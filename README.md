@@ -10,16 +10,6 @@ Manitou Web Framework is build on top of [Twitter Bootstrap](http://getbootstrap
 - **Font Awesome**
 - **Respond.JS** (IE8)
 - **html5shiv** (IE8)
-- **Grunt** (soon)
-
-## How to build
-- get Node.js (http://nodejs.org/)
-
-```
-$ npm install
-$ grunt
-```
-
 
 ## License
 

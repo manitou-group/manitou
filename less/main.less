@@ -1,10 +1,12 @@
 // Imports
 // -------------------------
 
+@path: "../docs/vendor";
+
 // Imports Assets
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
-@import "../../vendor/bootstrap/less/bootstrap.less";
-@import "../../vendor/font-awesome/less/font-awesome.less";
+@import "@{path}/bootstrap/less/bootstrap.less";
+@import "@{path}/font-awesome/less/font-awesome.less";
 
 // Import Utilities
 @import "reset";
@@ -24,18 +26,7 @@
 
 // Submodules
 // -------------------------
-@import '../app/home/home';
-@import '../app/benefits/benefits';
-@import '../app/contact/contact';
-@import '../app/company/news/news';
-@import '../app/company/history/history';
-@import '../app/landing_pages/landingPages';
-@import '../app/products/products';
-@import '../app/market/market';
-@import '../app/search/search';
-@import '../app/event/event';
-@import '../app/services/services';
-@import '../app/styleguide/styleguide';
+@import 'styleguide';
 
 // Variables
 // -------------------------
@@ -44,7 +35,7 @@
 @font-family-sans-serif: "Noto Sans", Helvetica, Arial, sans-serif;
 
 // Iconography
-@fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts";
+@fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts";
 
 // Colors
 @red: #e2001a;
