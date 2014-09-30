@@ -1,0 +1,116 @@
+// Footer
+// --------------------------
+
+footer {
+	.col {
+		.make-sm-column(4);
+		.make-md-column(4);
+	}
+	.col-button {
+		.hidden-xs;
+		.make-xs-column(12);
+		.make-sm-column(4,10px);
+		.make-md-column(4,80px);
+	}
+	h3 {
+		padding-left: 10px;
+	}
+	h4 {
+		padding-left: 10px;
+	}
+	.footer-menu {
+		.hidden-xs;
+		background: @gray-bckg;
+		padding-top: 30px;
+		box-shadow: inset 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+		img {
+			.img-responsive;
+		}
+	}
+	.footer-cta-bar {
+		border-top: 1px solid @gray-border;
+		border-bottom: 1px solid @gray-border;
+		background: #f2f2f2;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		.social {
+			padding: 5px 0 0 0;
+			margin: 0;
+			li {
+				float: left;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				> a {
+					display: block;
+					width: 50px;
+					height: 50px;
+					line-height: 50px;
+					border-radius: 50%;
+					background: #fff;
+					text-align: center;
+					font-size: 28px;
+					margin-left: 10px;
+					box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+					&:hover,
+					&:focus {
+						box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+					}
+					&.blog {
+						color: @red;
+						font-size: 10px;
+						font-weight: 700;
+					}
+					.fa-facebook {
+						color: @facebook-color;
+					}
+					.fa-twitter {
+						color: @twitter-color;
+					}
+					.fa-flickr {
+						color: @flickr-color;
+					}
+					.fa-youtube {
+						color: @youtube-color;
+					}
+				}
+			}
+		}
+	}
+ 	.footer-legal {
+ 		.make-xs-column(12);
+ 		box-shadow: inset 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+ 		ul {
+ 			position: relative;
+ 			clear: left;
+			float: left;
+ 			left: 50%;
+			list-style: none;
+ 			padding: 0;
+ 			margin: 0;
+ 			> li {
+ 				float: left;
+				position: relative;
+				right: 50%;
+				display: block;
+ 				> a {
+ 					display: block;
+ 					font-size: 11px;
+ 					line-height: 40px;
+ 					color: #aea8b0;
+ 					&:before {
+						content:"|";
+						padding-left: 10px;
+						padding-right: 10px;
+						font-weight: 400;
+					}
+ 				}
+ 				&:first-child a:before {
+					content:"";
+				}
+ 			}
+ 		}
+ 	}
+}
+
+

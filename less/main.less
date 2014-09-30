@@ -1,0 +1,253 @@
+// Imports
+// -------------------------
+
+// Imports Assets
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+@import "../../vendor/bootstrap/less/bootstrap.less";
+@import "../../vendor/font-awesome/less/font-awesome.less";
+
+// Import Utilities
+@import "reset";
+@import "mixins";
+@import "social-colors";
+
+// Import Updated BT components
+@import "navbar";
+@import "carousel";
+@import "button";
+@import "types";
+
+// Import Components
+@import "header";
+@import "footer";
+@import "bloc";
+
+// Submodules
+// -------------------------
+@import '../app/home/home';
+@import '../app/benefits/benefits';
+@import '../app/contact/contact';
+@import '../app/company/news/news';
+@import '../app/company/history/history';
+@import '../app/landing_pages/landingPages';
+@import '../app/products/products';
+@import '../app/market/market';
+@import '../app/search/search';
+@import '../app/event/event';
+@import '../app/services/services';
+@import '../app/styleguide/styleguide';
+
+// Variables
+// -------------------------
+
+// Typography
+@font-family-sans-serif: "Noto Sans", Helvetica, Arial, sans-serif;
+
+// Iconography
+@fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts";
+
+// Colors
+@red: #e2001a;
+@brand-primary: @red;
+
+@black: #333;
+
+@gray-bckg : #ededed;
+@gray-bckg-dark : #d9d9d9;
+@gray-border : #d5d5d5;
+@gray-border-light: #f0f0f0;
+@gray-border-lighter: #f2f2f2;
+@gray-bckg-light : #fcfcfc;
+@gray-border-dark : #c3c3c3;
+
+@text-color: #444;
+@text-gray: #b2b2b2;
+@body-bg: #fafafa;
+
+// Grid & Container
+@container-desktop: ((960px + @grid-gutter-width));
+@container-lg: @container-md;
+@grid-gutter-width: 20px;
+
+// Navbar
+@navbar-height: 50px;
+@navbar-margin-bottom: 0;
+@navbar-border-radius: 0;
+@navbar-default-color: @text-color;
+//@navbar-default-bg: #fff;
+@navbar-default-link-color: @text-color;
+@navbar-default-link-hover-color: @brand-primary;
+@navbar-default-link-hover-bg: transparent;
+@navbar-default-link-active-color: @brand-primary;
+@navbar-default-link-active-bg: transparent;
+@navbar-padding-horizontal: 0;
+//@navbar-default-toggle-hover-bg: #ddd;
+//@navbar-default-toggle-icon-bar-bg: #888;
+//@navbar-default-toggle-border-color: #ddd;
+
+// Navs
+@nav-link-padding: 8px 15px 6px 15px;
+@nav-link-hover-bg: transparent;
+
+// Tabs
+// @nav-tabs-border-color: #ddd;
+// @nav-tabs-link-hover-border-color: #999;
+@nav-tabs-active-link-hover-bg: transparent;
+// @nav-tabs-active-link-hover-color: @red;
+// @nav-tabs-active-link-hover-border-color: #ddd;
+// @nav-tabs-justified-link-border-color: #ddd;
+// @nav-tabs-justified-active-link-border-color: transparent;
+
+// Pagination 
+@pagination-color: @text-gray;
+@pagination-bg: transparent;
+@pagination-border: transparent;
+@pagination-hover-color: @red;
+@pagination-hover-bg: transparent;
+@pagination-active-color: transparent;
+@pagination-active-bg: transparent;
+@pagination-active-border: transparent;
+@pagination-disabled-color: lighten(@text-gray, 20%);
+@pagination-disabled-bg: transparent;
+@pagination-disabled-border: transparent;
+
+// Pager
+@pager-bg: transparent;
+@pager-border-radius: 0;
+
+// Thumbnails
+@thumbnail-padding: 0;
+@thumbnail-bg: #fff;
+@thumbnail-border-radius: @border-radius-base;
+
+// Custom Variables
+// -------------------------
+
+// Button
+@btn-height: 40px; // custom
+@btn-lg-height: 60px; // custom
+
+// Bloc
+@bloc-padding: 20px;
+
+
+.form-control {
+	//&:extend(.input-lg);
+}
+
+.container-fluid {
+	.container-fixed(0);
+}
+
+// Page Header
+.page-header {
+	border: none;
+	margin: 30px 0;
+	padding-right: @grid-gutter-width/2;
+	padding-bottom: 0;
+	padding-left: @grid-gutter-width/2;
+	h1 {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+// Special Classes
+// -------------------------
+.bckg-white {
+	background: #fff;
+}
+.bckg-black {
+	background: @text-color;
+}
+
+// Alerts
+// -------------------------
+.alert {
+	&.alert-info {
+		background: @gray-border-lighter;
+		border: 2px dashed @gray-border;
+		color: @text-color;
+		h3 {
+			margin-top: 0;
+			i {
+				margin-right: 10px;
+			}
+			span {
+				color: @red;
+			}
+		}
+	}
+}
+
+// Thumbnails
+.thumbnail-container {
+	.make-sm-column(6);
+	.make-md-column(4,20px);
+}
+.thumbnail {
+	img {
+		padding: 10px;
+		border-radius: @border-radius-base+10px;
+	}
+	.caption {
+		display: table;
+		width: 100%;
+		background: #fafafa;
+		border-top: 1px solid @thumbnail-border;
+		.border-bottom-radius(@border-radius-base+2);
+		p {
+			display: table-cell;
+			margin: 0;
+			text-align: center;
+			font-weight: 700;
+			vertical-align: middle;
+			white-space: normal;
+			height: 32px;
+			line-height: 16px;
+			padding: 0 20px;
+		}
+	}
+}
+
+// Tab Toggler
+.tab-toggler {
+	.visible-xs-block;
+	.container-fluid;
+	border-top: 1px solid @gray-border;
+	line-height: 50px;
+	font-weight: 700;
+	color: @text-color;
+	padding-left: 20px;
+	overflow: hidden;
+	&:hover,
+	&:focus {
+		background: darken(#fff,5%);
+	}
+	&:after {
+		.pull-right();
+		margin-right: 20px;
+		color: lighten(@text-color,30%);
+		.fa-icon();
+		content: @fa-var-angle-right;
+		font-size: 20px;
+		line-height: 50px;
+		.transition(transform);
+	}
+	&:not(.collapsed):after{
+		.fa-icon-rotate(90deg,1);
+	}
+}
+
+// Toggle Collapse
+.toggler:before {
+	.fa-icon();
+	margin-left: @bloc-padding; 
+	margin-right: @bloc-padding; 
+	content: @fa-var-angle-right;
+	.transition(transform);
+}
+.toggler:not(.collapsed):before{
+	.fa-icon-rotate(90deg,1);
+}
+

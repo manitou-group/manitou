@@ -1,0 +1,57 @@
+// Header
+// --------------------------
+
+header {
+	.sup-nav {
+		display: none;
+		@media (min-width: @screen-sm-min) { 
+			display: block;
+		}
+		background: @black;
+		min-height: 3px;
+		ul {
+			list-style: none;
+			margin-bottom: 0;
+			padding-left: 0;
+			> li {
+				padding-right: 15px;
+				> a {
+					color: #fff;
+					font-size: 11px;
+					&:focus,
+					&:hover {
+						color: @gray-lighter;
+					}
+				}
+				> ul > li {
+					padding-right: 0;
+					> a {
+						color: @text-color;
+						&:focus,
+						&:hover {
+							color: @text-color;
+						}
+					}
+				}
+			}
+		}
+		.sup-nav-group {
+			.make-sm-column(3);
+			.make-md-column(3);
+		}
+		.sup-nav-shortcuts {
+			.make-sm-column(5);
+			.make-md-column(5);
+			> li {
+				.sr-only;
+			}
+		}
+		.sup-nav-config {
+			.make-sm-column(4);
+			.make-md-column(4);
+			> li {
+				float: right;
+			}
+		}
+	}
+}

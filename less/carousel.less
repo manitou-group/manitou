@@ -1,0 +1,42 @@
+// Carousel
+// --------------------------
+
+.carousel-caption {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	text-align: left;
+	p {
+		padding-left: 20px;
+	}
+}
+.carousel-indicators {
+	display: none;
+}
+.carousel-control {
+	.icon-prev,
+	.icon-next {
+		.fa;
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		background: #fff;
+		border-radius: 50%;
+		text-shadow: none;
+		color: @text-color;
+		font-weight: 900;
+	}
+	.icon-prev {
+		&:before {
+			content: @fa-var-angle-left;
+		}
+	}
+	.icon-next {
+		&:before {
+			content: @fa-var-angle-right;
+			margin-left: 4px;
+		}
+	}
+}

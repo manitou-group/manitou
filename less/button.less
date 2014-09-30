@@ -1,0 +1,97 @@
+// Button 
+// -------------------------
+
+.btn {
+	color: #fff;
+	font-weight: 700;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+	padding: 0;
+	border: 0;
+	&:hover,
+	&:focus {
+		color: #fff;
+	}
+	> span {
+		display: table-cell;
+		vertical-align: middle;
+		white-space: normal;
+		text-align: left;
+		height: @btn-height;
+		line-height: 16px;
+		padding: 0 20px;
+
+	}
+	> .fa {
+		display: block;
+		float: left;
+		height: @btn-height;
+		width: @btn-height;
+		line-height: @btn-height;
+		text-align: center;
+		text-shadow: 1px 1px 0 fade(#fff, 15%);
+	}
+}
+.btn-lg {
+	height: 60px;
+	font-size: 16px;
+	padding: 0;
+	> span {
+		height: @btn-lg-height;
+		line-height: 20px;
+	}
+	> .fa {
+		font-size: 24px;
+		width: @btn-lg-height;
+		height: @btn-lg-height;
+		line-height: @btn-lg-height;
+	}
+}
+.btn-default {
+	box-shadow:0 1px 0 #3d3d3d;
+	.linear-gradient(#555,#4c4c4c,0,100);
+	&:hover,
+	&:focus {
+		.linear-gradient(darken(#555,10%),darken(#4c4c4c,10%),0,100);
+	}
+	> .fa {
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+	}
+	> span {
+		border-left: 1px solid rgba(0, 0, 0, 0.1);
+	}
+}
+.btn-info {
+	.linear-gradient(#bbb,#ccc,0,100);
+	&:hover,
+	&:focus {
+		.linear-gradient(darken(#ccc,10%),darken(#ddd,10%),0,100);
+	}
+}
+.btn-primary {
+	box-shadow:0 1px 0 fade(@red, 0.25);
+	.linear-gradient(#e2001a,#c20016,0,100);
+	&:hover,
+	&:focus {
+		.linear-gradient(darken(#e2001a,10%),darken(#c20016,10%),0,100);
+	}
+	> .fa {
+		text-shadow: 1px 1px 0 fade(#fff, 25%);
+	}
+	> span {
+		border-left: 1px solid lighten(@red, 30%);
+	}
+}
+.btn-min-width {
+	min-width: 270px;
+}
+.btn-group {
+	.dropdown-menu {
+		background: @body-bg;
+		width: 100%;
+		i {
+			width: 20px;
+			text-align: center;
+			color: lighten(@text-color, 30%);
+		}
+	}
+}
