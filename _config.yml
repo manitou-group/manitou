@@ -27,6 +27,6 @@ version:  1.0.0
 name: mwf
 
 # Sass conversion configs
-sass:
-    sass_dir: assets/scss
-    style: :compressed
+#sass:
+#    sass_dir: assets/scss
+#    style: :compressed
