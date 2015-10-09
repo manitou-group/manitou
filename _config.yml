@@ -15,7 +15,7 @@ markdown:         kramdown
 permalink:        pretty
 
 # Server
-source:           src
+source:           .
 destination:      build
 host:             localhost
 port:             9002
@@ -25,3 +25,8 @@ encoding:         UTF-8
 # Custom Vars
 version:  1.0.0
 name: mwf
+
+# Sass conversion configs
+sass:
+    sass_dir: assets/scss
+    style: :compressed

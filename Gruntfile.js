@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		jshint: {
-			files: ['Gruntfile.js', 'src/**/*.js'],
+			files: ['Gruntfile.js', 'assets/js/main.js'],
 			options: {
 				globals: {
 					jQuery: true,
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 	              flatten: true
 	            },
 	            files: {
-	                'build/assets/css/main.css': 'build/assets/css/main.css'
+	                'assets/css/main.css': 'assets/css/main.css'
 	            }
 	        }
 	    },
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 	                  report: 'min'
 	              },
 	              files: {
-	                  'build/assets/css/main.min.css': 'build/assets/css/main.css'
+	                  'assets/css/main.min.css': 'assets/css/main.css'
 	              }
 	          }
 	     },
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 	            expand: true,
 	            cwd: 'src/_assets/im',
 	            src: ['**/*.{png,jpg,gif}'],
-	            dest: 'build/assets/im'
+	            dest: 'assets/im'
 	        }]
 	      }
 	    },
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 	      },
 	      dist: {
 	        files: {
-	          'build/assets/css/main.css': 'src/_assets/scss/main.scss'
+	          'assets/css/main.css': 'assets/scss/main.scss'
 	        }
 	      }
 	    },
@@ -65,21 +65,21 @@ module.exports = function(grunt) {
 			main: {
 				src: ['vendor/jquery/dist/jquery.js',
 					'vendor/bootstrap/dist/js/bootstrap.js',
-					'js/*.js'],
-				dest: 'build/assets/js/<%= pkg.name %>-<%= pkg.version %>.js'
+					'js/main.js'],
+				dest: 'assets/js/<%= pkg.name %>-<%= pkg.version %>.js'
 			},
 			ieSupport: {
 				src: ['vendor/html5shiv/dist/html5shiv.js',
 					'vendor/respond/dest/respond.js'],
-				dest: 'build/assets/js/<%= pkg.name %>-<%= pkg.version %>-ie-support.js'
+				dest: 'assets/js/<%= pkg.name %>-<%= pkg.version %>-ie-support.js'
 			}
 		},
 
 		uglify : {
 			js: {
 				files: {
-					'build/assets/js/<%= pkg.name %>-<%= pkg.version %>.js' : [ 'dist/<%= pkg.name %>-<%= pkg.version %>.js' ],
-					'build/assets/js/<%= pkg.name %>-<%= pkg.version %>-ie-support.js' : ['dist/<%= pkg.name %>-<%= pkg.version %>-ie-support.js']
+					'assets/js/<%= pkg.name %>-<%= pkg.version %>.js' : [ 'dist/<%= pkg.name %>-<%= pkg.version %>.js' ],
+					'assets/js/<%= pkg.name %>-<%= pkg.version %>-ie-support.js' : ['dist/<%= pkg.name %>-<%= pkg.version %>-ie-support.js']
 				}
 			}
 		},
@@ -118,19 +118,19 @@ module.exports = function(grunt) {
 		        }
 		    },
 			sass: {
-				files: 'src/_assets/scss/*.scss',
+				files: 'assets/scss/*.scss',
 				tasks: ['sass', 'autoprefixer', 'csso', 'criticalcss'],
 			},
 			script: {
-				files: 'src/_assets/js/*.js',
+				files: 'assets/js/*.js',
 				tasks: ['jshint', 'concat']
 			},
 			html: {
-				files: ['src/*/*.html', 'src/*/*/*.html'],
+				files: ['*/*.html', '*/*/*.html'],
 				tasks: ['jekyll', 'sass', 'autoprefixer', 'csso', 'concat', 'imagemin']
 			},
 			images: {
-				files: ['src/_assets/im/**/*.{png,jpg,gif}'],
+				files: ['assets/im/**/*.{png,jpg,gif}'],
 				tasks: ['imagemin']
 			}
 		},
@@ -140,8 +140,8 @@ module.exports = function(grunt) {
 		criticalcss: {
 			home: {
 				options:  {
-					outputfile : 'src/_includes/critical.css',
-					filename : 'build/assets/css/main.css',
+					outputfile : '_includes/critical.css',
+					filename : 'assets/css/main.css',
 					url : 'http://localhost:9001',
 					width: 1300,
                 	height: 900,
@@ -185,6 +185,17 @@ module.exports = function(grunt) {
 		'criticalcss',
 		'jekyll',
 		'delta'
+	]);
+
+	grunt.registerTask('prod', [
+		'jshint',
+		'sass',
+		'autoprefixer',
+		'csso',
+		'concat',
+		'imagemin',
+		'connect:localhost',
+		'criticalcss',
 	]);
 
 };
