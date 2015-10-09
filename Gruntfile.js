@@ -119,11 +119,11 @@ module.exports = function(grunt) {
 		    },
 			sass: {
 				files: 'assets/scss/*.scss',
-				tasks: ['sass', 'autoprefixer', 'csso', 'criticalcss'],
+				tasks: ['sass', 'autoprefixer', 'csso', 'criticalcss', 'jekyll'],
 			},
 			script: {
 				files: 'assets/js/main.js',
-				tasks: ['jshint', 'concat']
+				tasks: ['jshint', 'concat', 'jekyll']
 			},
 			html: {
 				files: ['*/*.html', '*/*/*.html'],
