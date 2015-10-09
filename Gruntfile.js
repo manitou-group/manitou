@@ -99,7 +99,7 @@ module.exports = function(grunt) {
 						target: 'http://localhost:9001/'
 					},
 					keepalive: false,
-					base: ['build'],
+					base: ['_site'],
 					livereload: false,
 					hostname: 'localhost',
 				}
@@ -122,7 +122,7 @@ module.exports = function(grunt) {
 				tasks: ['sass', 'autoprefixer', 'csso', 'criticalcss'],
 			},
 			script: {
-				files: 'assets/js/*.js',
+				files: 'assets/js/main.js',
 				tasks: ['jshint', 'concat']
 			},
 			html: {

@@ -16,7 +16,7 @@ permalink:        pretty
 
 # Server
 source:           .
-destination:      build
+destination:      _site
 host:             localhost
 port:             9002
 #url:              http://
