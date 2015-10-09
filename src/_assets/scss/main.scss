@@ -1,0 +1,39 @@
+// Imports
+// -------------------------
+
+// Import Assets and Variables
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+@import "colors";
+@import "custom-variables";
+@import "override-variables";
+@import "vendor/bootstrap/scss/bootstrap.scss";
+@import "vendor/font-awesome/scss/font-awesome.scss";
+
+// Import Utilities
+@import "mixins";
+
+// Import Components
+@import "header";
+@import "footer";
+@import "typography";
+@import "navbar";
+@import "card";
+@import "button";
+
+// Imports specific to the framework
+@import "styleguide";
+
+// Shame
+@import "shame";
+
+// Styles
+// -------------------------
+
+html {
+	font-size: 14px;
+}
+
+section {
+	@extend .container;
+}
+

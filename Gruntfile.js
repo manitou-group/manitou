@@ -1,0 +1,190 @@
+module.exports = function(grunt) {
+
+	grunt.initConfig({
+
+		pkg: grunt.file.readJSON('package.json'),
+
+		jshint: {
+			files: ['Gruntfile.js', 'src/**/*.js'],
+			options: {
+				globals: {
+					jQuery: true,
+					console: true,
+					module: true,
+					document: true
+				}
+			}
+		},
+
+		autoprefixer: {
+	        dist: {
+	            options: {
+	              browsers: ['last 2 version', 'ie 9', 'Firefox > 20', 'Safari > 5'],
+	              flatten: true
+	            },
+	            files: {
+	                'build/assets/css/main.css': 'build/assets/css/main.css'
+	            }
+	        }
+	    },
+
+	    csso: {
+	          compress: {
+	              options: {
+	                  report: 'min'
+	              },
+	              files: {
+	                  'build/assets/css/main.min.css': 'build/assets/css/main.css'
+	              }
+	          }
+	     },
+
+	    imagemin: {
+	      dynamic: {
+	        files: [{
+	            expand: true,
+	            cwd: 'src/_assets/im',
+	            src: ['**/*.{png,jpg,gif}'],
+	            dest: 'build/assets/im'
+	        }]
+	      }
+	    },
+
+	    sass: {
+	      options: {
+	        sourceMap: false
+	      },
+	      dist: {
+	        files: {
+	          'build/assets/css/main.css': 'src/_assets/scss/main.scss'
+	        }
+	      }
+	    },
+
+		concat: {
+			main: {
+				src: ['vendor/jquery/dist/jquery.js',
+					'vendor/bootstrap/dist/js/bootstrap.js',
+					'js/*.js'],
+				dest: 'build/assets/js/<%= pkg.name %>-<%= pkg.version %>.js'
+			},
+			ieSupport: {
+				src: ['vendor/html5shiv/dist/html5shiv.js',
+					'vendor/respond/dest/respond.js'],
+				dest: 'build/assets/js/<%= pkg.name %>-<%= pkg.version %>-ie-support.js'
+			}
+		},
+
+		uglify : {
+			js: {
+				files: {
+					'build/assets/js/<%= pkg.name %>-<%= pkg.version %>.js' : [ 'dist/<%= pkg.name %>-<%= pkg.version %>.js' ],
+					'build/assets/js/<%= pkg.name %>-<%= pkg.version %>-ie-support.js' : ['dist/<%= pkg.name %>-<%= pkg.version %>-ie-support.js']
+				}
+			}
+		},
+
+		jekyll: {
+	      options: {
+	        config: '_config.yml'
+	      },
+	      dist: {}
+	    },
+
+		connect: {
+			localhost: {
+				options: {
+					port: 9001,
+					open: {
+						target: 'http://localhost:9001/'
+					},
+					keepalive: false,
+					base: ['build'],
+					livereload: false,
+					hostname: 'localhost',
+				}
+			}
+		},
+
+		delta: {
+			options: {
+				livereload: true,
+			},
+			gruntfile: {
+		        files: 'Gruntfile.js',
+		        tasks: [ 'jshint' ],
+		        options: {
+		          livereload: false
+		        }
+		    },
+			sass: {
+				files: 'src/_assets/scss/*.scss',
+				tasks: ['sass', 'autoprefixer', 'csso', 'criticalcss'],
+			},
+			script: {
+				files: 'src/_assets/js/*.js',
+				tasks: ['jshint', 'concat']
+			},
+			html: {
+				files: ['src/*/*.html', 'src/*/*/*.html'],
+				tasks: ['jekyll', 'sass', 'autoprefixer', 'csso', 'concat', 'imagemin']
+			},
+			images: {
+				files: ['src/_assets/im/**/*.{png,jpg,gif}'],
+				tasks: ['imagemin']
+			}
+		},
+
+		//When the critical css is generated, copy and paste it
+		//to insert it in the adequate view.
+		criticalcss: {
+			home: {
+				options:  {
+					outputfile : 'src/_includes/critical.css',
+					filename : 'build/assets/css/main.css',
+					url : 'http://localhost:9001',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: false
+				}
+			}
+			// view: {
+			// 	options:  {
+			// 		outputfile : 'css/critical/critical-viewName.css',
+			// 		filename : 'css/main.css',
+			// 		url : 'path/to/view.html'
+			// 	}
+			// }
+		}
+
+	});
+
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-csso');
+	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-criticalcss');
+	grunt.loadNpmTasks('grunt-jekyll');
+
+	grunt.registerTask('images', ['imagemin']);
+	grunt.renameTask( 'watch', 'delta' );
+	grunt.registerTask('default', [
+		'jshint',
+		'sass',
+		'autoprefixer',
+		'csso',
+		'concat',
+		'imagemin',
+		'connect:localhost',
+		'criticalcss',
+		'jekyll',
+		'delta'
+	]);
+
+};

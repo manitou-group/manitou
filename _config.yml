@@ -1,0 +1,27 @@
+# Site settings
+title: Manitou Web Framework
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Manitou Web Framework
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+#github_username:  jekyll
+highlighter: pygments
+
+# Build settings
+markdown:         kramdown
+# Permalinks
+permalink:        pretty
+
+# Server
+source:           src
+destination:      build
+host:             localhost
+port:             9002
+#url:              http://
+encoding:         UTF-8
+
+# Custom Vars
+version:  1.0.0
+name: mwf

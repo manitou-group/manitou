@@ -1,0 +1,201 @@
+// Typography
+// --------------------------
+
+a {
+	@include transition(color);
+	&:hover,
+	&:focus {
+	    text-decoration: none;
+	}
+}
+
+
+h1,.h1 {
+	font-weight: 700;
+	font-size: calc-rem(30px);
+	color: $red;
+}
+h2,.h2 {
+	margin-top: 0;
+	margin-bottom: calc-rem(10px);
+	padding-top: 0;
+	padding-bottom: calc-rem(10px);
+	font-weight: 700;
+	font-size: calc-rem(22px);
+	line-height: calc-rem(26px);
+	&.border {
+		border-bottom: 1px solid $gray-border;
+	}
+	&.toggler {
+		border-bottom: 1px solid $gray-border-light;
+		margin-top: 0;
+		margin-bottom: calc-rem(20px);
+		padding-top: calc-rem(10px);
+		line-height: calc-rem(34px);
+	}
+	&.dropdown-toggle {
+		cursor: pointer;
+		&:hover,
+		&:focus {
+			color: $red;
+		}
+	}
+}
+h3,.h3 {
+	font-size: calc-rem(18px);
+	font-weight: 700;
+	&.border {
+		border-bottom: 1px solid $gray-border;
+		line-height: calc-rem(40px);
+		margin-top: calc-rem(10px);
+		margin-bottom: 0;
+	}
+}
+h4,.h4 {
+	font-size: calc-rem(14px);
+	line-height: calc-rem(18px);
+	font-weight: 700;
+}
+h5,.h5 {
+	font-size: calc-rem(22px);
+	color: #b2b2b2;
+	font-weight: 400;
+	@extend .text-uppercase;
+}
+hr {
+	border-top-color: $gray-border;
+}
+p {
+	font-size: calc-rem(14px);
+	line-height: calc-rem(18px);
+	&.lg {
+		font-size: calc-rem(16px);
+		line-height: calc-rem(18px);
+	}
+	&.lead {
+		font-size: calc-rem(20px);
+		line-height: calc-rem(40px);
+	}
+	&.small {
+		font-size: calc-rem(12px);
+		line-height: calc-rem(14px);
+		color: #b2b2b2;
+		a {
+			color: #b2b2b2;
+			&:hover,
+			&:focus {
+				color: $red;
+			}
+		}
+	}
+}
+label {
+	font-weight: normal;
+}
+
+
+// LIST
+// -------------------------
+
+// Unorder List
+ul {
+	padding-left: calc-rem(28px);
+	margin-left: 0;
+	list-style-type: disc;
+	> li {
+		color: $text-color;
+		> a {
+			color: $text-color;
+			&:hover,
+			&:focus {
+				color: $red;
+			}
+		}
+	}
+	&.space {
+		> li {
+			padding-bottom: calc-rem(15px);
+		}
+	}
+	&.bullet {
+		> li {
+			color: $red;
+			> a {
+				color: $text-color;
+				&:hover,
+				&:focus {
+					color: $red;
+				}
+			}
+		}
+	}
+	&.pagination {
+		margin: 0;
+		@include pagination-size($pagination-padding-x-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
+	}
+}
+// Description list
+dl {
+	font-size: calc-rem(12px);
+}
+dt {
+	font-weight: normal;
+}
+.dl-horizontal dt {
+	text-align: left;
+}
+
+// ul Tags
+.tags {
+	@extend .list-unstyled;
+	@extend .list-inline;
+	font-size: calc-rem(12px);
+	> li {
+		padding-right: calc-rem(10px);
+		> a {
+			color: $text-gray;
+			&:hover,
+			&:focus {
+				color: $red;
+			}
+			&:before {
+				content: "#";
+			}
+		}
+        > span {
+          color: $text-gray;
+          &:before {
+            content: "#";
+          }
+        }
+	}
+}
+// ul Nav Tabs
+.nav-tabs {
+	font-weight: 700;
+	margin-bottom: $bloc-padding;
+	> li {
+		> a {
+			color: lighten($text-color, 10%);
+			border-bottom: 1px solid #ddd;
+			margin-right: 0;
+			margin-top: calc-rem(5px);
+			&:hover,
+			&:focus {
+				border-bottom: 1px solid #fff;
+			}
+		}
+		&.active {
+			> a {
+				color: $red;
+			}
+		}
+	}
+}
+// ul Pager
+.pager {
+	li > a {
+		color: $text-gray;
+	}
+}
+

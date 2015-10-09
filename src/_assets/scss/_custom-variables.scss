@@ -1,0 +1,32 @@
+//
+// Functions
+// --------------------------------------------------
+
+
+$font-size-root:             16px !default; //bootstrap default value
+
+@function calc-rem( $target, $context: $font-size-root ) {
+	@return $target / $context * 1rem;
+}
+
+
+//
+// Custom Variables
+// --------------------------------------------------
+
+// Navbar
+$navbar-height: calc-rem(50px);
+
+// Button
+$btn-height: calc-rem(40px);
+$btn-lg-height: calc-rem(60px);
+
+// Bloc
+$bloc-padding: calc-rem(20px);
+
+// Box Shadow
+$box-shadow: 0 0 calc-rem(10px) 0 rgba(0, 0, 0, .15);
+
+// Inputs
+$input-checkbox-height: calc-rem(16px);
+$input-radio-height: calc-rem(16px);

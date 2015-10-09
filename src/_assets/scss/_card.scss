@@ -1,0 +1,49 @@
+// Card & blocks
+// --------------------------
+
+.card {
+	@include box-shadow(none);
+	margin-bottom: 20px;
+    border: 1px solid transparent;
+	h2,.h2,
+	h3,.h3 {
+		margin:0;
+		padding:0;
+	}
+	hr {
+		@include reset-padding();
+	}
+	ul {
+		padding-left: $bloc-padding;
+		&.dropdown-menu {
+			padding-left: 0;
+		}
+	}
+	.card-img-top {
+		@extend .hidden-xs-down, .img-responsive;
+		& + .panel {
+			@include border-top-radius(0);
+			border-top: 0;
+		}
+	}
+	.card-block-title {
+		.dropdown-toggle {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	&.card-info {
+    	background-color: #f5f5f5;
+    	.card-block-title {
+    		border-bottom: 1px solid $gray-border;
+    	}
+	}
+}
+
+.bloc {
+	background: #fff;
+	border-radius: $border-radius;
+	@include box-shadow($box-shadow);
+	padding: $bloc-padding;
+}

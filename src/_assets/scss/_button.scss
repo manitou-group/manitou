@@ -1,0 +1,179 @@
+// Button
+// -------------------------
+
+.btn {
+	color: #fff;
+	font-size: calc-rem(14px);
+	font-weight: 700;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+	padding: 0 calc-rem(20px);
+	border: 0;
+	height: $btn-height;
+	line-height: $btn-height;
+	&:hover,
+	&:focus {
+		color: #fff;
+	}
+	> span {
+		display: table-cell;
+		vertical-align: middle;
+		white-space: normal;
+		text-align: left;
+		height: $btn-height;
+		line-height: calc-rem(16px);
+		padding: 0 calc-rem(2px) 0 calc-rem(10px);
+	}
+	> i {
+		display: block;
+		float: left;
+		height: $btn-height;
+		width: $btn-height;
+		margin-left: -$bloc-padding;
+		line-height: $btn-height;
+		text-align: center;
+		text-shadow: 1px 1px 0 fade(#fff, 15%);
+	}
+}
+.btn-lg {
+	height: calc-rem(60px);
+	font-size: calc-rem(14px);
+	padding: 0;
+	> span {
+		height: $btn-lg-height;
+		line-height: calc-rem(20px);
+	}
+	> i {
+		font-size: calc-rem(24px);
+		width: $btn-lg-height;
+		height: $btn-lg-height;
+		margin-left: 0;
+		line-height: $btn-lg-height;
+	}
+}
+.btn-default {
+	box-shadow:0 1px 0 #3d3d3d;
+	@include gradient-vertical(#555,#4c4c4c,0%,100%);
+	color: #fff;
+	&:hover,
+	&:focus {
+		color: #fff;
+		@include gradient-vertical(darken(#555,10%),darken(#4c4c4c,10%),0%,100%);
+		> span {
+			border-left: 1px solid darken(#4c4c4c, 15%);
+		}
+	}
+	> i {
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+	}
+	> span {
+		border-left: 1px solid darken(#4c4c4c,5%);
+	}
+}
+.btn-info {
+	@include gradient-vertical(#bbb,#ccc,0%,100%);
+	&:hover,
+	&:focus {
+		@include gradient-vertical(darken(#ccc,10%),darken(#ddd,10%),0%,100%);
+	}
+	&.active,
+	&:active {
+		border-color: $red;
+		@include gradient-vertical(#e2001a,#c20016,0%,100%);
+	}
+}
+.btn-primary {
+	@include box-shadow(0 -1px 0 darken($red,10%) inset);
+	@include gradient-vertical(#e2001a,#c20016,0%,100%);
+	&:hover,
+	&:focus {
+		@include gradient-vertical(darken(#e2001a,10%),darken(#c20016,10%),0%,100%);
+	}
+	> i {
+		text-shadow: 1px 1px 0 fade(#fff, 25%);
+	}
+	> span {
+		border-left: 1px solid darken($red, 8%);
+		opacity: .9;
+	}
+}
+.btn-success {
+	box-shadow:0 1px 0 fade($red, 0.25);
+	@include gradient-vertical(#92de59,#84c951,0%,100%);
+	&:hover,
+	&:focus {
+		@include gradient-vertical(darken(#92de59,10%),darken(#84c951,10%),0%,100%);
+		> span {
+			border-left: 1px solid darken(#84c951, 12%);
+		}
+	}
+	> i {
+		text-shadow: 1px 1px 0 fade(#fff, 25%);
+	}
+	> span {
+		border-left: 1px solid darken(#84c951, 5%);
+	}
+}
+
+.btn-group {
+	&.open {
+		.btn, .dropdown-toggle {
+			@extend .btn-default;
+			color: #fff;
+		}
+	}
+	.btn {
+		color: #fff;
+		padding-right: 0;
+	}
+	.btn-switch {
+		background: $body-bg;
+		border: 1px solid $gray-border;
+		text-shadow: none;
+		color: $text-color;
+		font-weight: normal;
+		padding: 0;
+		&:hover,
+		&:focus {
+			color: $text-color;
+			background: darken($body-bg,10%);
+		}
+		&.active,
+		&:active {
+			color: #fff;
+			border-color: $red;
+			@include gradient-vertical(#e2001a,#c20016,0%,100%);
+		}
+	}
+	.dropdown-menu {
+		background: $body-bg;
+		width: 100%;
+		i {
+			width: calc-rem(20px);
+			text-align: center;
+			color: lighten($text-color, 30%);
+		}
+		li { // fix Angular ng-repeat div
+			margin-bottom: 0;
+			> a {
+				display: block;
+				padding: calc-rem(3px) calc-rem(20px);
+				clear: both;
+				font-weight: normal;
+				line-height: $line-height;
+				color: $dropdown-link-color;
+				white-space: nowrap; // prevent links from randomly breaking onto new lines
+				cursor: pointer;
+				&:hover,
+				&:focus {
+					text-decoration: none;
+					color: $dropdown-link-hover-color;
+					background-color: $dropdown-link-hover-bg;
+				}
+			}
+		}
+		.dropdown-header {
+			padding: calc-rem(10px) calc-rem(20px) 0 calc-rem(20px);
+			font-weight: 700;
+		}
+	}
+}

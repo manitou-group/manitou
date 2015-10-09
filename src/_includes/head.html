@@ -1,0 +1,92 @@
+<head>
+	<title>{{ site.title }}</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/im/logo/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/im/logo/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/im/logo/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/im/logo/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/im/logo/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/im/logo/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/im/logo/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/im/logo/apple-touch-icon-152x152.png">
+
+	<link rel="icon" type="image/png" href="/assets/im/logo/favicon-196x196.png" sizes="196x196">
+	<link rel="icon" type="image/png" href="/assets/im/logo/favicon-160x160.png" sizes="160x160">
+	<link rel="icon" type="image/png" href="/assets/im/logo/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/assets/im/logo/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/assets/im/logo/favicon-32x32.png" sizes="32x32">
+
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="mstile-144x144.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://" />
+	<meta property="og:image" content="" />
+
+	<style>{% include critical.css %}</style>
+
+	<script>
+		/*!
+		loadCSS: load a CSS file asynchronously.
+		[c]2015 @scottjehl, Filament Group, Inc.
+		Licensed MIT
+		*/
+		(function(w){
+			"use strict";
+			w.loadCSS = function( href, before, media ){
+				var ss = w.document.createElement( "link" );
+				var ref;
+				if( before ){
+					ref = before;
+				}
+				else if( w.document.querySelectorAll ){
+					var refs = w.document.querySelectorAll(  "style,link[rel=stylesheet],script" );
+					ref = refs[ refs.length - 1];
+				}
+				else {
+					ref = w.document.getElementsByTagName( "script" )[ 0 ];
+				}
+				var sheets = w.document.styleSheets;
+				ss.rel = "stylesheet";
+				ss.href = href;
+				ss.media = "only x";
+				ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+				ss.onloadcssdefined = function( cb ){
+					var defined;
+					for( var i = 0; i < sheets.length; i++ ){
+						if( sheets[ i ].href && sheets[ i ].href === ss.href ){
+							defined = true;
+						}
+					}
+					if( defined ){
+						cb();
+					} else {
+						setTimeout(function() {
+							ss.onloadcssdefined( cb );
+						});
+					}
+				};
+				ss.onloadcssdefined(function() {
+					ss.media = media || "all";
+				});
+				return ss;
+			};
+		}(this));
+		loadCSS( "/assets/css/main.min.css" );
+		</script>
+
+		<!--[if lte IE 9 ]>
+		<script type="text/javascript" src="js/Sasserkit-1.1.0-ie-support.js"></script>
+		<![endif]-->
+
+</head>
