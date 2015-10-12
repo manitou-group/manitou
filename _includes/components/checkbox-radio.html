@@ -1,0 +1,128 @@
+<section id="checkboxes-radio">
+		<h2>Checkboxes and radio inputs</h2>
+		<p>Checkboxes and radio inputs both offer a choice to the users. The checkbox system is more flexible since it allows 0, 1 or multiple choices while the radio inputs only expect 1 pick among various options.</p>
+
+		<br>
+
+		<p>The checkboxes are used with one global <code>label</code> explaining the choice the user has to make. Then each choice has its proper <code>label</code>. These labels must have a specific <code>for</code> attribute corresponding to the <code>id</code> of its input. Each <code>id</code> must be specific to its label : 2 inputs cannot have the same <code>id</code>.</p>
+		<p>If a checkbox should be checked by default, add a <code>checked</code> attribute on its input.</p>
+
+		<div class="bs-example">
+
+			<div class="form-group">
+		        <label>Transmission</label>
+		        <div class="checkbox">
+		            <input type="checkbox" id="checkbox1">
+		            <label for="checkbox1">Torque converter</label>
+		        </div>
+		        <div class="checkbox">
+		            <input type="checkbox" id="checkbox2" checked>
+		            <label for="checkbox2">Hydrostatic</label>
+		        </div>
+		        <div class="checkbox">
+		            <input type="checkbox" id="checkbox3">
+		            <label for="checkbox3">Continuous variable</label>
+		        </div>
+		    </div>
+
+		</div>
+
+{% highlight html %}
+<div class="form-group">
+    <label>Global label</label>
+    <div class="checkbox">
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1">Checkbox 1</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="checkbox2" checked>
+        <label for="checkbox2">Checkbox 2</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="checkbox3">
+        <label for="checkbox3">Checkbox 3</label>
+    </div>
+</div>
+{% endhighlight %}
+
+	<br>
+
+	<p>It is also possible to nest different checkboxes and to thus manage dependent options.</p>
+
+	<div class="bs-example">
+
+		<div class="form-group">
+	        <label>Masted forklift trucks</label>
+
+	        <div class="checkbox">
+	            <input type="checkbox" id="checkbox4">
+	            <label for="checkbox4">Industrial</label>
+	            <div class="checkbox">
+	                <input type="checkbox" id="checkbox41">
+	                <label for="checkbox41">Diesel</label>
+	            </div>
+	            <div class="checkbox">
+	                <input type="checkbox" id="checkbox42">
+	                <label for="checkbox42">Gas</label>
+	            </div>
+	            <div class="checkbox">
+	                <input type="checkbox" id="checkbox43">
+	                <label for="checkbox43">Electric</label>
+	            </div>
+	        </div>
+	        <div class="checkbox">
+	            <input type="checkbox" id="checbox5">
+	            <label for="checbox5">Rough Terrain</label>
+	        </div>
+	    </div>
+
+	</div>
+
+{% highlight html %}
+<div class="form-group">
+    <label>Masted forklift trucks</label>
+
+    <div class="checkbox">
+        <input type="checkbox" id="checkbox4">
+        <label for="checkbox4">Industrial</label>
+        <div class="checkbox">
+            <input type="checkbox" id="checkbox41">
+            <label for="checkbox41">Diesel</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="checkbox42">
+            <label for="checkbox42">Gas</label>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="checkbox43">
+            <label for="checkbox43">Electric</label>
+        </div>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="checbox5">
+        <label for="checbox5">Rough Terrain</label>
+    </div>
+</div>
+{% endhighlight %}
+
+	<br>
+
+	<p>It is also possible to nest different checkboxes and to thus manage dependent options.</p>
+
+	<div class="bs-example">
+
+		<div class="form-group">
+		    <div class="btn-group btn-group-justified">
+		        <label class="btn btn-switch active" name="Machines">Equipment</label>
+		        <label class="btn btn-switch" name="Attachments">Attachments</label>
+		    </div>
+		</div>
+
+	</div>
+
+{% highlight html %}
+
+{% endhighlight %}
+
+
+	</section>

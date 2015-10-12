@@ -1,0 +1,33 @@
+{
+  "name": "angular-slider",
+  "description": "Slider directive implementation for AngularJS, without jQuery dependencies.",
+  "main": "slider.js",
+  "keywords": [
+    "angular",
+    "slider",
+    "jquery",
+    "jquery-ui"
+  ],
+  "devDependencies": {
+    "compass": "latest",
+    "coffee-script": "latest"
+  },
+  "author": "PopSugar",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "ignore": [
+    "*",
+    "!slider.scss",
+    "!slider.css",
+    "!slider.js"
+  ],
+  "homepage": "https://github.com/ftreguer/angular-slider",
+  "_release": "43ca40faec",
+  "_resolution": {
+    "type": "commit",
+    "commit": "43ca40faec941a00c6768dc89e148af9deb25508"
+  },
+  "_source": "https://github.com/ftreguer/angular-slider.git",
+  "_target": "43ca40faec941a00c6768dc89e148af9deb25508",
+  "_originalSource": "https://github.com/ftreguer/angular-slider.git"
+}

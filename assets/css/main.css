@@ -7767,12 +7767,27 @@ dt {
     padding: 0.7142857143rem 1.4285714286rem 0 1.4285714286rem;
     font-weight: 700; }
 
+.btn-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate; }
+  .btn-group-justified > .btn,
+  .btn-group-justified > .btn-group {
+    float: none;
+    display: table-cell;
+    width: 1%; }
+  .btn-group-justified > .btn-group .btn {
+    width: 100%; }
+  .btn-group-justified > .btn-group .dropdown-menu {
+    left: auto; }
+
 .form-control {
   border-width: 1px;
   height: 3.2142857143rem; }
 
 label {
-  font-size: 12px;
+  font-size: 0.8571428571rem;
   font-weight: 700;
   cursor: pointer; }
   label.required:after {
@@ -7790,6 +7805,10 @@ label {
     width: 1%;
     white-space: nowrap; }
 
+.radio,
+.checkbox {
+  margin-top: .75rem; }
+
 input[type="checkbox"]:not(:checked),
 input[type="checkbox"]:checked,
 input[type="radio"]:not(:checked),
@@ -7801,7 +7820,7 @@ input[type="radio"]:checked {
   input[type="radio"]:not(:checked) + label,
   input[type="radio"]:checked + label {
     position: relative;
-    padding-left: 25px;
+    padding-left: 1.7857142857rem;
     cursor: pointer; }
     input[type="checkbox"]:not(:checked) + label:before,
     input[type="checkbox"]:checked + label:before,
@@ -7815,6 +7834,9 @@ input[type="radio"]:checked {
       -webkit-transition: background 0.2s ease-out;
       transition: background 0.2s ease-out; }
 
+.checkbox > .checkbox {
+  margin-left: 25px; }
+
 input[type="checkbox"]:not(:checked) + label:before,
 input[type="checkbox"]:checked + label:before {
   width: 1rem;
@@ -7827,14 +7849,13 @@ input[type="checkbox"]:not(:checked) + label:before {
 
 input[type="checkbox"]:checked + label:before {
   color: #e2001a;
-  font-size: 12px;
+  font-size: 0.8571428571rem;
   line-height: 1rem;
   text-align: center;
-  content: "";
-  padding-top: 1px; }
+  content: ""; }
 
 input[type=checkbox][disabled] + label {
-  margin-left: 30px; }
+  margin-left: 2.1428571429rem; }
   input[type=checkbox][disabled] + label:before {
     border-radius: 50% !important;
     content: " " !important; }
@@ -7852,6 +7873,49 @@ input[type="radio"]:not(:checked) + label:before {
 
 input[type="radio"]:checked + label:before {
   background: #e2001a; }
+
+textarea.form-control {
+  height: auto; }
+
+slider, [slider] {
+  display: inline-block;
+  position: relative;
+  height: 12px;
+  width: 100%;
+  margin: 1.0714285714rem 0 0 0;
+  vertical-align: middle; }
+  slider div, [slider] div {
+    white-space: nowrap;
+    position: absolute; }
+    slider div.bar, [slider] div.bar {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid #d5d5d5;
+      overflow: hidden; }
+      slider div.bar .selection, [slider] div.bar .selection {
+        width: 0%;
+        height: 100%;
+        background: #e2001a; }
+    slider div.handle, [slider] div.handle {
+      cursor: pointer;
+      width: 17px;
+      height: 17px;
+      top: -3px;
+      background-color: #444;
+      z-index: 2;
+      border-radius: 100%; }
+    slider div.bubble, [slider] div.bubble {
+      display: none;
+      cursor: default;
+      top: -22px;
+      padding: 1px 3px 1px 3px;
+      font-size: 0.7em; }
+      slider div.bubble.active, [slider] div.bubble.active {
+        display: none; }
+      slider div.bubble.limit, [slider] div.bubble.limit {
+        color: #777; }
 
 .docs {
   padding-bottom: 100px; }

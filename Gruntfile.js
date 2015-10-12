@@ -63,8 +63,10 @@ module.exports = function(grunt) {
 
 		concat: {
 			main: {
-				src: ['vendor/jquery/dist/jquery.js',
+				src: ['vendor/angular/angular.min.js',
+					'vendor/jquery/dist/jquery.js',
 					'vendor/bootstrap/dist/js/bootstrap.js',
+					'vendor/angular-slider/slider.js',
 					'js/main.js'],
 				dest: 'assets/js/<%= pkg.name %>-<%= pkg.version %>.js'
 			},
