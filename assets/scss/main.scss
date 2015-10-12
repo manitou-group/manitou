@@ -19,6 +19,7 @@
 @import "navbar";
 @import "card";
 @import "button";
+@import "input";
 
 // Imports specific to the framework
 @import "styleguide";
@@ -28,10 +29,6 @@
 
 // Styles
 // -------------------------
-
-html {
-	font-size: 14px;
-}
 
 section {
 	@extend .container;

@@ -1,0 +1,116 @@
+<section id="basic-input">
+	<h2>Basic input</h2>
+	<p>Example of a basic input that includes a label explaining the reason of the input, a placeholder clarifying the expected type of input and an icon (with Font Awesome) illustrating the action.</p>
+
+	<div class="bs-example">
+
+		<div class="form-group">
+		    <label for="">Compatible with</label>
+		    <div class="form-group">
+		        <div class="input-group">
+		            <input type="text" placeholder="ex: MLT 634" class="form-control">
+		            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+		        </div>
+		    </div>
+		</div>
+
+	</div>
+	{% highlight html %}
+<div class="form-group">
+    <label for="">Label of the input</label>
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text" placeholder="placeholder showing example" class="form-control">
+            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+        </div>
+    </div>
+</div>
+	{% endhighlight %}
+
+	<br>
+
+	<p>You can change the place of the addon by simply change its place in the html.</p>
+
+	<p>For instance, in the example below, we put the <code>.input-group-addon</code> before the input.</p>
+
+	<div class="bs-example">
+
+		<div class="form-group">
+		    <div class="form-group">
+		        <div class="input-group">
+		        	<span class="input-group-addon">+</span>
+		            <input type="text" placeholder="" class="form-control">
+		        </div>
+		    </div>
+		</div>
+
+	</div>
+	{% highlight html %}
+<div class="form-group">
+    <div class="form-group">
+        <div class="input-group">
+        	<span class="input-group-addon">+</span>
+            <input type="text" placeholder="placeholder showing example" class="form-control">
+        </div>
+    </div>
+</div>
+	{% endhighlight %}
+
+	<br>
+
+	<p>Notice that the type attribute of the input can be changed for <code>number</code>, <code>tel</code> or <code>email</code></p>
+
+	<div class="bs-example">
+
+		<div class="form-group">
+            <label class="required">Email</label>
+            <input type="email" name="email" id="" class="form-control" required="" placeholder="Your email address">
+        </div>
+
+		<br>
+
+        <div class="form-group">
+            <label class="required">Phone</label>
+            <div class="input-group">
+                <span class="input-group-addon">+</span>
+                <input type="tel" name="phone" id="" class="form-control" required="" placeholder="Your phone number">
+            </div>
+        </div>
+
+	</div>
+	{% highlight html %}
+<div class="form-group">
+    <label class="required">Email</label>
+    <input type="email" name="email" id="" class="form-control" required="" placeholder="Your email address">
+</div>
+
+<div class="form-group">
+    <label class="required">Phone</label>
+    <div class="input-group">
+        <span class="input-group-addon">+</span>
+        <input type="tel" name="phone" id="" class="form-control" required="" placeholder="Your phone number">
+    </div>
+</div>
+
+	{% endhighlight %}
+
+	<br>
+
+	<p>The previous example also highlights that it is possible, and highly recommended, to show when an input is required. To do this, add the class <code>.required</code> to the label.</p>
+
+	<div class="bs-example">
+
+		<div class="form-group">
+            <label class="required">Name</label>
+            <input type="text" name="" id="" class="form-control" required="" placeholder="Your name">
+        </div>
+
+	</div>
+	{% highlight html %}
+<div class="form-group">
+    <label class="required">Name</label>
+    <input type="text" name="" id="" class="form-control" required="" placeholder="Your name">
+</div>
+	{% endhighlight %}
+
+</section>
