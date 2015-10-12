@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 					'vendor/jquery/dist/jquery.js',
 					'vendor/bootstrap/dist/js/bootstrap.js',
 					'vendor/angular-slider/slider.js',
-					'js/main.js'],
+					'assets/js/main.js'],
 				dest: 'assets/js/<%= pkg.name %>-<%= pkg.version %>.js'
 			},
 			ieSupport: {
@@ -184,7 +184,7 @@ module.exports = function(grunt) {
 		'concat',
 		'imagemin',
 		'connect:localhost',
-		'criticalcss',
+		// 'criticalcss',
 		'jekyll',
 		'delta'
 	]);
