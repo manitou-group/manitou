@@ -1,0 +1,48 @@
+// Carousel
+// --------------------------
+
+.carousel-caption {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	text-align: left;
+	p {
+		padding-left: calc-rem(20px);
+	}
+}
+.carousel-indicators {
+	display: none;
+}
+.carousel-control {
+	&.left {
+		@include gradient-horizontal(rgba(0,0,0,.1), rgba(0,0,0,.0001), 0%, 100%);
+	}
+  	&.right {
+		@include gradient-horizontal(rgba(0,0,0,.0001), rgba(0,0,0,.1), 0%, 100%);
+	}
+	.icon-prev,
+	.icon-next {
+		@extend .fa;
+		width: calc-rem(48px);
+		height: calc-rem(48px);
+		line-height: calc-rem(48px);
+		background: #fff;
+		border-radius: 50%;
+		text-shadow: none;
+		color: $text-color;
+		font-weight: 900;
+	}
+	.icon-prev {
+		&:before {
+			content: $fa-var-angle-left;
+		}
+	}
+	.icon-next {
+		&:before {
+			content: $fa-var-angle-right;
+			margin-left: calc-rem(4px);
+		}
+	}
+}

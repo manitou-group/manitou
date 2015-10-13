@@ -5216,7 +5216,8 @@ a.bg-danger:hover {
   font-weight: normal;
   font-style: normal; }
 
-.fa, input[type="checkbox"]:checked + label:before {
+.fa, input[type="checkbox"]:checked + label:before, .carousel-control .icon-prev,
+.carousel-control .icon-next {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -5273,10 +5274,12 @@ a.bg-danger:hover {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, input[type="checkbox"]:checked + label.fa-pull-left:before {
+.fa.fa-pull-left, input[type="checkbox"]:checked + label.fa-pull-left:before, .carousel-control .fa-pull-left.icon-prev,
+.carousel-control .fa-pull-left.icon-next {
   margin-right: .3em; }
 
-.fa.fa-pull-right, input[type="checkbox"]:checked + label.fa-pull-right:before {
+.fa.fa-pull-right, input[type="checkbox"]:checked + label.fa-pull-right:before, .carousel-control .fa-pull-right.icon-prev,
+.carousel-control .fa-pull-right.icon-next {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -5286,10 +5289,12 @@ a.bg-danger:hover {
 .pull-left {
   float: left; }
 
-.fa.pull-left, input[type="checkbox"]:checked + label.pull-left:before {
+.fa.pull-left, input[type="checkbox"]:checked + label.pull-left:before, .carousel-control .pull-left.icon-prev,
+.carousel-control .pull-left.icon-next {
   margin-right: .3em; }
 
-.fa.pull-right, input[type="checkbox"]:checked + label.pull-right:before {
+.fa.pull-right, input[type="checkbox"]:checked + label.pull-right:before, .carousel-control .pull-right.icon-prev,
+.carousel-control .pull-right.icon-next {
   margin-left: .3em; }
 
 .fa-spin {
@@ -8222,6 +8227,49 @@ slider, [slider] {
         display: none; }
       slider div.bubble.limit, [slider] div.bubble.limit {
         color: #777; }
+
+.carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: left; }
+  .carousel-caption p {
+    padding-left: 1.25rem; }
+
+.carousel-indicators {
+  display: none; }
+
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A000000', endColorstr='#00000000', GradientType=1); }
+
+.carousel-control.right {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1A000000', GradientType=1); }
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  background: #fff;
+  border-radius: 50%;
+  text-shadow: none;
+  color: #444;
+  font-weight: 900; }
+
+.carousel-control .icon-prev:before {
+  content: ""; }
+
+.carousel-control .icon-next:before {
+  content: "";
+  margin-left: 0.25rem; }
 
 .docs {
   padding-bottom: 100px; }
