@@ -31,7 +31,7 @@
 		margin-left: -$bloc-padding;
 		line-height: $btn-height;
 		text-align: center;
-		text-shadow: 1px 1px 0 fade(#fff, 15%);
+		text-shadow: 1px 1px 0 fade-out(#fff, 0.15);
 	}
 }
 .btn-lg {
@@ -39,15 +39,15 @@
 	font-size: calc-rem(14px);
 	padding: 0;
 	> span {
-		height: $btn-lg-height;
-		line-height: calc-rem(20px);
+		//height: $btn-lg-height;
+		line-height: calc-rem(60px);
 	}
 	> i {
 		font-size: calc-rem(24px);
 		width: $btn-lg-height;
-		height: $btn-lg-height;
+		//height: $btn-lg-height;
 		margin-left: 0;
-		line-height: $btn-lg-height;
+		line-height: calc-rem(60px);
 	}
 }
 .btn-default {
@@ -89,7 +89,7 @@
 		@include gradient-vertical(darken(#e2001a,10%),darken(#c20016,10%),0%,100%);
 	}
 	> i {
-		text-shadow: 1px 1px 0 fade(#fff, 25%);
+		text-shadow: 1px 1px 0 fade-out(#fff, 0.25);
 	}
 	> span {
 		border-left: 1px solid darken($red, 8%);
@@ -97,7 +97,7 @@
 	}
 }
 .btn-success {
-	box-shadow:0 1px 0 fade($red, 0.25);
+	box-shadow:0 1px 0 fade-out($red, 0.25);
 	@include gradient-vertical(#92de59,#84c951,0%,100%);
 	&:hover,
 	&:focus {
@@ -107,7 +107,7 @@
 		}
 	}
 	> i {
-		text-shadow: 1px 1px 0 fade(#fff, 25%);
+		text-shadow: 1px 1px 0 fade-out(#fff, 0.25);
 	}
 	> span {
 		border-left: 1px solid darken(#84c951, 5%);

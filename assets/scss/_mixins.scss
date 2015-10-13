@@ -75,9 +75,15 @@
 
 // Generate the extra small columns
 @mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
+  @if $enable-flex {
+    -webkit-flex: 0 0 percentage(($columns / $grid-columns));
+    -ms-flex: 0 0 percentage(($columns / $grid-columns));
+    flex: 0 0 percentage(($columns / $grid-columns));
+  } @else {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
   position: relative;
-  float: left;
-  width: percentage(($columns / $grid-columns));
   min-height: 1px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
@@ -91,8 +97,14 @@
   padding-right: ($gutter / 2);
 
   @media (min-width: breakpoint-min(sm)) {
-    float: left;
-    width: percentage(($columns / $grid-columns));
+    @if $enable-flex {
+      -webkit-flex: 0 0 percentage(($columns / $grid-columns));
+      -ms-flex: 0 0 percentage(($columns / $grid-columns));
+      flex: 0 0 percentage(($columns / $grid-columns));
+    } @else {
+      float: left;
+      width: percentage(($columns / $grid-columns));
+    }
   }
 }
 
@@ -104,8 +116,14 @@
   padding-right: ($gutter / 2);
 
   @media (min-width: breakpoint-min(md)) {
-    float: left;
-    width: percentage(($columns / $grid-columns));
+    @if $enable-flex {
+      -webkit-flex: 0 0 percentage(($columns / $grid-columns));
+      -ms-flex: 0 0 percentage(($columns / $grid-columns));
+      flex: 0 0 percentage(($columns / $grid-columns));
+    } @else {
+      float: left;
+      width: percentage(($columns / $grid-columns));
+    }
   }
 }
 
@@ -117,8 +135,14 @@
   padding-right: ($gutter / 2);
 
   @media (min-width: breakpoint-min(lg)) {
-    float: left;
-    width: percentage(($columns / $grid-columns));
+    @if $enable-flex {
+      -webkit-flex: 0 0 percentage(($columns / $grid-columns));
+      -ms-flex: 0 0 percentage(($columns / $grid-columns));
+      flex: 0 0 percentage(($columns / $grid-columns));
+    } @else {
+      float: left;
+      width: percentage(($columns / $grid-columns));
+    }
   }
 }
 
@@ -130,8 +154,14 @@
   padding-right: ($gutter / 2);
 
   @media (min-width: breakpoint-min(xl)) {
-    float: left;
-    width: percentage(($columns / $grid-columns));
+    @if $enable-flex {
+      -webkit-flex: 0 0 percentage(($columns / $grid-columns));
+      -ms-flex: 0 0 percentage(($columns / $grid-columns));
+      flex: 0 0 percentage(($columns / $grid-columns));
+    } @else {
+      float: left;
+      width: percentage(($columns / $grid-columns));
+    }
   }
 }
 
