@@ -510,7 +510,7 @@ mark,
   color: #818a91; }
 
 .img-responsive, .figure > img, .carousel-inner > .carousel-item > img,
-.carousel-inner > .carousel-item > a > img, .card .card-img-top, .card-nav .card-img-top, .home-news article a .card-img-top, .card-feature-container .card-feature .card-img-top {
+.carousel-inner > .carousel-item > a > img, .card .card-img-top, .card-nav .card-img-top, .home-news article a .card-img-top, .card-feature-container .card-feature .card-img-top, .filter .card-img-top {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -3386,7 +3386,7 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-divider {
   background-color: rgba(255, 255, 255, 0.075); }
 
-.card, .card-nav, .home-news article a, .card-feature-container .card-feature {
+.card, .card-nav, .home-news article a, .card-feature-container .card-feature, .filter {
   position: relative;
   margin-bottom: 0.75rem;
   border: 0.0625rem solid #e5e5e5;
@@ -3412,10 +3412,10 @@ input[type="button"].btn-block {
 .card-link + .card-link {
   margin-left: 1.25rem; }
 
-.card > .list-group:first-child .list-group-item:first-child, .card-nav > .list-group:first-child .list-group-item:first-child, .home-news article a > .list-group:first-child .list-group-item:first-child, .card-feature-container .card-feature > .list-group:first-child .list-group-item:first-child {
+.card > .list-group:first-child .list-group-item:first-child, .card-nav > .list-group:first-child .list-group-item:first-child, .home-news article a > .list-group:first-child .list-group-item:first-child, .card-feature-container .card-feature > .list-group:first-child .list-group-item:first-child, .filter > .list-group:first-child .list-group-item:first-child {
   border-radius: 0.25rem 0.25rem 0 0; }
 
-.card > .list-group:last-child .list-group-item:last-child, .card-nav > .list-group:last-child .list-group-item:last-child, .home-news article a > .list-group:last-child .list-group-item:last-child, .card-feature-container .card-feature > .list-group:last-child .list-group-item:last-child {
+.card > .list-group:last-child .list-group-item:last-child, .card-nav > .list-group:last-child .list-group-item:last-child, .home-news article a > .list-group:last-child .list-group-item:last-child, .card-feature-container .card-feature > .list-group:last-child .list-group-item:last-child, .filter > .list-group:last-child .list-group-item:last-child {
   border-radius: 0 0 0.25rem 0.25rem; }
 
 .card-header {
@@ -3504,7 +3504,7 @@ input[type="button"].btn-block {
           flex-flow: row wrap;
   margin-right: -.625rem;
   margin-left: -.625rem; }
-  .card-deck .card, .card-deck .card-nav, .card-deck .home-news article a, .home-news article .card-deck a, .card-deck .card-feature-container .card-feature, .card-feature-container .card-deck .card-feature {
+  .card-deck .card, .card-deck .card-nav, .card-deck .home-news article a, .home-news article .card-deck a, .card-deck .card-feature-container .card-feature, .card-feature-container .card-deck .card-feature, .card-deck .filter {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 0;
        -moz-box-flex: 1;
@@ -3522,30 +3522,31 @@ input[type="button"].btn-block {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; }
-  .card-group .card, .card-group .card-nav, .card-group .home-news article a, .home-news article .card-group a, .card-group .card-feature-container .card-feature, .card-feature-container .card-group .card-feature {
+  .card-group .card, .card-group .card-nav, .card-group .home-news article a, .home-news article .card-group a, .card-group .card-feature-container .card-feature, .card-feature-container .card-group .card-feature, .card-group .filter {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 0;
        -moz-box-flex: 1;
         -ms-flex: 1 0 0;
             flex: 1 0 0; }
-    .card-group .card + .card, .card-group .card-nav + .card, .card-group .home-news article a + .card, .home-news article .card-group a + .card, .card-group .card-feature-container .card-feature + .card, .card-feature-container .card-group .card-feature + .card, .card-group .card + .card-nav, .card-group .card-nav + .card-nav, .card-group .home-news article a + .card-nav, .home-news article .card-group a + .card-nav, .card-group .card-feature-container .card-feature + .card-nav, .card-feature-container .card-group .card-feature + .card-nav, .card-group .home-news article .card + a, .home-news article .card-group .card + a, .card-group .home-news article .card-nav + a, .home-news article .card-group .card-nav + a, .card-group .home-news article a + a, .home-news article .card-group a + a, .card-group .card-feature-container .home-news article .card-feature + a, .home-news article .card-group .card-feature-container .card-feature + a, .card-feature-container .card-group .home-news article .card-feature + a, .home-news article .card-feature-container .card-group .card-feature + a, .card-group .card-feature-container .card + .card-feature, .card-feature-container .card-group .card + .card-feature, .card-group .card-feature-container .card-nav + .card-feature, .card-feature-container .card-group .card-nav + .card-feature, .card-group .home-news article .card-feature-container a + .card-feature, .card-feature-container .card-group .home-news article a + .card-feature, .home-news article .card-group .card-feature-container a + .card-feature, .card-feature-container .home-news article .card-group a + .card-feature, .card-group .card-feature-container .card-feature + .card-feature, .card-feature-container .card-group .card-feature + .card-feature {
+    .card-group .card + .card, .card-group .card-nav + .card, .card-group .home-news article a + .card, .home-news article .card-group a + .card, .card-group .card-feature-container .card-feature + .card, .card-feature-container .card-group .card-feature + .card, .card-group .filter + .card, .card-group .card + .card-nav, .card-group .card-nav + .card-nav, .card-group .home-news article a + .card-nav, .home-news article .card-group a + .card-nav, .card-group .card-feature-container .card-feature + .card-nav, .card-feature-container .card-group .card-feature + .card-nav, .card-group .filter + .card-nav, .card-group .home-news article .card + a, .home-news article .card-group .card + a, .card-group .home-news article .card-nav + a, .home-news article .card-group .card-nav + a, .card-group .home-news article a + a, .home-news article .card-group a + a, .card-group .card-feature-container .home-news article .card-feature + a, .home-news article .card-group .card-feature-container .card-feature + a, .card-feature-container .card-group .home-news article .card-feature + a, .home-news article .card-feature-container .card-group .card-feature + a, .card-group .home-news article .filter + a, .home-news article .card-group .filter + a, .card-group .card-feature-container .card + .card-feature, .card-feature-container .card-group .card + .card-feature, .card-group .card-feature-container .card-nav + .card-feature, .card-feature-container .card-group .card-nav + .card-feature, .card-group .home-news article .card-feature-container a + .card-feature, .card-feature-container .card-group .home-news article a + .card-feature, .home-news article .card-group .card-feature-container a + .card-feature, .card-feature-container .home-news article .card-group a + .card-feature, .card-group .card-feature-container .card-feature + .card-feature, .card-feature-container .card-group .card-feature + .card-feature, .card-group .card-feature-container .filter + .card-feature, .card-feature-container .card-group .filter + .card-feature, .card-group .card + .filter, .card-group .card-nav + .filter, .card-group .home-news article a + .filter, .home-news article .card-group a + .filter, .card-group .card-feature-container .card-feature + .filter, .card-feature-container .card-group .card-feature + .filter, .card-group .filter + .filter {
       margin-left: 0;
       border-left: 0; }
-    .card-group .card:first-child .card-img-top, .card-group .card-nav:first-child .card-img-top, .card-group .home-news article a:first-child .card-img-top, .home-news article .card-group a:first-child .card-img-top, .card-group .card-feature-container .card-feature:first-child .card-img-top, .card-feature-container .card-group .card-feature:first-child .card-img-top {
+    .card-group .card:first-child .card-img-top, .card-group .card-nav:first-child .card-img-top, .card-group .home-news article a:first-child .card-img-top, .home-news article .card-group a:first-child .card-img-top, .card-group .card-feature-container .card-feature:first-child .card-img-top, .card-feature-container .card-group .card-feature:first-child .card-img-top, .card-group .filter:first-child .card-img-top {
       border-top-right-radius: 0; }
-    .card-group .card:first-child .card-img-bottom, .card-group .card-nav:first-child .card-img-bottom, .card-group .home-news article a:first-child .card-img-bottom, .home-news article .card-group a:first-child .card-img-bottom, .card-group .card-feature-container .card-feature:first-child .card-img-bottom, .card-feature-container .card-group .card-feature:first-child .card-img-bottom {
+    .card-group .card:first-child .card-img-bottom, .card-group .card-nav:first-child .card-img-bottom, .card-group .home-news article a:first-child .card-img-bottom, .home-news article .card-group a:first-child .card-img-bottom, .card-group .card-feature-container .card-feature:first-child .card-img-bottom, .card-feature-container .card-group .card-feature:first-child .card-img-bottom, .card-group .filter:first-child .card-img-bottom {
       border-bottom-right-radius: 0; }
-    .card-group .card:last-child .card-img-top, .card-group .card-nav:last-child .card-img-top, .card-group .home-news article a:last-child .card-img-top, .home-news article .card-group a:last-child .card-img-top, .card-group .card-feature-container .card-feature:last-child .card-img-top, .card-feature-container .card-group .card-feature:last-child .card-img-top {
+    .card-group .card:last-child .card-img-top, .card-group .card-nav:last-child .card-img-top, .card-group .home-news article a:last-child .card-img-top, .home-news article .card-group a:last-child .card-img-top, .card-group .card-feature-container .card-feature:last-child .card-img-top, .card-feature-container .card-group .card-feature:last-child .card-img-top, .card-group .filter:last-child .card-img-top {
       border-top-left-radius: 0; }
-    .card-group .card:last-child .card-img-bottom, .card-group .card-nav:last-child .card-img-bottom, .card-group .home-news article a:last-child .card-img-bottom, .home-news article .card-group a:last-child .card-img-bottom, .card-group .card-feature-container .card-feature:last-child .card-img-bottom, .card-feature-container .card-group .card-feature:last-child .card-img-bottom {
+    .card-group .card:last-child .card-img-bottom, .card-group .card-nav:last-child .card-img-bottom, .card-group .home-news article a:last-child .card-img-bottom, .home-news article .card-group a:last-child .card-img-bottom, .card-group .card-feature-container .card-feature:last-child .card-img-bottom, .card-feature-container .card-group .card-feature:last-child .card-img-bottom, .card-group .filter:last-child .card-img-bottom {
       border-bottom-left-radius: 0; }
-    .card-group .card:not(:first-child):not(:last-child), .card-group .card-nav:not(:first-child):not(:last-child), .card-group .home-news article a:not(:first-child):not(:last-child), .home-news article .card-group a:not(:first-child):not(:last-child), .card-group .card-feature-container .card-feature:not(:first-child):not(:last-child), .card-feature-container .card-group .card-feature:not(:first-child):not(:last-child) {
+    .card-group .card:not(:first-child):not(:last-child), .card-group .card-nav:not(:first-child):not(:last-child), .card-group .home-news article a:not(:first-child):not(:last-child), .home-news article .card-group a:not(:first-child):not(:last-child), .card-group .card-feature-container .card-feature:not(:first-child):not(:last-child), .card-feature-container .card-group .card-feature:not(:first-child):not(:last-child), .card-group .filter:not(:first-child):not(:last-child) {
       border-radius: 0; }
       .card-group .card:not(:first-child):not(:last-child) .card-img-top,
       .card-group .card-nav:not(:first-child):not(:last-child) .card-img-top,
       .card-group .home-news article a:not(:first-child):not(:last-child) .card-img-top,
       .home-news article .card-group a:not(:first-child):not(:last-child) .card-img-top, .card-group .card-feature-container .card-feature:not(:first-child):not(:last-child) .card-img-top,
-      .card-feature-container .card-group .card-feature:not(:first-child):not(:last-child) .card-img-top, .card-group .card:not(:first-child):not(:last-child) .card-img-bottom, .card-group .card-nav:not(:first-child):not(:last-child) .card-img-bottom, .card-group .home-news article a:not(:first-child):not(:last-child) .card-img-bottom, .home-news article .card-group a:not(:first-child):not(:last-child) .card-img-bottom, .card-group .card-feature-container .card-feature:not(:first-child):not(:last-child) .card-img-bottom, .card-feature-container .card-group .card-feature:not(:first-child):not(:last-child) .card-img-bottom {
+      .card-feature-container .card-group .card-feature:not(:first-child):not(:last-child) .card-img-top, .card-group .filter:not(:first-child):not(:last-child) .card-img-top,
+      .card-group .card:not(:first-child):not(:last-child) .card-img-bottom, .card-group .card-nav:not(:first-child):not(:last-child) .card-img-bottom, .card-group .home-news article a:not(:first-child):not(:last-child) .card-img-bottom, .home-news article .card-group a:not(:first-child):not(:last-child) .card-img-bottom, .card-group .card-feature-container .card-feature:not(:first-child):not(:last-child) .card-img-bottom, .card-feature-container .card-group .card-feature:not(:first-child):not(:last-child) .card-img-bottom, .card-group .filter:not(:first-child):not(:last-child) .card-img-bottom {
         border-radius: 0; }
 
 .card-columns {
@@ -3555,7 +3556,7 @@ input[type="button"].btn-block {
   -webkit-column-gap: 1.25rem;
      -moz-column-gap: 1.25rem;
           column-gap: 1.25rem; }
-  .card-columns .card, .card-columns .card-nav, .card-columns .home-news article a, .home-news article .card-columns a, .card-columns .card-feature-container .card-feature, .card-feature-container .card-columns .card-feature {
+  .card-columns .card, .card-columns .card-nav, .card-columns .home-news article a, .home-news article .card-columns a, .card-columns .card-feature-container .card-feature, .card-feature-container .card-columns .card-feature, .card-columns .filter {
     display: inline-block;
     width: 100%; }
 
@@ -7589,20 +7590,21 @@ dt {
 hr {
   border-width: calcl-rem(1px); }
 
-.card, .card-nav, .home-news article a, .card-feature-container .card-feature {
+.card, .card-nav, .home-news article a, .card-feature-container .card-feature, .filter {
   box-shadow: none;
   margin-bottom: 20px;
   border: 1px solid transparent;
   background: #f5f5f5;
   display: block; }
-  .card h2, .card-nav h2, .home-news article a h2, .card-feature-container .card-feature h2, .card .h2,
+  .card h2, .card-nav h2, .home-news article a h2, .card-feature-container .card-feature h2, .filter h2, .card .h2,
   .card-nav .h2,
   .home-news article a .h2,
   .card-feature-container .card-feature .h2,
-  .card h3, .card-nav h3, .home-news article a h3, .card-feature-container .card-feature h3, .card .h3, .card-nav .h3, .home-news article a .h3, .card-feature-container .card-feature .h3 {
+  .filter .h2,
+  .card h3, .card-nav h3, .home-news article a h3, .card-feature-container .card-feature h3, .filter h3, .card .h3, .card-nav .h3, .home-news article a .h3, .card-feature-container .card-feature .h3, .filter .h3 {
     margin: 0;
     padding: 0; }
-  .card hr, .card-nav hr, .home-news article a hr, .card-feature-container .card-feature hr {
+  .card hr, .card-nav hr, .home-news article a hr, .card-feature-container .card-feature hr, .filter hr {
     margin-right: -1.25rem;
     margin-left: -1.25rem; }
 
@@ -8516,6 +8518,65 @@ slider, [slider] {
   content: "";
   margin-left: 0.25rem; }
 
+.filter {
+  margin-bottom: 1.25rem;
+  padding: 0.625rem; }
+  .filter h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 2.8125rem; }
+  .filter label {
+    line-height: 2.8125rem;
+    margin-bottom: 0; }
+  .filter form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-left: -0.625rem;
+    margin-right: -0.625rem; }
+  .filter .col-label {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    -webkit-box-flex: 0;
+       -moz-box-flex: 0;
+            flex: 0 0 100%; }
+    @media (min-width: 48em) {
+      .filter .col-label {
+        -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+        -webkit-box-flex: 0;
+           -moz-box-flex: 0;
+                flex: 0 0 25%; } }
+    .filter .col-label label {
+      line-height: 2.8125rem; }
+  .filter .col-select {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    -webkit-box-flex: 0;
+       -moz-box-flex: 0;
+            flex: 0 0 100%;
+    padding-bottom: 0.625rem; }
+    @media (min-width: 48em) {
+      .filter .col-select {
+        -webkit-flex: 0 0 75%;
+        -ms-flex: 0 0 75%;
+        -webkit-box-flex: 0;
+           -moz-box-flex: 0;
+                flex: 0 0 75%; } }
+
 .docs {
   padding-bottom: 100px; }
   .docs aside {
@@ -8961,7 +9022,7 @@ h1[id] {
   margin-bottom: 15px; }
 
 @media (min-width: 480px) {
-  .bs-docs-featurette .img-responsive, .bs-docs-featurette .figure > img, .bs-docs-featurette .carousel-inner > .carousel-item > img, .bs-docs-featurette .carousel-inner > .carousel-item > a > img, .bs-docs-featurette .card .card-img-top, .card .bs-docs-featurette .card-img-top, .bs-docs-featurette .card-nav .card-img-top, .card-nav .bs-docs-featurette .card-img-top, .bs-docs-featurette .home-news article a .card-img-top, .home-news article a .bs-docs-featurette .card-img-top, .bs-docs-featurette .card-feature-container .card-feature .card-img-top, .card-feature-container .card-feature .bs-docs-featurette .card-img-top {
+  .bs-docs-featurette .img-responsive, .bs-docs-featurette .figure > img, .bs-docs-featurette .carousel-inner > .carousel-item > img, .bs-docs-featurette .carousel-inner > .carousel-item > a > img, .bs-docs-featurette .card .card-img-top, .card .bs-docs-featurette .card-img-top, .bs-docs-featurette .card-nav .card-img-top, .card-nav .bs-docs-featurette .card-img-top, .bs-docs-featurette .home-news article a .card-img-top, .home-news article a .bs-docs-featurette .card-img-top, .bs-docs-featurette .card-feature-container .card-feature .card-img-top, .card-feature-container .card-feature .bs-docs-featurette .card-img-top, .bs-docs-featurette .filter .card-img-top, .filter .bs-docs-featurette .card-img-top {
     margin-top: 30px; } }
 
 @media (min-width: 768px) {
@@ -8974,7 +9035,7 @@ h1[id] {
     max-width: 80%;
     margin-right: auto;
     margin-left: auto; }
-  .bs-docs-featurette .img-responsive, .bs-docs-featurette .figure > img, .bs-docs-featurette .carousel-inner > .carousel-item > img, .bs-docs-featurette .carousel-inner > .carousel-item > a > img, .bs-docs-featurette .card .card-img-top, .card .bs-docs-featurette .card-img-top, .bs-docs-featurette .card-nav .card-img-top, .card-nav .bs-docs-featurette .card-img-top, .bs-docs-featurette .home-news article a .card-img-top, .home-news article a .bs-docs-featurette .card-img-top, .bs-docs-featurette .card-feature-container .card-feature .card-img-top, .card-feature-container .card-feature .bs-docs-featurette .card-img-top {
+  .bs-docs-featurette .img-responsive, .bs-docs-featurette .figure > img, .bs-docs-featurette .carousel-inner > .carousel-item > img, .bs-docs-featurette .carousel-inner > .carousel-item > a > img, .bs-docs-featurette .card .card-img-top, .card .bs-docs-featurette .card-img-top, .bs-docs-featurette .card-nav .card-img-top, .card-nav .bs-docs-featurette .card-img-top, .bs-docs-featurette .home-news article a .card-img-top, .home-news article a .bs-docs-featurette .card-img-top, .bs-docs-featurette .card-feature-container .card-feature .card-img-top, .card-feature-container .card-feature .bs-docs-featurette .card-img-top, .bs-docs-featurette .filter .card-img-top, .filter .bs-docs-featurette .card-img-top {
     margin-top: 0; } }
 
 /*
@@ -8989,7 +9050,7 @@ h1[id] {
 .bs-docs-featured-sites .col-xs-6 {
   padding: 1px; }
 
-.bs-docs-featured-sites .img-responsive, .bs-docs-featured-sites .figure > img, .bs-docs-featured-sites .carousel-inner > .carousel-item > img, .bs-docs-featured-sites .carousel-inner > .carousel-item > a > img, .bs-docs-featured-sites .card .card-img-top, .card .bs-docs-featured-sites .card-img-top, .bs-docs-featured-sites .card-nav .card-img-top, .card-nav .bs-docs-featured-sites .card-img-top, .bs-docs-featured-sites .home-news article a .card-img-top, .home-news article a .bs-docs-featured-sites .card-img-top, .bs-docs-featured-sites .card-feature-container .card-feature .card-img-top, .card-feature-container .card-feature .bs-docs-featured-sites .card-img-top {
+.bs-docs-featured-sites .img-responsive, .bs-docs-featured-sites .figure > img, .bs-docs-featured-sites .carousel-inner > .carousel-item > img, .bs-docs-featured-sites .carousel-inner > .carousel-item > a > img, .bs-docs-featured-sites .card .card-img-top, .card .bs-docs-featured-sites .card-img-top, .bs-docs-featured-sites .card-nav .card-img-top, .card-nav .bs-docs-featured-sites .card-img-top, .bs-docs-featured-sites .home-news article a .card-img-top, .home-news article a .bs-docs-featured-sites .card-img-top, .bs-docs-featured-sites .card-feature-container .card-feature .card-img-top, .card-feature-container .card-feature .bs-docs-featured-sites .card-img-top, .bs-docs-featured-sites .filter .card-img-top, .filter .bs-docs-featured-sites .card-img-top {
   margin-top: 0; }
 
 @media (min-width: 768px) {

@@ -1,0 +1,133 @@
+<section id="filter-block">
+	<h2>Filter block</h2>
+	<p></p>
+
+	<div class="bs-example">
+
+		<div class="filter">
+		    <div class="row">
+		        <div class="col-md-4">
+		            <h3>
+		                <span>50</span>
+		                <span>Result(s)</span>
+		            </h3>
+		        </div>
+		        <div class="col-md-8">
+		            <select name="filter" id="filter" class="form-control">
+			            <option style="display:none" value="">Filter by</option>
+			            <option value="0" label="Lifting capacity">Lifting capacity</option>
+			            <option value="1" label="Lifting height">Lifting height</option>
+			            <option value="2" label="Power">Power</option>
+			            <option value="3" label="Engine">Engine</option>
+			            <option value="4" label="Width">Width</option>
+			            <option value="5" label="Height">Height</option>
+			            <option value="6" label="Length">Length</option>
+			            <option value="7" label="Weight">Weight</option>
+		            </select>
+		        </div>
+		    </div>
+		</div>
+
+		<br>
+
+		<div class="filter">
+		    <div class="row">
+		        <div class="col-md-4">
+		            <h3>
+		                <span>14</span>
+		                <span>Result(s)</span>
+		            </h3>
+		        </div>
+		    </div>
+		</div>
+
+		<br>
+
+		<div class="filter">
+		    <form role="form">
+		        <div class="col-label">
+		            <label for="country">Filter by:</label>
+		        </div>
+		        <div class="col-select">
+		            <label class="sr-only" for="language">Language</label>
+		            <select name="language" id="language" class="form-control">
+			            <option style="display:none" value="">Select a language</option>
+			            <option value="en" label="English">English</option>
+			            <option value="fr" label="Français">Français</option>
+			            <option value="es" label="Español">Español</option>
+			            <option value="de" label="Deutsch">Deutsch</option>
+			            <option value="it" label="Italiano">Italiano</option>
+			            <option value="pt" label="Português">Português</option>
+			            <option value="nl" label="Nederlands">Nederlands</option>
+			            <option value="pl" label="Polski">Polski</option>
+			            <option value="ru" label="Pусский">Pусский</option>
+			            <option value="zh" label="中文">中文</option>
+		            </select>
+		        </div>
+		    </form>
+		</div>
+
+	</div>
+
+{% highlight html %}
+<div class="filter">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>
+                <span>50</span>
+                <span>Result(s)</span>
+            </h3>
+        </div>
+        <div class="col-md-8">
+            <select name="filter" id="filter" class="form-control">
+	            <option style="display:none" value="">Filter by</option>
+	            <option value="0" label="Lifting capacity">Lifting capacity</option>
+	            <option value="1" label="Lifting height">Lifting height</option>
+	            <option value="2" label="Power">Power</option>
+	            <option value="3" label="Engine">Engine</option>
+	            <option value="4" label="Width">Width</option>
+	            <option value="5" label="Height">Height</option>
+	            <option value="6" label="Length">Length</option>
+	            <option value="7" label="Weight">Weight</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="filter">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>
+                <span>14</span>
+                <span>Result(s)</span>
+            </h3>
+        </div>
+    </div>
+</div>
+
+<div class="filter">
+    <form role="form">
+        <div class="col-label">
+            <label for="country">Filter by:</label>
+        </div>
+        <div class="col-select">
+            <label class="sr-only" for="language">Language</label>
+            <select name="language" id="language" class="form-control">
+	            <option style="display:none" value="">Select a language</option>
+	            <option value="en" label="English">English</option>
+	            <option value="fr" label="Français">Français</option>
+	            <option value="es" label="Español">Español</option>
+	            <option value="de" label="Deutsch">Deutsch</option>
+	            <option value="it" label="Italiano">Italiano</option>
+	            <option value="pt" label="Português">Português</option>
+	            <option value="nl" label="Nederlands">Nederlands</option>
+	            <option value="pl" label="Polski">Polski</option>
+	            <option value="ru" label="Pусский">Pусский</option>
+	            <option value="zh" label="中文">中文</option>
+            </select>
+        </div>
+    </form>
+</div>
+{% endhighlight %}
+
+</section>

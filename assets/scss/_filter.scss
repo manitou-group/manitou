@@ -1,0 +1,31 @@
+// Filter
+// ------------------------
+
+.filter {
+	@extend .card;
+	//.panel-default;
+	margin-bottom: $bloc-padding;
+	padding: $bloc-padding / 2;
+	h3 {
+		margin-top: 0;
+		margin-bottom: 0;
+		line-height: $input-height;
+	}
+	label {
+		line-height: $input-height;
+		margin-bottom: 0;
+	}
+	form {
+		@include make-row();
+	}
+	.col-label {
+		@include make-md-column(3);
+		label {
+			line-height: $input-height;
+		}
+	}
+	.col-select {
+		@include make-md-column(9);
+		padding-bottom: $bloc-padding / 2;
+	}
+}
