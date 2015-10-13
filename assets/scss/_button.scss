@@ -144,6 +144,11 @@
 			@include gradient-vertical(#e2001a,#c20016,0%,100%);
 		}
 	}
+	.dropdown-toggle {
+		&:after {
+			display: none;
+		}
+	}
 	.dropdown-menu {
 		background: $body-bg;
 		width: 100%;

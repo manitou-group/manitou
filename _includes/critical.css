@@ -70,8 +70,8 @@ header .sup-nav ul > li > a{ color: rgb(255, 255, 255); font-size: 11px; }
 header .sup-nav .sup-nav-shortcuts{ display: none; }
 a{ -webkit-transition-property: color; -webkit-transition-duration: 0.2s; -webkit-transition-timing-function: ease-out; -webkit-transition-delay: initial; }
 ul{ padding-left: 1.75rem; margin-left: 0px; list-style-type: disc; }
-ul > li{ color: rgb(68, 68, 68); }
-ul > li > a{ color: rgb(68, 68, 68); }
+ul > li{ color: rgb(68, 68, 68); font-size: 0.875rem; }
+ul > li > a{ color: rgb(68, 68, 68); font-size: 0.875rem; }
 .navbar{ border-right-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 0, 23); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(165, 0, 19); box-shadow: rgba(0, 0, 0, 0.496094) 0px 0px 8px 0px; background-image: -webkit-linear-gradient(top, rgb(226, 0, 26) 0%, rgb(194, 0, 22) 100%); background-repeat: repeat no-repeat; }
 @media (max-width: 47.9em){
 .navbar .container{ margin-right: auto; margin-left: auto; padding-left: 0px; padding-right: 0px; }

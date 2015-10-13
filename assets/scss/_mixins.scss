@@ -99,6 +99,11 @@
   min-height: 1px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
+  @if $enable-flex {
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
 
   @media (min-width: breakpoint-min(sm)) {
     @if $enable-flex {
@@ -124,6 +129,11 @@
   min-height: 1px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
+  @if $enable-flex {
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
 
   @media (min-width: breakpoint-min(md)) {
     @if $enable-flex {
@@ -149,6 +159,11 @@
   min-height: 1px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
+  @if $enable-flex {
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
 
   @media (min-width: breakpoint-min(lg)) {
     @if $enable-flex {
@@ -174,6 +189,11 @@
   min-height: 1px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
+  @if $enable-flex {
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
 
   @media (min-width: breakpoint-min(xl)) {
     @if $enable-flex {

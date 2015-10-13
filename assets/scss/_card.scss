@@ -230,6 +230,7 @@ hr {
 	}
 }
 
+//service cards
 .col-btn {
 	@include make-md-column(4);
 	&.col-btn-margin {
@@ -237,6 +238,68 @@ hr {
 		margin-bottom: $bloc-padding;
 		@media (min-width: breakpoint-min(md)) {
 			margin-bottom: 0;
+		}
+	}
+}
+
+//applciation cards
+.application-video {
+	@include make-sm-column(6);
+}
+.application-picture {
+	@include make-sm-column(6);
+}
+.application-content {
+	@include make-sm-column(6);
+}
+
+//event cards
+.event-month {
+	margin-bottom: $bloc-padding;
+	.bloc {
+		margin-bottom: calc-rem(20px);
+	}
+}
+.event-teaser {
+	h3 {
+		margin-bottom: calc-rem(10px);
+	}
+	p {
+		color: #999;
+	}
+}
+.event-bloc {
+	@extend .bloc;
+	@include make-row();
+}
+.event-picture {
+	@include make-xs-column(12);
+	@include make-sm-column(4);
+	img {
+		margin-right: calc-rem(10px);
+	}
+}
+.event-content {
+	@include make-xs-column(12);
+	@include make-sm-column(12);
+	h3 {
+		margin-top: calc-rem(-10px);
+		margin-bottom: calc-rem(15px);
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+.event-picture + .event-content {
+	@include make-sm-column(8);
+	h3 {
+		margin-top: calc-rem(10px);
+	}
+}
+@media (min-width: breakpoint-min(sm)) {
+	.event-picture + .event-content {
+		h3 {
+			margin-top: calc-rem(-10px);
 		}
 	}
 }
