@@ -1,10 +1,13 @@
 <section id="input-range" ng-controller="SliderCtrl">
 	<h2>Input range (slider)</h2>
-	<p></p>
+	<p>The slider component allows the user to filter results by specifiying a range of values. It is made of a slider with 2 cursors and, 2 inputs precising the min and max values selected.</p>
 
 	<div class="alert alert-info" role="alert">
 	  The slider component is based on 2 dependencies : the library <a href="https://angularjs.org/" target="_blank">angular.js</a> and the angular plugin <a href="https://github.com/ftreguer/angular-slider" target="_blank">angular-slider</a> which needs to be loaded in second.
 	</div>
+
+	<p>You can bind the slider values with inputs values using an Angular controller</p>
+	<p>Notice that the component includes 2 alerts <code>.help-block</code>, that we hide with angular. It is recommended that you should use it to warn the users when values are not allowed.</p>
 
 	<div class="bs-example">
 
@@ -28,17 +31,33 @@
 	            <p class="help-block ng-hide">Figure too large</p>
 	        </div>
 	        <slider floor="13" ceiling="32" step="1" ng-model-low="range.min" ng-model-high="range.max"></slider>
-			<!-- <div class="handle low" style="left: 0px;"></div><div class="handle high" style="left: 248px;"></div>
-			<div class="bubble limit low">13</div>
-			<div class="bubble limit high" style="left: 265px;">32</div>
-			<div class="bubble value low" style="left: 8.5px;">13</div>
-			<div class="bubble value high" style="left: 256.5px;">32</div></div> -->
 	    </div>
 
 	</div>
 
 {% highlight html %}
+<div class="form-group">
+    <label>Lifting height</label>
 
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="input-group">
+                <input id="" name="minliftingHeight" type="number" class="form-control" min="13" max="32" value="{{range.min}}">
+                <span class="input-group-addon">m</span>
+            </div>
+            <p class="help-block ng-hide">Figure too small</p>
+        </div>
+        <div class="col-xs-6">
+            <div class="input-group">
+                <input id="" name="maxliftingHeight" type="number" class="form-control" min="13" max="32" value="{{range.max}}">
+                <span class="input-group-addon">m</span>
+            </div>
+        </div>
+        <p class="help-block ng-hide">Figure too large</p>
+    </div>
+
+    <slider floor="13" ceiling="32" step="1" ng-model-low="range.min" ng-model-high="range.max"></slider>
+</div>
 
 {% endhighlight %}
 

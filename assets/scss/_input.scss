@@ -114,6 +114,20 @@ input[type="radio"] {
 	}
 }
 
+//Bootstrap custom input, used for radio
+.c-input {
+  > input {
+    &:checked ~ .c-indicator {
+      background-color: $red;
+    }
+  }
+}
+.c-radio {
+    margin-top: .75rem;
+    font-weight: 400;
+}
+
+
 textarea.form-control {
     height: auto;
 }

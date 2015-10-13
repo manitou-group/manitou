@@ -107,15 +107,21 @@
 
 	<br>
 
-	<p>It is also possible to nest different checkboxes and to thus manage dependent options.</p>
+	<p>The radio inputs are used with the custom inputs of Bootstrap 4. The <code>name</code> attribute of the inputs allows to link the different options of the radio input.</p>
 
 	<div class="bs-example">
 
-		<div class="form-group">
-		    <div class="btn-group btn-group-justified">
-		        <label class="btn btn-switch active" name="Machines">Equipment</label>
-		        <label class="btn btn-switch" name="Attachments">Attachments</label>
-		    </div>
+		<div class="c-inputs-stacked">
+			<label class="c-input c-radio">
+				<input id="radioStacked1" name="radio-stacked" type="radio" checked>
+				<span class="c-indicator"></span>
+				Toggle this custom radio
+			</label>
+			<label class="c-input c-radio">
+				<input id="radioStacked2" name="radio-stacked" type="radio">
+				<span class="c-indicator"></span>
+				Or toggle this other custom radio
+			</label>
 		</div>
 
 	</div>
