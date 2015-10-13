@@ -8,6 +8,8 @@ hr {
 	box-shadow: none;
 	margin-bottom: 20px;
     border: 1px solid transparent;
+    background: $card-bg;
+    display: block;
 	h2,.h2,
 	h3,.h3 {
 		margin:0;
@@ -16,31 +18,8 @@ hr {
 	hr {
 		@include reset-padding();
 	}
-	ul {
-		padding-left: $bloc-padding;
-		&.dropdown-menu {
-			padding-left: 0;
-		}
-	}
 	.card-img-top {
-		@extend .hidden-xs-down, .img-responsive;
-		& + .panel {
-			@include border-top-radius(0);
-			border-top: 0;
-		}
-	}
-	.card-block-title {
-		.dropdown-toggle {
-			&:after {
-				display: none;
-			}
-		}
-	}
-	&.card-info {
-    	background-color: #f5f5f5;
-    	.card-block-title {
-    		border-bottom: 1px solid $gray-border;
-    	}
+		@extend .img-responsive;
 	}
 }
 
@@ -54,35 +33,59 @@ hr {
 
 
 // Panel
-.panel {
-	box-shadow: none;
-	h2,.h2,h3,.h3 {
-		margin:0;
-		padding:0;
+// .panel {
+// 	box-shadow: none;
+// 	h2,.h2,h3,.h3 {
+// 		margin:0;
+// 		padding:0;
+// 	}
+// 	hr {
+// 		@include reset-padding();
+// 	}
+// 	ul {
+// 		padding-left: $bloc-padding;
+// 		&.dropdown-menu {
+// 			padding-left: 0;
+// 		}
+// 	}
+// }
+// .panel-heading-img {
+// 	@extend .hidden-xs-down;
+// 	@extend .img-responsive;
+// 	@include border-top-radius($border-radius);
+// 	& + .panel {
+// 		@include border-top-radius(0);
+// 		border-top: 0;
+// 	}
+// }
+// .panel-info > .panel-heading {
+// 	border-bottom: 1px solid $gray-border;
+// }
+
+.card-nav {
+	@extend .card;
+	.card-img-top {
+		@extend .hidden-xs-down;
+		// & + .panel {
+		// 	@include border-top-radius(0);
+		// 	border-top: 0;
+		// }
 	}
-	hr {
-		@include reset-padding();
-	}
-	ul {
-		padding-left: $bloc-padding;
-		&.dropdown-menu {
-			padding-left: 0;
+	.card-block-title {
+		border-bottom: 1px solid $gray-border;
+		ul {
+			padding-left: $bloc-padding;
+			&.dropdown-menu {
+				padding-left: 0;
+			}
+		}
+		.dropdown-toggle {
+			&:after {
+				display: none;
+			}
 		}
 	}
 }
-.panel-heading-img {
-	@extend .hidden-xs-down;
-	@extend .img-responsive;
-	@include border-top-radius($border-radius);
-	& + .panel {
-		@include border-top-radius(0);
-		border-top: 0;
-	}
-}
-.panel-info > .panel-heading {
-	border-bottom: 1px solid $gray-border;
-}
-
 
 .product-teaser {
 	@extend .bloc;
@@ -138,6 +141,102 @@ hr {
 			@extend .hidden-xs-down;
 			@extend .hidden-sm-down;
 			@include make-md-column(7);
+		}
+	}
+}
+
+.home-news {
+	padding-top: calc-rem(30px);
+	padding-bottom: calc-rem(30px);
+	article {
+		@include make-xs-column(12);
+		@include make-sm-column(6);
+		@include make-md-column(3);
+		a {
+			@extend .card;
+			box-shadow: $box-shadow;
+			border: 0;
+			color: $text-color;
+			display: block;
+			&:hover,
+			&:focus {
+				color: $red;
+			}
+		}
+	}
+	p {
+		padding: calc-rem(10px);
+	}
+	img {
+		@include img-responsive();
+		@extend .img-responsive-fluid;
+		@include border-top-radius($border-radius);
+	}
+	@media (min-width: breakpoint-min(md)) and (max-width: breakpoint-max(md)) {
+		p {
+			min-height: calc-rem(74px);
+		}
+	}
+	@media (min-width: breakpoint-min(lg)) and (max-width: breakpoint-max(lg)) {
+		p {
+			min-height: calc-rem(110px);
+		}
+	}
+	@media (min-width: breakpoint-min(xl)) {
+		p {
+			min-height: calc-rem(110px);
+		}
+	}
+}
+
+
+.card-feature-container {
+	@include make-sm-column(6);
+	@include make-md-column(4,20px);
+	.card-feature {
+		@extend .card;
+	    border: 1px solid $card-border-color;
+	    border-radius: calc-rem(4px);
+		img {
+			@extend .img-responsive-fluid;
+			@extend .img-thumbnail;
+			border: none;
+		}
+		.card-block {
+			display: table;
+			width: 100%;
+			background: #fafafa;
+			border-top: 1px solid $card-border-color;
+			@include border-bottom-radius($border-radius + calc-rem(2px));
+			p {
+				display: table-cell;
+				margin: 0;
+				text-align: center;
+				font-weight: 700;
+				vertical-align: middle;
+				white-space: normal;
+				height: calc-rem(32px);
+				line-height: calc-rem(16px);
+				padding: 0;
+				font-size: calc-rem(12px);
+				color: $text-color;
+				@include transition(color);
+				&:hover,
+				&:focus {
+					color: $red;
+				}
+			}
+		}
+	}
+}
+
+.col-btn {
+	@include make-md-column(4);
+	&.col-btn-margin {
+		@include make-md-column-offset(4);
+		margin-bottom: $bloc-padding;
+		@media (min-width: breakpoint-min(md)) {
+			margin-bottom: 0;
 		}
 	}
 }

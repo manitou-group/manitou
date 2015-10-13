@@ -11,6 +11,7 @@
 	}
 	main {
 		@include make-sm-column(9);
+    @include make-xs-column(12);
 		padding-bottom: $bloc-padding;
 		padding-top: 30px;
 		.highlight pre {

@@ -30,3 +30,16 @@
 		    color: #BADA55 !important;
 		}
 */
+
+
+// Special Classes
+// -------------------------
+.bckg-white {
+	background: #fff;
+}
+.bckg-black {
+	background: $text-color;
+}
+.img-responsive-fluid {
+	min-width: 100%;
+}
