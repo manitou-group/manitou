@@ -1,0 +1,17 @@
+// Banner
+.banner {
+	@include make-row(0);
+	border-top: 1px solid $gray-border;
+	border-bottom: 1px solid $gray-border;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: #fff;
+	.banner-text {
+		@include make-md-column(8,0);
+		font-size: 30px;
+		line-height: $btn-lg-height;
+	}
+	.banner-cta {
+		@include make-md-column(4,0);
+	}
+}

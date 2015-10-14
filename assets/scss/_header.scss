@@ -9,44 +9,47 @@ header {
 		}
 		background: $black;
 		min-height: 20px;
-		ul {
-			list-style: none;
-			margin-bottom: 0;
-			padding-left: 0;
-			> li {
-				padding-right: 15px;
-				> a {
-					color: #fff;
-					font-size: 11px;
-					&:focus,
-					&:hover {
-						color: $gray-lighter;
-					}
-				}
-				> ul > li {
-					padding-right: 0;
+		.row {
+			margin: 0;
+			ul {
+				list-style: none;
+				margin-bottom: 0;
+				padding-left: 0;
+				> li {
+					padding-right: 15px;
 					> a {
-						color: $text-color;
+						color: #fff;
+						font-size: 11px;
 						&:focus,
 						&:hover {
+							color: $gray-lighter;
+						}
+					}
+					> ul > li {
+						padding-right: 0;
+						> a {
 							color: $text-color;
+							&:focus,
+							&:hover {
+								color: $text-color;
+							}
 						}
 					}
 				}
 			}
-		}
-		.sup-nav-group {
-			@include make-sm-column(6,0);
-		}
-		.sup-nav-shortcuts {
-			display: none;
-		}
-		.sup-nav-config {
-			@include make-sm-column(6,0);
-			> li {
-				float: right;
-				&:first-child {
-					padding-right: 3px;
+			.sup-nav-group {
+				@include make-sm-column(6,0);
+			}
+			.sup-nav-shortcuts {
+				display: none;
+			}
+			.sup-nav-config {
+				@include make-sm-column(6,0);
+				> li {
+					float: right;
+					&:first-child {
+						padding-right: 3px;
+					}
 				}
 			}
 		}

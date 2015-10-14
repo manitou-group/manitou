@@ -1,0 +1,103 @@
+// Grid
+// -------------------------
+
+.basic-grid {
+	@include make-container(0);
+	@include make-row(0);
+	padding-bottom: $bloc-padding*2;
+	h1 {
+		margin-bottom: $bloc-padding;
+	}
+	section {
+		@include make-sm-column(8);
+		padding-bottom: $bloc-padding;
+		padding-left: 0;
+		padding-right: 0;
+		.tab-content {
+			padding: 0 $grid-gutter-width;
+		}
+	}
+	aside {
+		@include make-sm-column(4);
+		.bloc {
+			margin-bottom: $bloc-padding;
+		}
+		.cta-bloc {
+			margin-bottom: $bloc-padding;
+		}
+		.btn-group {
+			width: 100%;
+			margin-bottom: calc-rem(10px);
+			.btn {
+				margin-bottom: calc-rem(5px);
+			}
+		}
+		ul {
+			li {
+				margin-bottom: calc-rem(15px);
+			}
+		}
+	}
+	article {
+		margin-top: $bloc-padding;
+	}
+	.col {
+		@include make-md-column(6);
+	}
+	@media (min-width: breakpoint-min(sm)) {
+		section {
+			.tab-content {
+				padding: 0;
+				border-bottom: 0;
+			}
+		}
+		// .bloc-product {
+		// 	.bloc;
+		// }
+	}
+}
+
+.navigation-grid {
+	@include make-container(0);
+	@include make-row(0);
+	padding-bottom: $bloc-padding*2;
+	section {
+		@include  make-sm-column(9);
+		padding-bottom: $bloc-padding;
+	}
+	aside {
+		//margin-top: 20px;
+		@include  make-sm-column(3);
+		.bloc {
+			margin-bottom: $bloc-padding;
+		}
+	}
+	article {
+		margin-top: $bloc-padding;
+	}
+	.bloc {
+		margin-bottom: $bloc-padding;
+	}
+	.col {
+		@include make-md-column(6);
+		ul > li {
+			padding-bottom: 15px;
+		}
+	}
+}
+
+.split-grid {
+	@include make-container(0);
+	@include make-row(0);
+	padding-bottom: $bloc-padding*2;
+	section {
+		@include  make-sm-column(6);
+		padding-bottom: $bloc-padding;
+	}
+	article {
+		margin-top: $bloc-padding;
+	}
+	.bloc {
+		margin-bottom: $bloc-padding;
+	}
+}

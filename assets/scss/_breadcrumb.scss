@@ -1,0 +1,10 @@
+.breadcrumb-block {
+	background: #fff;
+	border-bottom: 1px solid lighten($gray-border, 10%);
+	.breadcrumb-container {
+		@include make-container();
+	}
+	.breadcrumb {
+		margin-bottom: 0;
+	}
+}

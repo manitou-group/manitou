@@ -1,0 +1,38 @@
+<section id="grid-features">
+	<h2>Features grid</h2>
+	<p><code>Feature cards</code> (see <a href="/web/blocks/#feature-card">section Cards & Blocks</a>) are natively made to fit in a grid. No need for an additional class : you just have to stack your cards in a <code>.row</code>.</p>
+
+	<div class="bs-example">
+
+    <div class="row">
+        {% include demo/feature-card-demo.html %}
+        {% include demo/feature-card-demo.html %}
+        {% include demo/feature-card-demo.html %}
+        {% include demo/feature-card-demo.html %}
+    </div>
+
+	</div>
+
+{% highlight html %}
+<div class="row">
+  <div class="card-feature-container">
+    <a href="#" class="card-feature">
+      <img class="card-img-top" alt="" src="http://farm8.staticflickr.com/7462/15608351184_fc84dda888_z.jpg">
+      <div class="card-block">
+        <p>Aerial Jib 1</p>
+      </div>
+    </a>
+  </div>
+  <div class="card-feature-container">
+    <a href="#" class="card-feature">
+      <img class="card-img-top" alt="" src="http://farm8.staticflickr.com/7462/15608351184_fc84dda888_z.jpg">
+      <div class="card-block">
+        <p>Aerial Jib 1</p>
+      </div>
+    </a>
+  </div>
+  ...
+</div>
+{% endhighlight %}
+
+</section>

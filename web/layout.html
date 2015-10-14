@@ -1,15 +1,34 @@
 ---
-layout: default
+layout: full-width
 ---
+<div class="docs">
+	<div class="container">
+		<div class="row">
 
-{% include web-aside.html view="layout" %}
+			{% include web-aside.html view="layout" %}
 
-<main>
-	<h1>Layout</h1>
-	<p>The layout of any basic view : header, footer, container, grid, etc.</p>
+			<main class="main-docs">
+				<h1>Layout</h1>
+				<p>The layout of any basic view : header, footer, container, grid, etc.</p>
 
-	{% include components/header.html %}
+				{% include components/header.html %}
 
-</main>
+				{% include components/footer.html %}
 
+				{% include components/banner.html %}
 
+				{% include components/basic-grid.html %}
+
+				{% include components/navigation-grid.html %}
+
+				{% include components/split-grid.html %}
+
+				{% include components/features-grid.html %}
+
+			</main>
+
+		</div>
+	</div>
+</div>
+
+{% include demo/footer-demo.html %}

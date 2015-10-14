@@ -4,29 +4,7 @@
 
 	<div class="bs-example">
 
-		<div class="filter">
-		    <div class="row">
-		        <div class="col-md-4">
-		            <h3>
-		                <span>50</span>
-		                <span>Result(s)</span>
-		            </h3>
-		        </div>
-		        <div class="col-md-8">
-		            <select name="filter" id="filter" class="form-control">
-			            <option style="display:none" value="">Filter by</option>
-			            <option value="0" label="Lifting capacity">Lifting capacity</option>
-			            <option value="1" label="Lifting height">Lifting height</option>
-			            <option value="2" label="Power">Power</option>
-			            <option value="3" label="Engine">Engine</option>
-			            <option value="4" label="Width">Width</option>
-			            <option value="5" label="Height">Height</option>
-			            <option value="6" label="Length">Length</option>
-			            <option value="7" label="Weight">Weight</option>
-		            </select>
-		        </div>
-		    </div>
-		</div>
+		{% include demo/filter-block-demo.html %}
 
 		<br>
 

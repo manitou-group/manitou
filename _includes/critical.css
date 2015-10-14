@@ -64,10 +64,11 @@ header .sup-nav{ display: none; background-image: initial; background-attachment
 @media (min-width: 47.9em){
 header .sup-nav{ display: block; }
 }
-header .sup-nav ul{ list-style-type: none; list-style-position: initial; list-style-image: initial; margin-bottom: 0px; padding-left: 0px; }
-header .sup-nav ul > li{ padding-right: 15px; }
-header .sup-nav ul > li > a{ color: rgb(255, 255, 255); font-size: 11px; }
-header .sup-nav .sup-nav-shortcuts{ display: none; }
+header .sup-nav .row{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
+header .sup-nav .row ul{ list-style-type: none; list-style-position: initial; list-style-image: initial; margin-bottom: 0px; padding-left: 0px; }
+header .sup-nav .row ul > li{ padding-right: 15px; }
+header .sup-nav .row ul > li > a{ color: rgb(255, 255, 255); font-size: 11px; }
+header .sup-nav .row .sup-nav-shortcuts{ display: none; }
 a{ -webkit-transition-property: color; -webkit-transition-duration: 0.2s; -webkit-transition-timing-function: ease-out; -webkit-transition-delay: initial; }
 ul{ padding-left: 1.75rem; margin-left: 0px; list-style-type: disc; }
 ul > li{ color: rgb(68, 68, 68); font-size: 0.875rem; }
