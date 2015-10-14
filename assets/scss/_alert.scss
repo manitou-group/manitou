@@ -1,0 +1,19 @@
+// Alerts
+// -------------------------
+
+.alert {
+	&.alert-info {
+		background: $gray-border-lighter;
+		border: 2px dashed $gray-border;
+		color: $text-color;
+		h3 {
+			margin-top: 0;
+			i {
+				margin-right: calc-rem(10px);
+			}
+			span {
+				color: $red;
+			}
+		}
+	}
+}

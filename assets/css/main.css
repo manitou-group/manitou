@@ -8798,6 +8798,17 @@ slider, [slider] {
            -moz-box-flex: 0;
                 flex: 0 0 75%; } }
 
+.alert.alert-info {
+  background: #f2f2f2;
+  border: 2px dashed #d5d5d5;
+  color: #444; }
+  .alert.alert-info h3 {
+    margin-top: 0; }
+    .alert.alert-info h3 i {
+      margin-right: 0.625rem; }
+    .alert.alert-info h3 span {
+      color: #e2001a; }
+
 .docs {
   padding-bottom: 100px; }
   .docs aside {
@@ -8924,6 +8935,8 @@ slider, [slider] {
           background-image: linear-gradient(to bottom, #555 0%, #4c4c4c 100%);
           background-repeat: repeat-x;
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF555555', endColorstr='#FF4C4C4C', GradientType=0); }
+  .docs footer .footer-cookie {
+    position: relative; }
 
 /*
  * Homepage
