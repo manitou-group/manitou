@@ -21,6 +21,11 @@ hr {
 	.card-img-top {
 		@extend .img-responsive;
 	}
+	.card-block {
+		ul {
+			padding-left: $bloc-padding;
+		}
+	}
 	&.card-default {
 		border-color: #ddd;
 	}
@@ -69,19 +74,8 @@ hr {
 	@extend .card;
 	.card-img-top {
 		@extend .hidden-xs-down;
-		// & + .panel {
-		// 	@include border-top-radius(0);
-		// 	border-top: 0;
-		// }
 	}
-	.card-block-title {
-		border-bottom: 1px solid $gray-border;
-		ul {
-			padding-left: $bloc-padding;
-			&.dropdown-menu {
-				padding-left: 0;
-			}
-		}
+	.card-header {
 		.dropdown-toggle {
 			&:after {
 				display: none;
