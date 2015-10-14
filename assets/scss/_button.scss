@@ -202,3 +202,12 @@
 		left: auto;
 	}
 }
+
+.twitter-btn {
+	display: block;
+	color: lighten($text-color, 10%);
+	font-weight: 300;
+	font-size: calc-rem(15px);
+	line-height: normal;
+	text-align: center;
+}

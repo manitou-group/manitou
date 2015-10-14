@@ -21,6 +21,9 @@ hr {
 	.card-img-top {
 		@extend .img-responsive;
 	}
+	&.card-default {
+		border-color: #ddd;
+	}
 }
 
 .bloc {

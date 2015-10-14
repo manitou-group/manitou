@@ -7607,6 +7607,8 @@ hr {
   .card hr, .card-nav hr, .home-news article a hr, .card-feature-container .card-feature hr, .filter hr {
     margin-right: -1.25rem;
     margin-left: -1.25rem; }
+  .card.card-default, .card-default.card-nav, .home-news article a.card-default, .card-feature-container .card-default.card-feature, .card-default.filter {
+    border-color: #ddd; }
 
 .bloc, .product-teaser, .event-bloc {
   background: #fff;
@@ -8332,6 +8334,14 @@ hr {
     width: 100%; }
   .btn-group-justified > .btn-group .dropdown-menu {
     left: auto; }
+
+.twitter-btn {
+  display: block;
+  color: #5e5e5e;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  line-height: normal;
+  text-align: center; }
 
 .form-control {
   border-width: 1px;

@@ -1,0 +1,59 @@
+<section id="event-aside">
+	<h2>Event aside</h2>
+	<p></p>
+
+	<div class="bs-example">
+
+		<div class="row">
+
+			<div class="col-xs-6">
+
+				<div class="bloc bloc-border">
+					<h2>Right now</h2>
+					<hr>
+					<div class="event-teaser">
+						<a href="http://www.pollutec.com/" title="" target="_blank">
+							<h3 >Pollutec</h3>
+						</a>
+						<p>
+							<i class="fa fa-calendar"></i>
+							<time datetime="" ng-bind="ev.start_date" class="ng-binding">2015-10-13</time>
+							-
+							<time datetime="" ng-bind="ev.end_date" class="ng-binding">2015-10-16</time>
+						</p>
+						<p>
+							<i class="fa fa-map-marker"></i>
+							<span>france</span>
+						</p>
+					</div>
+					<hr>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+{% highlight html %}
+<div class="bloc bloc-border">
+	<h2>Right now</h2>
+	<hr>
+	<div class="event-teaser">
+		<a href="http://www.pollutec.com/" title="" target="_blank">
+			<h3 >Pollutec</h3>
+		</a>
+		<p>
+			<i class="fa fa-calendar"></i>
+			<time datetime="" ng-bind="ev.start_date" class="ng-binding">2015-10-13</time>
+			-
+			<time datetime="" ng-bind="ev.end_date" class="ng-binding">2015-10-16</time>
+		</p>
+		<p>
+			<i class="fa fa-map-marker"></i>
+			<span>france</span>
+		</p>
+	</div>
+	<hr>
+</div>
+{% endhighlight %}
+
+</section>

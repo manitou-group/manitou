@@ -1,0 +1,187 @@
+<section id="basic-block">
+	<h2>Basic block</h2>
+	<p>There is 2 basic blocks.</p>
+
+	<div class="bs-example">
+
+		<div class="row">
+
+			<div class="col-xs-6">
+
+				<div class="card card-default">
+		            <div class="card-header">
+		                <h2 class="card-title">Filter by:</h2>
+		            </div>
+		            <div class="card-block">
+
+		            	<div class="form-group">
+						    <div class="btn-group btn-group-justified">
+						        <label class="btn btn-switch active" name="Machines">Equipment</label>
+						        <label class="btn btn-switch" name="Attachments">Attachments</label>
+						    </div>
+						</div>
+
+						<div class="form-group">
+						    <label for=""></label>
+						    <select class="form-control">
+						    	<option value="0" label="Telehandlers">Telehandlers</option>
+						    	<option value="1" selected="selected" label="Rotating Telehandlers">Rotating Telehandlers</option>
+						    	<option value="2" label="Masted Forklift Trucks">Masted Forklift Trucks</option>
+						    	<option value="3" label="Truck Mounted Forklifts">Truck Mounted Forklifts</option>
+						    	<option value="4" label="Warehousing Equipment">Warehousing Equipment</option>
+						    	<option value="5" label="Aerial Work Platforms">Aerial Work Platforms</option>
+						    </select>
+						</div>
+
+		                <hr>
+
+		                <div class="form-group">
+						    <label>Lifting height</label>
+
+						    <div class="row">
+						        <div class="col-xs-6">
+						            <div class="input-group">
+						                <input id="" name="minliftingHeight" type="number" class="form-control" min="13" max="32" value="">
+						                <span class="input-group-addon">m</span>
+						            </div>
+						            <p class="help-block ng-hide">Figure too small</p>
+						        </div>
+						        <div class="col-xs-6">
+						            <div class="input-group">
+						                <input id="" name="maxliftingHeight" type="number" class="form-control" min="13" max="32" value="">
+						                <span class="input-group-addon">m</span>
+						            </div>
+						        </div>
+						        <p class="help-block ng-hide">Figure too large</p>
+						    </div>
+
+						    <slider floor="13" ceiling="32" step="1" ng-model-low="range.min" ng-model-high="range.max"></slider>
+						</div>
+
+		    			<hr>
+
+		    			<div class="form-group">
+						    <label>Global label</label>
+						    <div class="checkbox">
+						        <input type="checkbox" id="checkbox1">
+						        <label for="checkbox1">Checkbox 1</label>
+						    </div>
+						    <div class="checkbox">
+						        <input type="checkbox" id="checkbox2" checked>
+						        <label for="checkbox2">Checkbox 2</label>
+						    </div>
+						    <div class="checkbox">
+						        <input type="checkbox" id="checkbox3">
+						        <label for="checkbox3">Checkbox 3</label>
+						    </div>
+						</div>
+
+		    			<hr>
+
+					    <div class="form-group">
+					        <a href="" class="btn btn-block btn-primary ng-scope" translate="SEARCH.SEARCH.TEXT" ng-click="searchDetailTelehandlersCtrl.filter(searchDetailTelehandlersForm)">Search</a>
+					    </div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-xs-6">
+
+				<div class="card">
+					<div class="card-header">
+						<h2>Newsletter</h2>
+					</div>
+					<div class="card-block">
+						<p>Stay up to date with the latest Manitou news and products, straight to your inbox.</p>
+
+						<a target="_blank" class="btn btn-primary btn-block" title="Subscribe to Newsletter" href="#">
+							<i class="fa fa-envelope"></i>
+							<span>Subscribe to Newsletter</span>
+						</a>
+	            	</div>
+        		</div>
+
+			</div>
+		</div>
+	</div>
+
+{% highlight html %}
+<div class="card card-default">
+    <div class="card-header">
+        <h2 class="card-title">Filter by:</h2>
+    </div>
+    <div class="card-block">
+
+		...
+
+		<hr>
+
+		...
+
+		<hr>
+
+		...
+
+		<hr>
+
+		...
+
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-header">
+		<h2>Newsletter</h2>
+	</div>
+	<div class="card-block">
+		<p>Stay up to date with the latest Manitou news and products, straight to your inbox.</p>
+
+		<a target="_blank" class="btn btn-primary btn-block" title="Subscribe to Newsletter" href="#">
+			<i class="fa fa-envelope"></i>
+			<span>Subscribe to Newsletter</span>
+		</a>
+	</div>
+</div>
+{% endhighlight %}
+
+<br>
+
+<div class="bs-example">
+
+	<div class="row">
+
+		<div class="col-xs-6">
+
+			<div class="bloc">
+				<p>Example of a <code>.bloc</code>.</p>
+			</div>
+
+		</div>
+
+		<div class="col-xs-6">
+
+			<div class="bloc">
+		          <h2 class="border">Benefits</h2>
+		          <ul>
+			          <li>Manitou will manage all the procedures to make your process easier. You no longer need to submit applications to banks and insurance companies. Our experts guarantee a clear tailored solution without hidden costs.</li>
+			          <li>You refer to a single contact: your dealer. No need for repeated visits to an insurance company, dealership or the bank.</li>
+			          <li>The best of technology through the regular renewal of your equipment and for an accurate budget with no surprises.</li>
+		          </ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+</div>
+
+{% highlight html %}
+<div class="bloc">
+	...
+</div>
+{% endhighlight %}
+
+</section>
