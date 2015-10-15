@@ -1,0 +1,29 @@
+// Toggle Collapse
+// -------------------------
+
+h2 {
+	&.toggler {
+		border-bottom: 1px solid $gray-border-light;
+		margin-top: 0;
+		margin-bottom: calc-rem(20px);
+		padding-top: calc-rem(10px);
+		line-height: calc-rem(34px);
+	}
+	&.toggler-collapse {
+		cursor: pointer;
+		&:hover,
+		&:focus {
+			color: $red;
+		}
+	}
+}
+.toggler:before {
+	@include fa-icon();
+	margin-left: $bloc-padding;
+	margin-right: $bloc-padding;
+	content: $fa-var-angle-right;
+	@include transition(transform);
+}
+.toggler:not(.collapsed):before{
+	@include fa-icon-rotate(90deg,1);
+}

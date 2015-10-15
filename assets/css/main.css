@@ -9363,6 +9363,38 @@ slider, [slider] {
     padding-left: 0.625rem;
     padding-right: 0.625rem; }
 
+h2.toggler {
+  border-bottom: 1px solid #f0f0f0;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  padding-top: 0.625rem;
+  line-height: 2.125rem; }
+
+h2.toggler-collapse {
+  cursor: pointer; }
+  h2.toggler-collapse:hover,
+  h2.toggler-collapse:focus {
+    color: #e2001a; }
+
+.toggler:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  content: "";
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out; }
+
+.toggler:not(.collapsed):before {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
 .docs {
   padding-bottom: 100px; }
   .docs .aside-docs {

@@ -1,0 +1,46 @@
+<section id="toggle-collapse">
+	<h2>Toggle Collapse</h2>
+	<p></p>
+
+	<div class="bs-example">
+
+        <h2 class="toggler" data-toggle="collapse" data-target="#events-october" aria-expanded="false" aria-controls="events-october">
+            <span>October</span>
+        </h2>
+
+        <row class="collapse" id="events-october">
+            <div class="event-month">
+              {% include demo/block-event-demo.html %}
+            </div>
+
+            <div class="event-month">
+              {% include demo/block-event-demo.html %}
+            </div>
+
+            <div class="event-month">
+              {% include demo/block-event-demo.html %}
+            </div>
+
+            <div class="event-month">
+              {% include demo/block-event-demo.html %}
+            </div>
+        </row>
+
+	</div>
+
+{% highlight html %}
+<h2 class="toggler" data-toggle="collapse" data-target="#events-october" aria-expanded="false" aria-controls="events-october">
+    <span>October</span>
+</h2>
+<row class="collapse" id="events-october">
+    <div class="event-month">
+      <!-- Block event -->
+  </div>
+  <div class="event-month">
+      <!-- Block event -->
+  </div>
+  ...
+</row>
+{% endhighlight %}
+
+</section>
