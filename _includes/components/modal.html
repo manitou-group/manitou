@@ -1,0 +1,390 @@
+<section id="modal">
+	<h2>Modal</h2>
+	<p></p>
+
+	<div class="bs-example">
+
+    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#modalLangPicker">
+      Modal lang picker
+    </button>
+
+    <div class="modal fade" id="modalLangPicker" tabindex="-1" role="dialog" aria-labelledby="modalLangPickerLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <h4 class="modal-title">Welcome to Manitou.com</h4>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger ng-hide">
+             <p>Please take the time to fill in all of the fields.</p>
+           </div>
+           <form action="" id="languageForm" name="" role="form">
+            <fieldset>
+              <div class="form-group">
+                <label for="languageFormCountry">Select a country</label>
+                <select name="country" class="form-control" id="languageFormCountry">
+                  <option value="1" selected="selected" label="Country A">Country A</option>
+                  <option value="2" label="Country B">Country B</option>
+                  <option value="3" label="Country C">Country C</option>
+                  <option value="4" label="Country D">Country D</option>
+                  <option value="5" label="Country E">Country E</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="languageFormCountry">Select a language</label>
+                <select name="language" class="form-control" id="languageFormCountry">
+                  <option value="1" selected="selected" label="Language A">Language A</option>
+                  <option value="2" label="Language B">Language B</option>
+                  <option value="3" label="Language C">Language C</option>
+                  <option value="4" label="Language D">Language D</option>
+                  <option value="5" label="Language E">Language E</option>
+                </select>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-block btn-primary">
+            <i class="fa fa-check"></i>
+            <span>Valider</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	</div>
+
+{% highlight html %}
+<button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#modalLangPicker">
+  Modal lang picker
+</button>
+
+<div class="modal fade" id="modalLangPicker" tabindex="-1" role="dialog" aria-labelledby="modalLangPickerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title">Welcome to Manitou.com</h4>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-danger ng-hide">
+         <p>Please take the time to fill in all of the fields.</p>
+       </div>
+       <form action="" id="languageForm" name="" role="form">
+        <fieldset>
+          <div class="form-group">
+            <label for="languageFormCountry">Select a country</label>
+            <select name="country" class="form-control" id="languageFormCountry">
+              <option value="1" selected="selected" label="Country A">Country A</option>
+              <option value="2" label="Country B">Country B</option>
+              <option value="3" label="Country C">Country C</option>
+              <option value="4" label="Country D">Country D</option>
+              <option value="5" label="Country E">Country E</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="languageFormCountry">Select a language</label>
+            <select name="language" class="form-control" id="languageFormCountry">
+              <option value="1" selected="selected" label="Language A">Language A</option>
+              <option value="2" label="Language B">Language B</option>
+              <option value="3" label="Language C">Language C</option>
+              <option value="4" label="Language D">Language D</option>
+              <option value="5" label="Language E">Language E</option>
+            </select>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-block btn-primary">
+        <i class="fa fa-check"></i>
+        <span>Valider</span>
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+{% endhighlight %}
+
+<br>
+
+<p></p>
+
+  <div class="bs-example">
+
+    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#modalPreview">
+      Modal preview
+    </button>
+
+    <div class="modal fade" id="modalPreview" tabindex="-1" role="dialog" aria-labelledby="modalPreviewLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <h4 class="modal-title">Welcome to Manitou.com</h4>
+          </div>
+          <div class="modal-body">
+
+          <iframe class="scribd_iframe_embed" data-auto-height="false" data-aspect-ratio="0.7216" scrolling="no" id="doc_93775" width="100%" height="600" frameborder="0" src="//www.scribd.com/embeds/113077288/content?start_page=1&amp;view_mode=book&amp;access_key=key-q0oh1pynnz5d6jnd4ec&amp;show_recommendations=false">
+          </iframe>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+{% highlight html %}
+<button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#modalPreview">
+  Modal preview
+</button>
+
+<div class="modal fade" id="modalPreview" tabindex="-1" role="dialog" aria-labelledby="modalPreviewLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title">Welcome to Manitou.com</h4>
+      </div>
+      <div class="modal-body">
+
+      <iframe class="scribd_iframe_embed" data-auto-height="false" data-aspect-ratio="0.7216" scrolling="no" id="doc_93775" width="100%" height="600" frameborder="0" src="//www.scribd.com/embeds/113077288/content?start_page=1&amp;view_mode=book&amp;access_key=key-q0oh1pynnz5d6jnd4ec&amp;show_recommendations=false">
+      </iframe>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+<br>
+
+<p></p>
+
+  <div class="bs-example">
+
+    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#modalContact">
+      Modal contact
+    </button>
+
+    <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="modalContactLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <h4 class="modal-title">Get in touch with Manitou</h4>
+          </div>
+          <div class="modal-body">
+            <h2>Poutou Manutention Agence De Brive</h2>
+            <div>Z.I Beauregard Rue Eugene Freyssinet</div>
+            <div>19100</div>
+            <div></div>
+            <div>Brive</div>
+            <div>France</div>
+            <div class="alert alert-danger ng-hide">
+              <p>Please fill in all of the fields so we can best respond to your query.</p>
+            </div>
+            <div class="alert alert-danger ng-hide">
+              <p>There seems to be a mistake in the e-mail address entered. Please try again.</p>
+            </div>
+            <div class="alert alert-danger ng-hide">
+              <p>When keying in your telephone number, please give us the numbers only (no spaces or dashes).</p>
+            </div>
+            <div class="alert alert-success ng-hide">
+              <p>Thank you. Your query has successfully been sent. We'll be in touch shortly.</p>
+            </div>
+            <form name="sendMessageForm" role="form" class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="" class="required">Firstname</label>
+                  <input type="text" name="" id="" class="form-control" required placeholder="Your firstname">
+                </div>
+                <div class="form-group">
+                  <label for="" class="required">Name</label>
+                  <input type="text" name="" id="" class="form-control" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                  <label for="" class="required">Email</label>
+                  <input type="email" name="email" id="" class="form-control" required placeholder="Your email address">
+                </div>
+                <div class="form-group">
+                  <label for="" class="required">Phone</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">+</span>
+                    <input type="tel" name="phone" id="" class="form-control" required placeholder="Your phone number">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="" class="required">What do you need to get in touch with us about?</label>
+                  <select id="" class="form-control">
+                    <option value="?" selected="selected" label=""></option>
+                    <option value="0" label="Estimate">Estimate</option>
+                    <option value="1" label="Documentation">Documentation</option>
+                    <option value="2" label="After-Sales">After-Sales</option>
+                    <option value="3" label="Sales Administration">Sales Administration</option>
+                    <option value="4" label="Spare parts">Spare parts</option>
+                    <option value="5" label="Demo">Demo</option>
+                    <option value="6" label="Rentals">Rentals</option>
+                    <option value="7" label="Legal">Legal</option>
+                    <option value="8" label="Marketing">Marketing</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="" class="required">Message</label>
+                  <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Your message, in full. Please be as detailed as possible so we can best answer your query."></textarea>
+                </div>
+                <div class="ng-hide">
+                  <label for="check"></label>
+                  <input type="text" id="check" name="check" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary pull-right">
+                  <i class="fa fa-check"></i>
+                  <span>Send</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+{% highlight html %}
+<button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#modalContact">
+  Modal contact
+</button>
+
+<div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="modalContactLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title">Get in touch with Manitou</h4>
+      </div>
+      <div class="modal-body">
+        <h2>Poutou Manutention Agence De Brive</h2>
+        <div>Z.I Beauregard Rue Eugene Freyssinet</div>
+        <div>19100</div>
+        <div></div>
+        <div>Brive</div>
+        <div>France</div>
+        <div class="alert alert-danger ng-hide">
+          <p>Please fill in all of the fields so we can best respond to your query.</p>
+        </div>
+        <div class="alert alert-danger ng-hide">
+          <p>There seems to be a mistake in the e-mail address entered. Please try again.</p>
+        </div>
+        <div class="alert alert-danger ng-hide">
+          <p>When keying in your telephone number, please give us the numbers only (no spaces or dashes).</p>
+        </div>
+        <div class="alert alert-success ng-hide">
+          <p>Thank you. Your query has successfully been sent. We'll be in touch shortly.</p>
+        </div>
+        <form name="sendMessageForm" role="form" class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="" class="required">Firstname</label>
+              <input type="text" name="" id="" class="form-control" required placeholder="Your firstname">
+            </div>
+            <div class="form-group">
+              <label for="" class="required">Name</label>
+              <input type="text" name="" id="" class="form-control" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="" class="required">Email</label>
+              <input type="email" name="email" id="" class="form-control" required placeholder="Your email address">
+            </div>
+            <div class="form-group">
+              <label for="" class="required">Phone</label>
+              <div class="input-group">
+                <span class="input-group-addon">+</span>
+                <input type="tel" name="phone" id="" class="form-control" required placeholder="Your phone number">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="form-group">
+              <label for="" class="required">What do you need to get in touch with us about?</label>
+              <select id="" class="form-control">
+                <option value="?" selected="selected" label=""></option>
+                <option value="0" label="Estimate">Estimate</option>
+                <option value="1" label="Documentation">Documentation</option>
+                <option value="2" label="After-Sales">After-Sales</option>
+                <option value="3" label="Sales Administration">Sales Administration</option>
+                <option value="4" label="Spare parts">Spare parts</option>
+                <option value="5" label="Demo">Demo</option>
+                <option value="6" label="Rentals">Rentals</option>
+                <option value="7" label="Legal">Legal</option>
+                <option value="8" label="Marketing">Marketing</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="" class="required">Message</label>
+              <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Your message, in full. Please be as detailed as possible so we can best answer your query."></textarea>
+            </div>
+            <div class="ng-hide">
+              <label for="check"></label>
+              <input type="text" id="check" name="check" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary pull-right">
+              <i class="fa fa-check"></i>
+              <span>Send</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-block btn-primary">
+          <i class="fa fa-check"></i>
+          <span>Valider</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+<br>
+
+<p></p>
+
+  <div class="bs-example">
+    <div class="alert alert-danger">
+      <p>Please fill in all of the fields so we can best respond to your query.</p>
+    </div>
+    <div class="alert alert-danger">
+      <p>There seems to be a mistake in the e-mail address entered. Please try again.</p>
+    </div>
+    <div class="alert alert-danger">
+      <p>When keying in your telephone number, please give us the numbers only (no spaces or dashes).</p>
+    </div>
+    <div class="alert alert-success">
+      <p>Thank you. Your query has successfully been sent. We'll be in touch shortly.</p>
+    </div>
+  </div>
+
+</section>
