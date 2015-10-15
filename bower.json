@@ -19,6 +19,7 @@
     "font-awesome": "~4.4.0",
     "html5shiv": "~3.7.3",
     "respond": "~1.4.2",
-    "angular-slider": "https://github.com/ftreguer/angular-slider.git#43ca40faec941a00c6768dc89e148af9deb25508"
+    "angular-slider": "https://github.com/ftreguer/angular-slider.git#43ca40faec941a00c6768dc89e148af9deb25508",
+    "angular-google-maps": "~2.2.1",
   }
 }
