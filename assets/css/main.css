@@ -9274,6 +9274,95 @@ slider, [slider] {
   .breadcrumb-block .breadcrumb {
     margin-bottom: 0; }
 
+.angular-google-map-container {
+  height: 25rem; }
+
+#map_canvas {
+  height: 25rem;
+  width: 37.5rem; }
+
+.contact article {
+  margin-top: 1.25rem; }
+
+.contact .nav-tabs > li {
+  float: right; }
+
+.contact .tab-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: -0.625rem;
+  margin-right: -0.625rem; }
+
+.contact .map-container {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  -webkit-box-flex: 0;
+     -moz-box-flex: 0;
+          flex: 0 0 100%; }
+  @media (min-width: 34em) {
+    .contact .map-container {
+      -webkit-flex: 0 0 66.6666666667%;
+      -ms-flex: 0 0 66.6666666667%;
+      -webkit-box-flex: 0;
+         -moz-box-flex: 0;
+              flex: 0 0 66.6666666667%; } }
+
+.contact .contact-coordinate i {
+  width: calcl-rem(20px);
+  text-align: center;
+  color: #444; }
+
+.contact .contact-info {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  -webkit-box-flex: 0;
+     -moz-box-flex: 0;
+          flex: 0 0 100%; }
+  @media (min-width: 34em) {
+    .contact .contact-info {
+      -webkit-flex: 0 0 33.3333333333%;
+      -ms-flex: 0 0 33.3333333333%;
+      -webkit-box-flex: 0;
+         -moz-box-flex: 0;
+              flex: 0 0 33.3333333333%; } }
+
+.contact .contact-photo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: -0.625rem;
+  margin-right: -0.625rem;
+  margin-bottom: 1.25rem; }
+  .contact .contact-photo .contact-photo-col {
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+       -moz-box-flex: 0;
+            flex: 0 0 50%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem; }
+
 .docs {
   padding-bottom: 100px; }
   .docs .aside-docs {

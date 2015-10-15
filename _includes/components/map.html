@@ -1,0 +1,531 @@
+<section id="map">
+	<h2>Map</h2>
+	<p></p>
+
+	<div class="bs-example">
+
+    <div class="map-container" ng-controller="MapCtrl">
+      <ui-gmap-google-map
+        center='map.center'
+        zoom='map.zoom'
+        class="mapAngular">
+        <ui-gmap-markers
+          models="markers"
+          idkey="'id'"
+          coords="'self'"
+          click="onClick()">
+          <ui-gmap-windows
+            options="windowOptions"
+            closeClick="closeClick()">
+            <div>
+              <h4 ng-non-bindable>Manitou</h4>
+              <div ng-non-bindable>430 route de l'Aubinière</div>
+              <div ng-non-bindable>44150</div>
+              <div ng-non-bindable></div>
+              <div ng-non-bindable>Ancenis</div>
+              <div ng-non-bindable>France</div>
+            </div>
+          </ui-gmap-windows>
+        </ui-gmap-markers>
+      </ui-gmap-google-map>
+    </div>
+
+  </div>
+
+{% highlight html %}
+<div class="map-container" ng-controller="MapCtrl">
+  <ui-gmap-google-map
+    center='map.center'
+    zoom='map.zoom'
+    class="mapAngular">
+    <ui-gmap-markers
+      models="markers"
+      idkey="'id'"
+      coords="'self'"
+      click="onClick()">
+      <ui-gmap-windows
+        options="windowOptions"
+        closeClick="closeClick()">
+        <div>
+          <h4 ng-non-bindable>Manitou</h4>
+          <div ng-non-bindable>430 route de l'Aubinière</div>
+          <div ng-non-bindable>44150</div>
+          <div ng-non-bindable></div>
+          <div ng-non-bindable>Ancenis</div>
+          <div ng-non-bindable>France</div>
+        </div>
+      </ui-gmap-windows>
+    </ui-gmap-markers>
+  </ui-gmap-google-map>
+</div>
+{% endhighlight %}
+
+<br>
+
+<p>With the previous map and a <code>nav tabs</code>(see <a href="/web/navigations/#nav-tabs">section Navigations</a>) you can thus build a contact block.</p>
+<p>Notice that the <code>nav tabs</code> is aligned on its right here, since all the informations are in the right of the view.</p>
+
+  <div class="bs-example">
+
+    <div class="contact">
+      <article class="bloc">
+        <ul class="nav nav-tabs hidden-xs" role="tablist">
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="tab" title="Contact one of our service teams at the Manitou head office">Head office</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="tab" title="Get in touch with a Manitou subsidiary">Subsidiaries</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active" role="tab" title="Get in touch with a Manitou network dealer">Dealers</a>
+          </li>
+        </ul>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="map-container" ng-controller="MapCtrl">
+              <ui-gmap-google-map center='map.center' zoom='map.zoom' class="mapAngular">
+                <ui-gmap-markers models="markers" idkey="'id'" coords="'self'" click="onClick()">
+                  <ui-gmap-windows options="windowOptions" closeClick="closeClick()">
+                    <div>
+                      <h4 ng-non-bindable>Manitou</h4>
+                      <div ng-non-bindable>430 route de l'Aubinière</div>
+                      <div ng-non-bindable>44150</div>
+                      <div ng-non-bindable></div>
+                      <div ng-non-bindable>Ancenis</div>
+                      <div ng-non-bindable>France</div>
+                    </div>
+                  </ui-gmap-windows>
+                </ui-gmap-markers>
+              </ui-gmap-google-map>
+            </div>
+            <div class="contact-info">
+              <h3>Select a dealer</h3>
+              <p>To get in touch with a dealer, click on one of the indicators. If you don't currently see any indicators, trying zooming out on the map.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+
+  </div>
+
+{% highlight html %}
+<div class="contact">
+  <article class="bloc">
+    <ul class="nav nav-tabs hidden-xs" role="tablist">
+      <li class="nav-item">
+        <a href="#" class="nav-link" role="tab" title="Contact one of our service teams at the Manitou head office">Head office</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" role="tab" title="Get in touch with a Manitou subsidiary">Subsidiaries</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link active" role="tab" title="Get in touch with a Manitou network dealer">Dealers</a>
+      </li>
+    </ul>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="map-container" ng-controller="MapCtrl">
+          <!-- Insert the ui-gmap-google-map here. -->
+        </div>
+        <div class="contact-info">
+          <h3>Select a dealer</h3>
+          <p>To get in touch with a dealer, click on one of the indicators. If you don't currently see any indicators, trying zooming out on the map.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+{% endhighlight %}
+
+<br>
+
+<p></p>
+
+  <div class="bs-example">
+
+    <div class="contact">
+      <article class="bloc">
+        <ul class="nav nav-tabs hidden-xs" role="tablist">
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="tab" title="Contact one of our service teams at the Manitou head office">Head office</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="tab" title="Get in touch with a Manitou subsidiary">Subsidiaries</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active" role="tab" title="Get in touch with a Manitou network dealer">Dealers</a>
+          </li>
+        </ul>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="map-container" ng-controller="MapCtrl">
+              <ui-gmap-google-map center='mapDemo.center' zoom='mapDemo.zoom' class="mapAngular">
+                <ui-gmap-markers models="markersDemo" idkey="'id'" coords="'self'" click="onClick()">
+                  <ui-gmap-windows options="windowOptions" closeClick="closeClick()">
+                    <div>
+                      <h4 ng-non-bindable>Marcantoni Fils Agence Ajaccio</h4>
+                      <div ng-non-bindable>R.N 193 ZI Baléone</div>
+                      <div ng-non-bindable>20167</div>
+                      <div ng-non-bindable></div>
+                      <div ng-non-bindable>Sarrola</div>
+                      <div ng-non-bindable>France</div>
+                    </div>
+                  </ui-gmap-windows>
+                </ui-gmap-markers>
+              </ui-gmap-google-map>
+            </div>
+            <div class="contact-info" ng-controller="ContactCtrl">
+              <div>
+                <h2>Marcantoni Fils Agence Ajaccio</h2>
+                <address>
+                  <div>R.N 193 ZI Baléone</div>
+                  <div>20167</div>
+                  <div></div>
+                  <div>Sarrola</div>
+                  <div>France</div>
+                </address>
+                <a href="#" class="btn btn-primary btn-block" title="Send your request and it will be processed shortly.">
+                  <i class="fa fa-envelope"></i>
+                  <span>Send a request</span>
+                </a>
+                <a href="" class="btn btn-default btn-block" title="View contact details" ng-hide="clickedCoordinates" ng-click="clickCoordinates()">
+                  <i class="fa fa-map-marker"></i>
+                  <span>View contact details</span>
+                </a>
+                <div class="contact-coordinate" ng-show="clickedCoordinates">
+                  <a href="mailto:direction@marcantoni.fr">
+                    <i class="fa fa-envelope"></i>
+                    direction@marcantoni.fr
+                  </a>
+                  <br>
+                  <a href="tel:+33495204930">
+                    <i class="fa fa-phone"></i>
+                    + 33 4 95 20 49 30
+                  </a>
+                  <br>
+                  <a href="http://www.marcantonifils.com" target="_blank" rel="nofollow">
+                    <i class="fa fa-globe"></i>
+                    www.marcantonifils.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </div>
+
+{% highlight html %}
+<div class="contact">
+  <article class="bloc">
+    <ul class="nav nav-tabs hidden-xs" role="tablist">
+      <li class="nav-item">
+        <a href="#" class="nav-link" role="tab" title="Contact one of our service teams at the Manitou head office">Head office</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" role="tab" title="Get in touch with a Manitou subsidiary">Subsidiaries</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link active" role="tab" title="Get in touch with a Manitou network dealer">Dealers</a>
+      </li>
+    </ul>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="map-container" ng-controller="MapCtrl">
+          <!-- Insert the ui-gmap-google-map here. -->
+        </div>
+        <div class="contact-info" ng-controller="ContactCtrl">
+          <div>
+            <h2>Marcantoni Fils Agence Ajaccio</h2>
+            <address>
+              <div>R.N 193 ZI Baléone</div>
+              <div>20167</div>
+              <div></div>
+              <div>Sarrola</div>
+              <div>France</div>
+            </address>
+            <a href="#" class="btn btn-primary btn-block" title="Send your request and it will be processed shortly.">
+              <i class="fa fa-envelope"></i>
+              <span>Send a request</span>
+            </a>
+            <a href="" class="btn btn-default btn-block" title="View contact details" ng-hide="clickedCoordinates" ng-click="clickCoordinates()">
+              <i class="fa fa-map-marker"></i>
+              <span>View contact details</span>
+            </a>
+            <div class="contact-coordinate" ng-show="clickedCoordinates">
+              <a href="mailto:direction@marcantoni.fr">
+                <i class="fa fa-envelope"></i>
+                direction@marcantoni.fr
+              </a>
+              <br>
+              <a href="tel:+33495204930">
+                <i class="fa fa-phone"></i>
+                + 33 4 95 20 49 30
+              </a>
+              <br>
+              <a href="http://www.marcantonifils.com" target="_blank" rel="nofollow">
+                <i class="fa fa-globe"></i>
+                www.marcantonifils.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+{% endhighlight %}
+
+<br>
+
+<p></p>
+
+  <div class="bs-example">
+
+    <div class="contact">
+      <article class="bloc">
+        <ul class="nav nav-tabs hidden-xs" role="tablist">
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="tab" title="Contact one of our service teams at the Manitou head office">Head office</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active" role="tab" title="Get in touch with a Manitou subsidiary">Subsidiaries</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="tab" title="Get in touch with a Manitou network dealer">Dealers</a>
+          </li>
+        </ul>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="map-container" ng-controller="MapCtrl">
+              <ui-gmap-google-map center='map.center' zoom='map.zoom' class="mapAngular">
+                <ui-gmap-markers models="markers" idkey="'id'" coords="'self'" click="onClick()">
+                  <ui-gmap-windows options="windowOptions" closeClick="closeClick()">
+                    <div>
+                      <h4 ng-non-bindable>Manitou</h4>
+                      <div ng-non-bindable>430 route de l'Aubinière</div>
+                      <div ng-non-bindable>44150</div>
+                      <div ng-non-bindable></div>
+                      <div ng-non-bindable>Ancenis</div>
+                      <div ng-non-bindable>France</div>
+                    </div>
+                  </ui-gmap-windows>
+                </ui-gmap-markers>
+              </ui-gmap-google-map>
+            </div>
+            <div class="contact-info">
+              <h3>Select a country</h3>
+              <div class="form-group">
+                <select class="form-control">
+                  <option value="0" selected="selected" label="France">France</option>
+                  <option value="1" label="French Guiana">French Guiana</option>
+                  <option value="2" label="French Polynesia">French Polynesia</option>
+                  <option value="3" label="Gabon">Gabon</option>
+                  <option value="4" label="Gambia">Gambia</option>
+                </select>
+              </div>
+              <h2>Manitou France</h2>
+              <address>
+                <div>430 route de l'Aubinière</div>
+                <div>44150</div>
+                <div></div>
+                <div>Ancenis</div>
+                <div>France</div>
+              </address>
+              <div id="tab-photos" class="contact-photo">
+                <div class="contact-photo-col">
+                  <img class="img-responsive" alt="" src="http://manitou.cdn.prismic.io/manitou/038947eb4b171fe81342a40bae1cf96503e8ca76_usine_manitou_ancenis_002.jpg">
+                </div>
+                <div class="contact-photo-col">
+                  <img class="img-responsive" alt="" src="http://manitou.cdn.prismic.io/manitou/f7c4b1848262e27705681c51f86cc1326358970e_img_04811.jpg">
+                </div>
+              </div>
+              <a href="" class="btn btn-primary btn-block" title="Send your request and it will be processed shortly.">
+                <i class="fa fa-envelope"></i>
+                <span>Send a request</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </div>
+
+{% highlight html %}
+<div class="contact">
+  <article class="bloc">
+    <ul class="nav nav-tabs hidden-xs" role="tablist">
+      <li class="nav-item">
+        <a href="#" class="nav-link" role="tab" title="Contact one of our service teams at the Manitou head office">Head office</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" role="tab" title="Get in touch with a Manitou subsidiary">Subsidiaries</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link active" role="tab" title="Get in touch with a Manitou network dealer">Dealers</a>
+      </li>
+    </ul>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="map-container" ng-controller="MapCtrl">
+          <!-- Insert the ui-gmap-google-map here. -->
+        </div>
+        <div class="contact-info">
+          <h3>Select a country</h3>
+          <div class="form-group">
+            <label for=""></label>
+            <select class="form-control">
+              <option value="0" selected="selected" label="France">France</option>
+              <option value="1" label="French Guiana">French Guiana</option>
+              <option value="2" label="French Polynesia">French Polynesia</option>
+              <option value="3" label="Gabon">Gabon</option>
+              <option value="4" label="Gambia">Gambia</option>
+              ...
+            </select>
+          </div>
+          <h2>Manitou France</h2>
+          <address>
+            <div>430 route de l'Aubinière</div>
+            <div>44150</div>
+            <div></div>
+            <div>Ancenis</div>
+            <div>France</div>
+          </address>
+          <div id="tab-photos" class="contact-photo">
+            <div class="contact-photo-col">
+              <img class="img-responsive" alt="" src="http://manitou.cdn.prismic.io/manitou/038947eb4b171fe81342a40bae1cf96503e8ca76_usine_manitou_ancenis_002.jpg">
+            </div>
+            <div class="contact-photo-col">
+              <img class="img-responsive" alt="" src="http://manitou.cdn.prismic.io/manitou/f7c4b1848262e27705681c51f86cc1326358970e_img_04811.jpg">
+            </div>
+          </div>
+          <a href="" class="btn btn-primary btn-block" title="Send your request and it will be processed shortly.">
+            <i class="fa fa-envelope"></i>
+            <span>Send a request</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+{% endhighlight %}
+
+<br>
+
+<p></p>
+
+  <div class="bs-example">
+
+    <div class="contact">
+      <article class="bloc">
+        <ul class="nav nav-tabs hidden-xs" role="tablist">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" role="tab" title="Contact one of our service teams at the Manitou head office">Head office</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="tab" title="Get in touch with a Manitou subsidiary">Subsidiaries</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="tab" title="Get in touch with a Manitou network dealer">Dealers</a>
+          </li>
+        </ul>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="map-container" ng-controller="MapCtrl">
+              <ui-gmap-google-map center='map.center' zoom='map.zoom' class="mapAngular">
+                <ui-gmap-markers models="markers" idkey="'id'" coords="'self'" click="onClick()">
+                  <ui-gmap-windows options="windowOptions" closeClick="closeClick()">
+                    <div>
+                      <h4 ng-non-bindable>Manitou</h4>
+                      <div ng-non-bindable>430 route de l'Aubinière</div>
+                      <div ng-non-bindable>44150</div>
+                      <div ng-non-bindable></div>
+                      <div ng-non-bindable>Ancenis</div>
+                      <div ng-non-bindable>France</div>
+                    </div>
+                  </ui-gmap-windows>
+                </ui-gmap-markers>
+              </ui-gmap-google-map>
+            </div>
+            <div class="contact-info">
+              <h2>Manitou</h2>
+              <address>
+                <div>430 route de l'Aubinière</div>
+                <div>44150</div>
+                <div></div>
+                <div>Ancenis</div>
+                <div>France</div>
+              </address>
+              <div id="tab-photos" class="contact-photo">
+                <div class="contact-photo-col">
+                  <img class="img-responsive" alt="" src="http://manitou.cdn.prismic.io/manitou/038947eb4b171fe81342a40bae1cf96503e8ca76_usine_manitou_ancenis_002.jpg">
+                </div>
+                <div class="contact-photo-col">
+                  <img class="img-responsive" alt="" src="http://manitou.cdn.prismic.io/manitou/f7c4b1848262e27705681c51f86cc1326358970e_img_04811.jpg">
+                </div>
+              </div>
+              <a href="" class="btn btn-primary btn-block" title="Send your request and it will be processed shortly.">
+                <i class="fa fa-envelope"></i>
+                <span>Send a request</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </div>
+
+{% highlight html %}
+<div class="contact">
+  <article class="bloc">
+    <ul class="nav nav-tabs hidden-xs" role="tablist">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" role="tab" title="Contact one of our service teams at the Manitou head office">Head office</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" role="tab" title="Get in touch with a Manitou subsidiary">Subsidiaries</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" role="tab" title="Get in touch with a Manitou network dealer">Dealers</a>
+      </li>
+    </ul>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="map-container" ng-controller="MapCtrl">
+          <!-- Insert the ui-gmap-google-map here. -->
+        </div>
+        <div class="contact-info">
+          <h2>Manitou France</h2>
+          <address>
+            <div>430 route de l'Aubinière</div>
+            <div>44150</div>
+            <div></div>
+            <div>Ancenis</div>
+            <div>France</div>
+          </address>
+          <div id="tab-photos" class="contact-photo">
+            <div class="contact-photo-col">
+              <img class="img-responsive" alt="" src="http://manitou.cdn.prismic.io/manitou/038947eb4b171fe81342a40bae1cf96503e8ca76_usine_manitou_ancenis_002.jpg">
+            </div>
+            <div class="contact-photo-col">
+              <img class="img-responsive" alt="" src="http://manitou.cdn.prismic.io/manitou/f7c4b1848262e27705681c51f86cc1326358970e_img_04811.jpg">
+            </div>
+          </div>
+          <a href="" class="btn btn-primary btn-block" title="Send your request and it will be processed shortly.">
+            <i class="fa fa-envelope"></i>
+            <span>Send a request</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+{% endhighlight %}
+
+</section>

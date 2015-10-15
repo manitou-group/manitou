@@ -1,0 +1,49 @@
+// Map
+// -------------------------
+
+//google map
+.angular-google-map-container {
+  height: calc-rem(400px);
+}
+#map_canvas {
+  height: calc-rem(400px);
+  width: calc-rem(600px);
+}
+
+//contact block
+.contact {
+  article {
+    margin-top: $bloc-padding;
+  }
+  .nav-tabs {
+    > li {
+      float: right;
+    }
+  }
+  .tab-content {
+    @include make-row();
+  }
+  .map-container {
+    @include make-sm-column(8);
+  }
+  .contact-coordinate {
+    i {
+      width: calcl-rem(20px);
+      text-align: center;
+      color: $text-color;
+    }
+  }
+  .contact-info {
+    @include make-sm-column(4);
+  }
+  .contact-photo {
+    @include make-row();
+    margin-bottom: $bloc-padding;
+    .contact-photo-col {
+      @include make-xs-column(6);
+    }
+  }
+}
+
+
+
