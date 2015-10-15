@@ -17,6 +17,31 @@
 		.highlight pre {
 			white-space: pre !important;
 		}
+    .logo-doc-container {
+      @include make-xs-column(6, 10px);
+      @include make-sm-column(3, 10px);
+      margin-bottom: 20px;
+      .logo-tile {
+        border: 1px solid $gray-border-dark;
+        .logo-preview {
+          display: block;
+          width: 100%;
+          min-height: 80px;
+          padding: 15px 20px;
+          background: #fff;
+          img {
+            width: 100%;
+            height: auto;
+          }
+          &.bg-red {
+            background: $red;
+          }
+        }
+        .logo-download {
+          padding: 15px 20px;
+        }
+      }
+    }
 		.color-container {
       @include make-xs-column(6, 10px);
       @include make-sm-column(4, 10px);

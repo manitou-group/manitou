@@ -9447,6 +9447,48 @@ h2.toggler-collapse {
                 flex: 0 0 75%; } }
     .docs .main-docs .highlight pre {
       white-space: pre !important; }
+    .docs .main-docs .logo-doc-container {
+      -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      -webkit-box-flex: 0;
+         -moz-box-flex: 0;
+              flex: 0 0 50%;
+      position: relative;
+      min-height: 1px;
+      padding-left: 5px;
+      padding-right: 5px;
+      position: relative;
+      min-height: 1px;
+      padding-left: 5px;
+      padding-right: 5px;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      -webkit-box-flex: 0;
+         -moz-box-flex: 0;
+              flex: 0 0 100%;
+      margin-bottom: 20px; }
+      @media (min-width: 34em) {
+        .docs .main-docs .logo-doc-container {
+          -webkit-flex: 0 0 25%;
+          -ms-flex: 0 0 25%;
+          -webkit-box-flex: 0;
+             -moz-box-flex: 0;
+                  flex: 0 0 25%; } }
+      .docs .main-docs .logo-doc-container .logo-tile {
+        border: 1px solid #c3c3c3; }
+        .docs .main-docs .logo-doc-container .logo-tile .logo-preview {
+          display: block;
+          width: 100%;
+          min-height: 80px;
+          padding: 15px 20px;
+          background: #fff; }
+          .docs .main-docs .logo-doc-container .logo-tile .logo-preview img {
+            width: 100%;
+            height: auto; }
+          .docs .main-docs .logo-doc-container .logo-tile .logo-preview.bg-red {
+            background: #e2001a; }
+        .docs .main-docs .logo-doc-container .logo-tile .logo-download {
+          padding: 15px 20px; }
     .docs .main-docs .color-container {
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
