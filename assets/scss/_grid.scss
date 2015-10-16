@@ -8,7 +8,8 @@
 	h1 {
 		margin-bottom: $bloc-padding;
 	}
-	section {
+	> section,
+	> main {
 		@include make-sm-column(8);
 		padding-bottom: $bloc-padding;
 		padding-left: 0;
@@ -17,7 +18,7 @@
 			padding: 0 $grid-gutter-width;
 		}
 	}
-	aside {
+	> aside {
 		@include make-sm-column(4);
 		.bloc {
 			margin-bottom: $bloc-padding;
@@ -61,11 +62,12 @@
 	@include make-container(0);
 	@include make-row(0);
 	padding-bottom: $bloc-padding*2;
-	section {
+	> section,
+	> main {
 		@include  make-sm-column(9);
 		padding-bottom: $bloc-padding;
 	}
-	aside {
+	> aside {
 		//margin-top: 20px;
 		@include  make-sm-column(3);
 		.bloc {
@@ -90,7 +92,8 @@
 	@include make-container(0);
 	@include make-row(0);
 	padding-bottom: $bloc-padding*2;
-	section {
+	> section,
+	> main {
 		@include  make-sm-column(6);
 		padding-bottom: $bloc-padding;
 	}

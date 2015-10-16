@@ -1,7 +1,8 @@
 
 .docs {
+  padding-top: 30px;
 	padding-bottom: 100px;
-	.aside-docs {
+	.docs-aside {
 		margin-top: 20px;
 		@include make-sm-column(3);
     @extend .hidden-sm-down;
@@ -9,137 +10,137 @@
 			margin-bottom: $bloc-padding;
 		}
 	}
-	.main-docs {
+	.docs-main {
 		@include make-sm-column(9);
     @include make-xs-column(12);
 		padding-bottom: $bloc-padding;
 		padding-top: 30px;
-		.highlight pre {
-			white-space: pre !important;
-		}
-    .logo-doc-container {
-      @include make-xs-column(6, 10px);
-      @include make-sm-column(3, 10px);
-      margin-bottom: 20px;
-      .logo-tile {
-        border: 1px solid $gray-border-dark;
-        .logo-preview {
-          display: block;
-          width: 100%;
-          min-height: 80px;
-          padding: 15px 20px;
-          background: #fff;
-          img {
-            width: 100%;
-            height: auto;
-          }
-          &.bg-red {
-            background: $red;
-          }
-        }
-        .logo-download {
-          padding: 15px 20px;
-        }
-      }
-    }
-		.color-container {
-      @include make-xs-column(6, 10px);
-      @include make-sm-column(4, 10px);
-      margin-bottom: 20px;
-      .color-tile {
-        border: 1px solid $gray-border-dark;
-        .color-preview {
-          display: block;
-          width: 100%;
-          height: 80px;
-        }
-        .color-infos {
-          padding: 15px 20px;
-        }
-        &.color-tile-red {
-          .color-preview {
-            background-color: $red;
-          }
-        }
-        &.color-tile-black {
-          .color-preview {
-            background-color: $black;
-          }
-        }
-        &.color-tile-gray-bckg {
-          .color-preview {
-            background-color: $gray-bckg;
-          }
-        }
-        &.color-tile-gray-bckg-dark {
-          .color-preview {
-            background-color: $gray-bckg-dark;
-          }
-        }
-        &.color-tile-gray-border {
-          .color-preview {
-            background-color: $gray-border;
-          }
-        }
-        &.color-tile-gray-border-light {
-          .color-preview {
-            background-color: $gray-border-light;
-          }
-        }
-        &.color-tile-gray-border-lighter {
-          .color-preview {
-            background-color: $gray-border-lighter;
-          }
-        }
-        &.color-tile-gray-bckg-light {
-          .color-preview {
-            background-color: $gray-bckg-light;
-          }
-        }
-        &.color-tile-gray-border-dark {
-          .color-preview {
-            background-color: $gray-border-dark;
-          }
-        }
-        &.color-tile-text-color {
-          .color-preview {
-            background-color: $text-color;
-          }
-        }
-        &.color-tile-text-gray {
-          .color-preview {
-            background-color: $text-gray;
-          }
-        }
-        &.color-tile-body-bg {
-          .color-preview {
-            background-color: $body-bg;
-          }
-        }
-        &.color-tile-gray-gradient {
-          .color-preview {
-            @include gradient-vertical(#bbb,#ccc,0%,100%);
-          }
-        }
-        &.color-tile-red-gradient {
-          .color-preview {
-            @include gradient-vertical(#e2001a,#c20016,0%,100%);
-          }
-        }
-        &.color-tile-dark-gradient {
-          .color-preview {
-            @include gradient-vertical(#555,#4c4c4c,0%,100%);
-          }
-        }
-      }
-    }
-    .block-demo {
-      background-color: #f5f5f5;
-    }
 	}
   footer {
     .footer-cookie {
       position: relative;
+    }
+  }
+  .highlight pre {
+    white-space: pre !important;
+  }
+  .block-demo {
+    background-color: #f5f5f5;
+  }
+  .logo-doc-container {
+    @include make-xs-column(6, 10px);
+    @include make-sm-column(3, 10px);
+    margin-bottom: 20px;
+    .logo-tile {
+      border: 1px solid $gray-border-dark;
+      .logo-preview {
+        display: block;
+        width: 100%;
+        min-height: 80px;
+        padding: 15px 20px;
+        background: #fff;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        &.bg-red {
+          background: $red;
+        }
+      }
+      .logo-download {
+        padding: 15px 20px;
+      }
+    }
+  }
+  .color-container {
+    @include make-xs-column(6, 10px);
+    @include make-sm-column(4, 10px);
+    margin-bottom: 20px;
+    .color-tile {
+      border: 1px solid $gray-border-dark;
+      .color-preview {
+        display: block;
+        width: 100%;
+        height: 80px;
+      }
+      .color-infos {
+        padding: 15px 20px;
+      }
+      &.color-tile-red {
+        .color-preview {
+          background-color: $red;
+        }
+      }
+      &.color-tile-black {
+        .color-preview {
+          background-color: $black;
+        }
+      }
+      &.color-tile-gray-bckg {
+        .color-preview {
+          background-color: $gray-bckg;
+        }
+      }
+      &.color-tile-gray-bckg-dark {
+        .color-preview {
+          background-color: $gray-bckg-dark;
+        }
+      }
+      &.color-tile-gray-border {
+        .color-preview {
+          background-color: $gray-border;
+        }
+      }
+      &.color-tile-gray-border-light {
+        .color-preview {
+          background-color: $gray-border-light;
+        }
+      }
+      &.color-tile-gray-border-lighter {
+        .color-preview {
+          background-color: $gray-border-lighter;
+        }
+      }
+      &.color-tile-gray-bckg-light {
+        .color-preview {
+          background-color: $gray-bckg-light;
+        }
+      }
+      &.color-tile-gray-border-dark {
+        .color-preview {
+          background-color: $gray-border-dark;
+        }
+      }
+      &.color-tile-text-color {
+        .color-preview {
+          background-color: $text-color;
+        }
+      }
+      &.color-tile-text-gray {
+        .color-preview {
+          background-color: $text-gray;
+        }
+      }
+      &.color-tile-body-bg {
+        .color-preview {
+          background-color: $body-bg;
+        }
+      }
+      &.color-tile-gray-gradient {
+        .color-preview {
+          @include gradient-vertical(#bbb,#ccc,0%,100%);
+        }
+      }
+      &.color-tile-red-gradient {
+        .color-preview {
+          @include gradient-vertical(#e2001a,#c20016,0%,100%);
+        }
+      }
+      &.color-tile-dark-gradient {
+        .color-preview {
+          @include gradient-vertical(#555,#4c4c4c,0%,100%);
+        }
+      }
     }
   }
 }
