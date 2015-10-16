@@ -110,10 +110,6 @@ ul > li > a{ color: rgb(68, 68, 68); font-size: 0.875rem; }
 .navbar .collapse ul li a::after{ float: right; margin-top: 0.625rem; }
 }
 .bloc{ background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(255, 255, 255); border-top-left-radius: 0.25rem 0.25rem; border-top-right-radius: 0.25rem 0.25rem; border-bottom-right-radius: 0.25rem 0.25rem; border-bottom-left-radius: 0.25rem 0.25rem; box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0.625rem 0px; padding-top: 1.25rem; padding-right: 1.25rem; padding-bottom: 1.25rem; padding-left: 1.25rem; background-position: initial initial; background-repeat: initial initial; }
-.navigation-grid{ padding-left: 0px; padding-right: 0px; display: -webkit-box; margin-left: 0px; margin-right: 0px; padding-bottom: 2.5rem; }
-.navigation-grid::before, .navigation-grid::after{ content: ' '; display: table; }
-.navigation-grid::after{ clear: both; }
-.navigation-grid .bloc{ margin-bottom: 1.25rem; }
 .split-grid{ padding-left: 0px; padding-right: 0px; display: -webkit-box; margin-left: 0px; margin-right: 0px; padding-bottom: 2.5rem; }
 .split-grid::before, .split-grid::after{ content: ' '; display: table; }
 .split-grid::after{ clear: both; }
