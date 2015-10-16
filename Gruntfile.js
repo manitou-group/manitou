@@ -147,20 +147,123 @@ module.exports = function(grunt) {
 				options:  {
 					outputfile : '_includes/critical.css',
 					filename : 'assets/css/main.css',
-					url : 'http://localhost:9001',
+					url : 'http://design.manitou.com',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
+			blocks: {
+				options:  {
+					outputfile : '_includes/critical-blocks.css',
+					filename : 'assets/css/main.css',
+					url : 'http://design.manitou.com/web/blocks/',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
+			buttons: {
+				options:  {
+					outputfile : '_includes/critical-buttons.css',
+					filename : 'assets/css/main.css',
+					url : 'http://design.manitou.com/web/buttons/',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
+			colors: {
+				options:  {
+					outputfile : '_includes/critical-colors.css',
+					filename : 'assets/css/main.css',
+					url : 'http://design.manitou.com/web/colors/',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
+			forms: {
+				options:  {
+					outputfile : '_includes/critical-forms.css',
+					filename : 'assets/css/main.css',
+					url : 'http://design.manitou.com/web/forms/',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
+			illustrations: {
+				options:  {
+					outputfile : '_includes/critical-illustrations.css',
+					filename : 'assets/css/main.css',
+					url : 'http://design.manitou.com/web/illustrations/',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
+			interactive: {
+				options:  {
+					outputfile : '_includes/critical-interactive.css',
+					filename : 'assets/css/main.css',
+					url : 'http://design.manitou.com/web/interactive-components/',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
+			layout: {
+				options:  {
+					outputfile : '_includes/critical-layout.css',
+					filename : 'assets/css/main.css',
+					url : 'http://design.manitou.com/web/layout/',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
+			messaging: {
+				options:  {
+					outputfile : '_includes/critical-messaging.css',
+					filename : 'assets/css/main.css',
+					url : 'http://design.manitou.com/web/messaging/',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
+			navigations: {
+				options:  {
+					outputfile : '_includes/critical-navigations.css',
+					filename : 'assets/css/main.css',
+					url : 'http://design.manitou.com/web/navigations/',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
+			typography: {
+				options:  {
+					outputfile : '_includes/critical-typography.css',
+					filename : 'assets/css/main.css',
+					url : 'http://design.manitou.com/web/typography/',
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
 					ignoreConsole: false
 				}
 			}
-			// view: {
-			// 	options:  {
-			// 		outputfile : 'css/critical/critical-viewName.css',
-			// 		filename : 'css/main.css',
-			// 		url : 'path/to/view.html'
-			// 	}
-			// }
 		}
 
 	});
@@ -187,7 +290,6 @@ module.exports = function(grunt) {
 		'concat',
 		'imagemin',
 		'connect:localhost',
-		// 'criticalcss',
 		'jekyll',
 		'delta'
 	]);

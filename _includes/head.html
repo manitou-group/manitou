@@ -33,7 +33,14 @@
 	<meta property="og:url" content="http://" />
 	<meta property="og:image" content="" />
 
-	<style>{% include critical.css %}</style>
+
+	{% if page.critical_file %}
+		{% for stylesheet in page.critical_file %}
+			<style>{% include {{page.critical_file}} %}</style>
+		{% endfor %}
+	{% else %}
+		<style>{% include critical.css %}</style>
+	{% endif %}
 
 	<script>
 		/*!
