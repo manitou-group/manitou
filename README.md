@@ -12,6 +12,8 @@ Manitou framework
 - **Bower**
 - **Jekyll**
 
+Some components are also based on angular.js
+
 ## Getting Started
 
 This project requires [Jekyll](http://jekyllrb.com/), [Grunt](http://gruntjs.com/) and [Bower](http://bower.io/). As dependencies this project also need [Ruby](https://www.ruby-lang.org) for Jekyll and [NodeJS](http://nodejs.org/) and [npm](https://www.npmjs.com) for Grunt and Bower.
