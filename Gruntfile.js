@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 		autoprefixer: {
 	        dist: {
 	            options: {
-	              browsers: ['last 2 version', 'ie 9', 'Firefox > 20', 'Safari > 5'],
+	              browsers: ['last 2 version', 'ie 9', 'Firefox > 20', 'Safari > 6'],
 	              flatten: true
 	            },
 	            files: {
@@ -124,14 +124,14 @@ module.exports = function(grunt) {
 		    },
 			sass: {
 				files: 'assets/scss/*.scss',
-				tasks: ['sass', 'autoprefixer', 'csso', 'criticalcss', 'jekyll'],
+				tasks: ['sass', 'autoprefixer', 'csso', 'jekyll'],
 			},
 			script: {
 				files: 'assets/js/main.js',
 				tasks: ['jshint', 'concat', 'jekyll']
 			},
 			html: {
-				files: ['*/*.html', '*/*/*.html'],
+				files: ['*.html', '*/*.html', '*/*/*.html'],
 				tasks: ['jekyll', 'sass', 'autoprefixer', 'csso', 'concat', 'imagemin']
 			},
 			images: {
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: true
 				}
 			},
 			blocks: {
@@ -162,7 +162,7 @@ module.exports = function(grunt) {
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: true
 				}
 			},
 			buttons: {
@@ -173,7 +173,7 @@ module.exports = function(grunt) {
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: true
 				}
 			},
 			colors: {
@@ -184,7 +184,7 @@ module.exports = function(grunt) {
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: true
 				}
 			},
 			forms: {
@@ -195,7 +195,7 @@ module.exports = function(grunt) {
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: true
 				}
 			},
 			illustrations: {
@@ -206,7 +206,7 @@ module.exports = function(grunt) {
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: true
 				}
 			},
 			interactive: {
@@ -217,7 +217,7 @@ module.exports = function(grunt) {
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: true
 				}
 			},
 			layout: {
@@ -228,7 +228,7 @@ module.exports = function(grunt) {
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: true
 				}
 			},
 			messaging: {
@@ -239,7 +239,7 @@ module.exports = function(grunt) {
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: true
 				}
 			},
 			navigations: {
@@ -250,7 +250,7 @@ module.exports = function(grunt) {
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: true
 				}
 			},
 			typography: {
@@ -261,7 +261,7 @@ module.exports = function(grunt) {
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: true
 				}
 			}
 		}

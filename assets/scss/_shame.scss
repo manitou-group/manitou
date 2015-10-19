@@ -43,3 +43,19 @@
 .img-responsive-fluid {
 	min-width: 100%;
 }
+
+// Hack for img in flex-basis
+//see https://github.com/philipwalton/flexbugs/issues/41
+// -------------------------
+
+img {
+	width: 100%;
+}
+
+.split-grid {
+	&:after,
+	&:before {
+		content: none;
+	}
+}
+

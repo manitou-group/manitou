@@ -89,7 +89,6 @@
 }
 
 .split-grid {
-	@include make-container(0);
 	@include make-row(0);
 	padding-bottom: $bloc-padding*2;
 	> section,

@@ -103,6 +103,8 @@
     -webkit-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
+    //hack for flex-basis support
+    min-width: 0;
   }
 
   @media (min-width: breakpoint-min(sm)) {
@@ -110,6 +112,8 @@
       -webkit-flex: 0 0 percentage(($columns / $grid-columns));
       -ms-flex: 0 0 percentage(($columns / $grid-columns));
       flex: 0 0 percentage(($columns / $grid-columns));
+      //hack for flex-basis support
+      min-width: 0;
     } @else {
       float: left;
       width: percentage(($columns / $grid-columns));
@@ -133,6 +137,8 @@
     -webkit-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
+    //hack for flex-basis support
+      min-width: 0;
   }
 
   @media (min-width: breakpoint-min(md)) {
@@ -140,6 +146,8 @@
       -webkit-flex: 0 0 percentage(($columns / $grid-columns));
       -ms-flex: 0 0 percentage(($columns / $grid-columns));
       flex: 0 0 percentage(($columns / $grid-columns));
+      //hack for flex-basis support
+      min-width: 0;
     } @else {
       float: left;
       width: percentage(($columns / $grid-columns));
@@ -163,6 +171,8 @@
     -webkit-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
+    //hack for flex-basis support
+      min-width: 0;
   }
 
   @media (min-width: breakpoint-min(lg)) {
@@ -170,6 +180,8 @@
       -webkit-flex: 0 0 percentage(($columns / $grid-columns));
       -ms-flex: 0 0 percentage(($columns / $grid-columns));
       flex: 0 0 percentage(($columns / $grid-columns));
+      //hack for flex-basis support
+      min-width: 0;
     } @else {
       float: left;
       width: percentage(($columns / $grid-columns));
@@ -193,6 +205,8 @@
     -webkit-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
+    //hack for flex-basis support
+      min-width: 0;
   }
 
   @media (min-width: breakpoint-min(xl)) {
@@ -200,6 +214,8 @@
       -webkit-flex: 0 0 percentage(($columns / $grid-columns));
       -ms-flex: 0 0 percentage(($columns / $grid-columns));
       flex: 0 0 percentage(($columns / $grid-columns));
+      //hack for flex-basis support
+      min-width: 0;
     } @else {
       float: left;
       width: percentage(($columns / $grid-columns));

@@ -50,9 +50,9 @@ code{ padding-top: 0.2rem; padding-right: 0.4rem; padding-bottom: 0.2rem; paddin
 @media (min-width: 75em){
 .container, section{ max-width: 980px; }
 }
-.row{ display: -webkit-box; margin-left: -0.625rem; margin-right: -0.625rem; }
+.row{ margin-left: -0.625rem; margin-right: -0.625rem; }
  .col-xs-6{ position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; }
-.col-xs-6{ -webkit-box-flex: 0; }
+.col-xs-6{ }
 .collapse{ display: none; }
 .collapse.in{ display: block; }
  .dropdown{ position: relative; }
@@ -108,19 +108,19 @@ header .sup-nav .row ul{ list-style-type: none; list-style-position: initial; li
 header .sup-nav .row ul > li{ padding-right: 15px; }
 header .sup-nav .row ul > li > a{ color: rgb(255, 255, 255); font-size: 11px; }
 header .sup-nav .row .sup-nav-shortcuts{ display: none; }
-footer .col{ position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; -webkit-box-flex: 0; }
+footer .col{ position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; min-width: 0px; }
 @media (min-width: 34em){
-footer .col{ -webkit-box-flex: 0; }
+footer .col{ min-width: 0px; }
 }
 @media (min-width: 48em){
-footer .col{ -webkit-box-flex: 0; }
+footer .col{ min-width: 0px; }
 }
 footer h3{ padding-left: 0.625rem; }
 footer h4{ padding-left: 0.625rem; }
 footer ul > li{ color: rgb(226, 0, 26); }
 footer .footer-menu{ background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(237, 237, 237); padding-top: 1.875rem; padding-bottom: 1.875rem; box-shadow: rgba(0, 0, 0, 0.0976562) 0px 0px 1.5625rem 0px inset; background-position: initial initial; background-repeat: initial initial; }
-footer .footer-menu .row > .container{ -webkit-box-flex: 0; }
-a{ -webkit-transition-property: color; -webkit-transition-duration: 0.2s; -webkit-transition-timing-function: ease-out; -webkit-transition-delay: initial; }
+footer .footer-menu .row > .container{ }
+a{ }
 h1{ font-weight: 700; font-size: 1.875rem; color: rgb(226, 0, 26); }
 h2{ margin-top: 0px; margin-bottom: 0.625rem; padding-top: 0px; padding-bottom: 0.625rem; font-weight: 700; font-size: 1.375rem; line-height: 1.625rem; }
 h2.dropdown-toggle{ cursor: pointer; }
@@ -137,7 +137,7 @@ ul.bullet > li{ color: rgb(226, 0, 26); }
 ul.bullet > li > a{ color: rgb(68, 68, 68); font-size: 0.875rem; }
 .nav-tabs{ font-weight: 700; margin-bottom: 1.25rem; }
 .nav-tabs > li > a{ color: rgb(94, 94, 94); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(221, 221, 221); margin-right: 0px; margin-top: 0.3125rem; }
-.navbar{ border-right-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 0, 23); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(165, 0, 19); box-shadow: rgba(0, 0, 0, 0.496094) 0px 0px 8px 0px; background-image: -webkit-linear-gradient(top, rgb(226, 0, 26) 0%, rgb(194, 0, 22) 100%); background-repeat: repeat no-repeat; }
+.navbar{ border-right-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 0, 23); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(165, 0, 19); box-shadow: rgba(0, 0, 0, 0.496094) 0px 0px 8px 0px; background-repeat: repeat no-repeat; }
 @media (max-width: 47.9em){
 .navbar .container{ margin-right: auto; margin-left: auto; padding-left: 0px; padding-right: 0px; }
 .navbar .container::before, .navbar .container::after{ content: ' '; display: table; }
@@ -172,13 +172,13 @@ hr{ }
 .bloc{ background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(255, 255, 255); border-top-left-radius: 0.25rem 0.25rem; border-top-right-radius: 0.25rem 0.25rem; border-bottom-right-radius: 0.25rem 0.25rem; border-bottom-left-radius: 0.25rem 0.25rem; box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0.625rem 0px; padding-top: 1.25rem; padding-right: 1.25rem; padding-bottom: 1.25rem; padding-left: 1.25rem; background-position: initial initial; background-repeat: initial initial; }
 .card-nav .card-header .dropdown-toggle::after{ display: none; }
 .docs{ padding-top: 30px; padding-bottom: 100px; }
-.docs .docs-aside{ margin-top: 20px; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; -webkit-box-flex: 0; }
+.docs .docs-aside{ margin-top: 20px; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; min-width: 0px; }
 @media (min-width: 34em){
-.docs .docs-aside{ -webkit-box-flex: 0; }
+.docs .docs-aside{ min-width: 0px; }
 }
-.docs .docs-main{ -webkit-box-flex: 0; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; padding-bottom: 1.25rem; padding-top: 30px; }
+.docs .docs-main{ min-width: 0px; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; padding-bottom: 1.25rem; padding-top: 30px; }
 @media (min-width: 34em){
-.docs .docs-main{ -webkit-box-flex: 0; }
+.docs .docs-main{ min-width: 0px; }
 }
 .bs-example{ position: relative; padding-top: 45px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; margin-top: 0px; margin-right: -15px; margin-bottom: 15px; margin-left: -15px; border-top-color: rgb(229, 229, 229); border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: rgb(238, 238, 238); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; box-shadow: rgba(0, 0, 0, 0.046875) 0px 3px 6px inset; }
 .bs-example::after{ position: absolute; top: 15px; left: 15px; font-size: 12px; font-weight: bold; color: rgb(149, 149, 149); text-transform: uppercase; letter-spacing: 1px; content: Example; }
@@ -186,3 +186,4 @@ hr{ }
 .bs-example{ margin-right: 0px; margin-left: 0px; background-color: rgb(255, 255, 255); border-top-color: rgb(221, 221, 221); border-right-color: rgb(221, 221, 221); border-bottom-color: rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-right-radius: 0px 0px; border-bottom-left-radius: 0px 0px; box-shadow: none; }
 }
 .bs-example .container{ width: auto; }
+img{ width: 100%; }
