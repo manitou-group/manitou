@@ -8251,7 +8251,9 @@ hr {
   padding: 0 1.25rem;
   border: 0;
   height: 2.5rem;
-  line-height: 2.5rem; }
+  line-height: 2.5rem;
+  display: block;
+  width: 100%; }
   .btn:hover,
   .btn:focus {
     color: #fff; }

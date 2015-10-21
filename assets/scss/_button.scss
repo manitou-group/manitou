@@ -10,6 +10,8 @@
 	border: 0;
 	height: $btn-height;
 	line-height: $btn-height;
+	display: block;
+	width: 100%;
 	&:hover,
 	&:focus {
 		color: #fff;
