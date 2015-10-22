@@ -1,10 +1,20 @@
 <aside class="docs-aside">
-	<div class="card card-nav">
-		<div class="card-block card-block-title">
-			<h2 class="card-title dropdown-toggle" data-target="#category1" data-toggle="collapse" aria-expanded="false">Logos</h2>
+	<div class="card-nav">
+		<div class="card-header">
+			<h2 class="dropdown-toggle" data-target="#printGettingStarted" data-toggle="collapse" aria-expanded="false">Getting Started</h2>
 		</div>
-		<div class="card-block collapse in" id="category1">
-			<ul>
+		<div class="card-block collapse {% if include.view == "getting-started" %}in{% endif %}" id="printGettingStarted">
+			<ul class="bullet">
+				<li><a href="#">Sub-category</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="card-nav">
+		<div class="card-header">
+			<h2 class="dropdown-toggle" data-target="#printLogos" data-toggle="collapse" aria-expanded="false">Logos</h2>
+		</div>
+		<div class="card-block collapse {% if include.view == "logos" %}in{% endif %}" id="printLogos">
+			<ul class="bullet">
 				<li><a href="#">Sub-category</a></li>
 				<li><a href="#">Sub-category</a></li>
 				<li><a href="#">Sub-category</a></li>
@@ -12,22 +22,22 @@
 			</ul>
 		</div>
 	</div>
-	<div class="card card-nav">
-		<div class="card-block card-block-title">
-			<h2 class="card-title dropdown-toggle" data-target="#category2" data-toggle="collapse" aria-expanded="false">Graphic Elements</h2>
+	<div class="card-nav">
+		<div class="card-header">
+			<h2 class="dropdown-toggle" data-target="#printGraphicElements" data-toggle="collapse" aria-expanded="false">Graphic Elements</h2>
 		</div>
-		<div class="card-block collapse" id="category2">
-			<ul>
+		<div class="card-block collapse {% if include.view == "graphic-elements" %}in{% endif %}" id="printGraphicElements">
+			<ul class="bullet">
 				<li><a href="#">Sub-category</a></li>
 			</ul>
 		</div>
 	</div>
-	<div class="card card-nav">
-		<div class="card-block card-block-title">
-			<h2 class="card-title dropdown-toggle" data-target="#category3" data-toggle="collapse" aria-expanded="false">Merchandising</h2>
+	<div class="card-nav">
+		<div class="card-header">
+			<h2 class="dropdown-toggle" data-target="#printMerchandising" data-toggle="collapse" aria-expanded="false">Merchandising</h2>
 		</div>
-		<div class="card-block collapse" id="category3">
-			<ul>
+		<div class="card-block collapse {% if include.view == "merchandising" %}in{% endif %}" id="printMerchandising">
+			<ul class="bullet">
 				<li><a href="#">Sub-category</a></li>
 			</ul>
 		</div>
