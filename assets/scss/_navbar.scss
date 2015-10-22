@@ -2,6 +2,7 @@
 // --------------------------
 
 .navbar {
+	min-height: $navbar-height + calc-rem(2px);
 	border: 0;
 	border-top: 1px solid #c20017;
 	border-bottom: 1px solid #a50013;
@@ -13,7 +14,6 @@
 		}
 	}
 	.navbar-toggler {
-		//float: left;
 		padding: 0 calc-rem(15px);
 		margin: 0;
 		line-height: calc-rem(50px);
@@ -37,12 +37,13 @@
 		text-align: center;
 		@media (min-width: breakpoint-max(sm)) {
 			position: inherit;
-			width: calc-rem(160px);
 			text-align: left;
+			width: auto;
 		}
 		> img {
 			display: inline;
-			width: calc-rem(160px);
+			height: calc-rem(30px);
+			width: auto;
 		}
 	}
 	.navbar-default-link-hover {
@@ -59,13 +60,14 @@
 			> a {
 				color: #fff;
 				padding: calc-rem(15px);
+				line-height: calc-rem(20px);
 				&:hover,
 				&:focus {
 					@extend .navbar-default-link-hover;
 				}
 				@media (min-width: breakpoint-max(sm)) and (max-width: breakpoint-max(md)) {
-					padding: 15px 8px;
-					font-size: 12px;
+					padding: calc-rem(15px) calc-rem(8px);
+					font-size: calc-rem(12px);
 				}
 
 			}
