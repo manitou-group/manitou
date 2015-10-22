@@ -39,7 +39,7 @@
 			<style>{% include {{page.critical_file}} %}</style>
 		{% endfor %}
 	{% else %}
-		<style>{% include critical.css %}</style>
+		<style>{% include critical/critical.css %}</style>
 	{% endif %}
 
 	<script>
@@ -93,7 +93,7 @@
 	</script>
 
 	<!--[if lte IE 9 ]>
-	<script type="text/javascript" src="js/Sasserkit-1.1.0-ie-support.js"></script>
+	<script type="text/javascript" src="js/manitou-web-framework-{{ site.version }}.min.js"></script>
 	<![endif]-->
 
 

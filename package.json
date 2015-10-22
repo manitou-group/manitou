@@ -19,5 +19,8 @@
     "grunt-sass": "^1.0.0",
     "grunt-criticalcss": "^0.5.0",
     "grunt-jekyll": "^0.4.2"
+  },
+  "devDependencies": {
+    "grunt-pagespeed": "^1.0.0"
   }
 }

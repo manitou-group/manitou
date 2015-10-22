@@ -83,8 +83,8 @@ module.exports = function(grunt) {
 		uglify : {
 			js: {
 				files: {
-					'assets/js/<%= pkg.name %>-<%= pkg.version %>.js' : [ 'dist/<%= pkg.name %>-<%= pkg.version %>.js' ],
-					'assets/js/<%= pkg.name %>-<%= pkg.version %>-ie-support.js' : ['dist/<%= pkg.name %>-<%= pkg.version %>-ie-support.js']
+					'assets/js/<%= pkg.name %>-<%= pkg.version %>.min.js' : [ 'assets/js/<%= pkg.name %>-<%= pkg.version %>.js' ],
+					'assets/js/<%= pkg.name %>-<%= pkg.version %>-ie-support.min.js' : ['assets/js/<%= pkg.name %>-<%= pkg.version %>-ie-support.js']
 				}
 			}
 		},
@@ -145,7 +145,7 @@ module.exports = function(grunt) {
 		criticalcss: {
 			home: {
 				options:  {
-					outputfile : '_includes/critical.css',
+					outputfile : '_includes/critical/critical.css',
 					filename : 'assets/css/main.css',
 					url : 'http://design.manitou.com',
 					width: 1300,
@@ -154,9 +154,20 @@ module.exports = function(grunt) {
 					ignoreConsole: true
 				}
 			},
+			webGettingStarted: {
+				options:  {
+					outputfile : '_includes/critical/critical-webGettingStarted.css',
+					filename : 'assets/css/main.css',
+					url : 'http://design.manitou.com/web',
+					width: 1300,
+                	height: 900,
+                	buffer: 800*1024,
+					ignoreConsole: true
+				}
+			},
 			blocks: {
 				options:  {
-					outputfile : '_includes/critical-blocks.css',
+					outputfile : '_includes/critical/critical-blocks.css',
 					filename : 'assets/css/main.css',
 					url : 'http://design.manitou.com/web/blocks/',
 					width: 1300,
@@ -167,7 +178,7 @@ module.exports = function(grunt) {
 			},
 			buttons: {
 				options:  {
-					outputfile : '_includes/critical-buttons.css',
+					outputfile : '_includes/critical/critical-buttons.css',
 					filename : 'assets/css/main.css',
 					url : 'http://design.manitou.com/web/buttons/',
 					width: 1300,
@@ -178,7 +189,7 @@ module.exports = function(grunt) {
 			},
 			colors: {
 				options:  {
-					outputfile : '_includes/critical-colors.css',
+					outputfile : '_includes/critical/critical-colors.css',
 					filename : 'assets/css/main.css',
 					url : 'http://design.manitou.com/web/colors/',
 					width: 1300,
@@ -189,7 +200,7 @@ module.exports = function(grunt) {
 			},
 			forms: {
 				options:  {
-					outputfile : '_includes/critical-forms.css',
+					outputfile : '_includes/critical/critical-forms.css',
 					filename : 'assets/css/main.css',
 					url : 'http://design.manitou.com/web/forms/',
 					width: 1300,
@@ -200,7 +211,7 @@ module.exports = function(grunt) {
 			},
 			illustrations: {
 				options:  {
-					outputfile : '_includes/critical-illustrations.css',
+					outputfile : '_includes/critical/critical-illustrations.css',
 					filename : 'assets/css/main.css',
 					url : 'http://design.manitou.com/web/illustrations/',
 					width: 1300,
@@ -211,7 +222,7 @@ module.exports = function(grunt) {
 			},
 			interactive: {
 				options:  {
-					outputfile : '_includes/critical-interactive.css',
+					outputfile : '_includes/critical/critical-interactive.css',
 					filename : 'assets/css/main.css',
 					url : 'http://design.manitou.com/web/interactive-components/',
 					width: 1300,
@@ -222,7 +233,7 @@ module.exports = function(grunt) {
 			},
 			layout: {
 				options:  {
-					outputfile : '_includes/critical-layout.css',
+					outputfile : '_includes/critical/critical-layout.css',
 					filename : 'assets/css/main.css',
 					url : 'http://design.manitou.com/web/layout/',
 					width: 1300,
@@ -233,7 +244,7 @@ module.exports = function(grunt) {
 			},
 			messaging: {
 				options:  {
-					outputfile : '_includes/critical-messaging.css',
+					outputfile : '_includes/critical/critical-messaging.css',
 					filename : 'assets/css/main.css',
 					url : 'http://design.manitou.com/web/messaging/',
 					width: 1300,
@@ -244,7 +255,7 @@ module.exports = function(grunt) {
 			},
 			navigations: {
 				options:  {
-					outputfile : '_includes/critical-navigations.css',
+					outputfile : '_includes/critical/critical-navigations.css',
 					filename : 'assets/css/main.css',
 					url : 'http://design.manitou.com/web/navigations/',
 					width: 1300,
@@ -255,13 +266,36 @@ module.exports = function(grunt) {
 			},
 			typography: {
 				options:  {
-					outputfile : '_includes/critical-typography.css',
+					outputfile : '_includes/critical/critical-typography.css',
 					filename : 'assets/css/main.css',
 					url : 'http://design.manitou.com/web/typography/',
 					width: 1300,
                 	height: 900,
                 	buffer: 800*1024,
 					ignoreConsole: true
+				}
+			}
+		},
+
+		pagespeed: {
+			options: {
+				nokey: true,
+				url: "http://design.manitou.com"
+			},
+			prod: {
+				options: {
+					url: "http://design.manitou.com",
+					locale: "en_GB",
+					strategy: "desktop",
+					threshold: 80
+				}
+			},
+			paths: {
+				options: {
+					paths: ["/print", "/web"],
+					locale: "en_GB",
+					strategy: "desktop",
+					threshold: 80
 				}
 			}
 		}
@@ -279,8 +313,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-criticalcss');
 	grunt.loadNpmTasks('grunt-jekyll');
+	grunt.loadNpmTasks('grunt-pagespeed');
 
 	grunt.registerTask('images', ['imagemin']);
+	grunt.registerTask('critical', ['criticalcss']);
+	grunt.registerTask('stats', ['pagespeed']);
 	grunt.renameTask( 'watch', 'delta' );
 	grunt.registerTask('default', [
 		'jshint',
@@ -288,6 +325,7 @@ module.exports = function(grunt) {
 		'autoprefixer',
 		'csso',
 		'concat',
+		'uglify',
 		'imagemin',
 		'connect:localhost',
 		'jekyll',
@@ -300,9 +338,10 @@ module.exports = function(grunt) {
 		'autoprefixer',
 		'csso',
 		'concat',
+		'uglify',
 		'imagemin',
 		'connect:localhost',
-		'criticalcss',
+		'criticalcss'
 	]);
 
 };

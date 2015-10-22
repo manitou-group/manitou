@@ -1,6 +1,6 @@
 html{ font-family: sans-serif; }
 body{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
-article, aside, header, main, nav, section{ display: block; }
+article, aside, header, nav, section{ display: block; }
 a{ background-color: transparent; }
 b, strong{ font-weight: bold; }
 h1{ font-size: 2em; margin-top: 0.67em; margin-right: 0px; margin-bottom: 0.67em; margin-left: 0px; }
@@ -232,7 +232,7 @@ ul.bullet > li > a{ color: rgb(68, 68, 68); font-size: 0.875rem; }
 .tags > li{ padding-right: 0.625rem; }
 .tags > li > span{ color: rgb(178, 178, 178); }
 .tags > li > span::before{ content: '#'; }
-.navbar{ border-right-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 0, 23); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(165, 0, 19); box-shadow: rgba(0, 0, 0, 0.496094) 0px 0px 8px 0px; background-repeat: repeat no-repeat; }
+.navbar{ min-height: 3.25rem; border-right-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 0, 23); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(165, 0, 19); box-shadow: rgba(0, 0, 0, 0.496094) 0px 0px 8px 0px; background-repeat: repeat no-repeat; }
 @media (max-width: 47.9em){
 .navbar .container{ margin-right: auto; margin-left: auto; padding-left: 0px; padding-right: 0px; }
 .navbar .container::before, .navbar .container::after{ content: ' '; display: table; }
@@ -241,16 +241,16 @@ ul.bullet > li > a{ color: rgb(68, 68, 68); font-size: 0.875rem; }
 .navbar .navbar-toggler{ padding-top: 0px; padding-right: 0.9375rem; padding-bottom: 0px; padding-left: 0.9375rem; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; line-height: 3.125rem; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-top-left-radius: 0px 0px; border-top-right-radius: 0px 0px; border-bottom-right-radius: 0px 0px; border-bottom-left-radius: 0px 0px; z-index: 2; position: relative; color: rgb(255, 255, 255); }
 .navbar .navbar-brand{ padding-top: 0.625rem; position: absolute; width: 100%; left: 0px; top: 0px; text-align: center; }
 @media (min-width: 47.9em){
-.navbar .navbar-brand{ position: inherit; width: 10rem; text-align: left; }
+.navbar .navbar-brand{ position: inherit; text-align: left; width: auto; }
 }
-.navbar .navbar-brand > img{ display: inline; width: 10rem; }
+.navbar .navbar-brand > img{ display: inline; height: 1.875rem; width: auto; }
 .navbar .navbar-nav{ float: right; }
 .navbar .navbar-nav::before, .navbar .navbar-nav::after{ content: ' '; display: table; }
 .navbar .navbar-nav::after{ clear: both; }
 .navbar .navbar-nav > li{ position: relative; display: block; margin-top: 0px !important; margin-right: 0px !important; margin-bottom: 0px !important; margin-left: 0px !important; }
-.navbar .navbar-nav > li > a{ color: rgb(255, 255, 255); padding-top: 0.9375rem; padding-right: 0.9375rem; padding-bottom: 0.9375rem; padding-left: 0.9375rem; }
+.navbar .navbar-nav > li > a{ color: rgb(255, 255, 255); padding-top: 0.9375rem; padding-right: 0.9375rem; padding-bottom: 0.9375rem; padding-left: 0.9375rem; line-height: 1.25rem; }
 @media (max-width: 61.9em) and (min-width: 47.9em){
-.navbar .navbar-nav > li > a{ padding-top: 15px; padding-right: 8px; padding-bottom: 15px; padding-left: 8px; font-size: 12px; }
+.navbar .navbar-nav > li > a{ padding-top: 0.9375rem; padding-right: 0.5rem; padding-bottom: 0.9375rem; padding-left: 0.5rem; font-size: 0.75rem; }
 }
 @media (max-width: 47.9em){
 .navbar{ border-bottom-width: 0px; border-bottom-style: initial; border-bottom-color: initial; }
@@ -372,7 +372,7 @@ hr{ }
 @media (min-width: 34em){
 .event-picture + .event-content h3{ margin-top: -0.625rem; }
 }
-.btn{ color: rgb(255, 255, 255); font-size: 0.875rem; font-weight: 700; text-shadow: rgba(0, 0, 0, 0.246094) 1px 1px 0px; padding-top: 0px; padding-right: 1.25rem; padding-bottom: 0px; padding-left: 1.25rem; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; height: 2.5rem; line-height: 2.5rem; }
+.btn{ color: rgb(255, 255, 255); font-size: 0.875rem; font-weight: 700; text-shadow: rgba(0, 0, 0, 0.246094) 1px 1px 0px; padding-top: 0px; padding-right: 1.25rem; padding-bottom: 0px; padding-left: 1.25rem; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; height: 2.5rem; line-height: 2.5rem; display: block; width: 100%; }
 .btn > span{ display: table-cell; vertical-align: middle; white-space: normal; text-align: left; height: 2.5rem; line-height: 1rem; padding-top: 0px; padding-right: 0.125rem; padding-bottom: 0px; padding-left: 0.625rem; }
 .btn > i{ display: block; float: left; height: 2.5rem; width: 2.5rem; margin-left: -1.25rem; line-height: 2.5rem; text-align: center; text-shadow: rgba(255, 255, 255, 0.847656) 1px 1px 0px; }
 .btn-default{ box-shadow: rgb(61, 61, 61) 0px 1px 0px; color: rgb(255, 255, 255); background-repeat: repeat no-repeat; }
@@ -434,10 +434,6 @@ slider div.bubble.limit{ color: rgb(119, 119, 119); }
 .docs .docs-aside{ margin-top: 20px; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; min-width: 0px; }
 @media (min-width: 34em){
 .docs .docs-aside{ min-width: 0px; }
-}
-.docs .docs-main{ min-width: 0px; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; padding-bottom: 1.25rem; padding-top: 30px; }
-@media (min-width: 34em){
-.docs .docs-main{ min-width: 0px; }
 }
 .docs .highlight pre{ white-space: pre !important; }
 .bs-example{ position: relative; padding-top: 45px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; margin-top: 0px; margin-right: -15px; margin-bottom: 15px; margin-left: -15px; border-top-color: rgb(229, 229, 229); border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: rgb(238, 238, 238); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; box-shadow: rgba(0, 0, 0, 0.046875) 0px 3px 6px inset; }
