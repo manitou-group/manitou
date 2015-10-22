@@ -8277,6 +8277,8 @@ hr {
     line-height: 2.5rem;
     text-align: center;
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.85); }
+  .btn + .btn {
+    margin-top: 5px; }
 
 .btn-lg, .btn-group-lg > .btn {
   height: 3.75rem;

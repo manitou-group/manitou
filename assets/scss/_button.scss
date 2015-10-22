@@ -35,6 +35,9 @@
 		text-align: center;
 		text-shadow: 1px 1px 0 fade-out(#fff, 0.15);
 	}
+	& + .btn {
+		margin-top: 5px;
+	}
 }
 .btn-lg {
 	height: calc-rem(60px);
