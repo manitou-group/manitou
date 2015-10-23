@@ -124,15 +124,15 @@ module.exports = function(grunt) {
 		    },
 			sass: {
 				files: 'assets/scss/*.scss',
-				tasks: ['sass', 'autoprefixer', 'csso', 'jekyll'],
+				tasks: ['sass', 'autoprefixer', 'csso', 'csscount'],
 			},
 			script: {
 				files: 'assets/js/main.js',
-				tasks: ['jshint', 'concat', 'jekyll']
+				tasks: ['jshint', 'concat']
 			},
 			html: {
 				files: ['*.html', '*/*.html', '*/*/*.html'],
-				tasks: ['jekyll', 'sass', 'autoprefixer', 'csso', 'concat', 'imagemin']
+				tasks: ['jekyll', 'sass', 'autoprefixer', 'csso', 'concat']
 			},
 			images: {
 				files: ['assets/im/**/*.{png,jpg,gif}'],
@@ -298,6 +298,18 @@ module.exports = function(grunt) {
 					threshold: 80
 				}
 			}
+		},
+
+		csscount: {
+			dev: {
+				src: [
+					'assets/css/main.css'
+				],
+				options: {
+					maxSelectors: 4095,
+					maxSelectorDepth: false
+				}
+			}
 		}
 
 	});
@@ -314,15 +326,17 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-criticalcss');
 	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.loadNpmTasks('grunt-pagespeed');
+	grunt.loadNpmTasks('grunt-css-count');
 
 	grunt.registerTask('images', ['imagemin']);
 	grunt.registerTask('critical', ['criticalcss']);
-	grunt.registerTask('stats', ['pagespeed']);
+	grunt.registerTask('stats', ['csscount', 'pagespeed']);
 	grunt.renameTask( 'watch', 'delta' );
 	grunt.registerTask('default', [
 		'jshint',
 		'sass',
 		'autoprefixer',
+		'csscount',
 		'csso',
 		'concat',
 		'uglify',
@@ -336,6 +350,7 @@ module.exports = function(grunt) {
 		'jshint',
 		'sass',
 		'autoprefixer',
+		'csscount',
 		'csso',
 		'concat',
 		'uglify',
