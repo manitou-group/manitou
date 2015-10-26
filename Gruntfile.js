@@ -329,6 +329,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-css-count');
 
 	grunt.registerTask('images', ['imagemin']);
+	grunt.registerTask('jek', ['jekyll']);
 	grunt.registerTask('critical', ['criticalcss']);
 	grunt.registerTask('stats', ['csscount', 'pagespeed']);
 	grunt.renameTask( 'watch', 'delta' );
@@ -340,7 +341,6 @@ module.exports = function(grunt) {
 		'csso',
 		'concat',
 		'uglify',
-		'imagemin',
 		'connect:localhost',
 		'jekyll',
 		'delta'
