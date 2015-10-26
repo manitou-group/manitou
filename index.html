@@ -1,8 +1,19 @@
 ---
 layout: default
+title : Manitou framework
 critical_file: critical/critical.css
 ---
-<section>
-	<h1>Manitou Web Design Guidelines</h1>
-	<p class="lead">No need to reinvent the wheel. Find here everything you will to start building web apps with Manitou.</p>
-</section>
+
+{% include getting-started-aside.html view="idea" %}
+
+<main class="docs-main">
+	<h1>Typography</h1>
+	<p class="lg">Since text is the primary and most essential way to convey informations and values to the users, it's important to grant typography a primordial attention. This section stresses the typographic guidelines that should be used on all manitou websites.</p>
+
+	<p>You can find the below components in <a target="_blank" href="https://github.com/manitou-group/manitou/blob/master/assets/scss/_typography.scss"><code>_typography.scss</code></a>.</p>
+
+	{% include getting-started/doctype.html %}
+
+	{% include getting-started/head.html %}
+
+</main>
