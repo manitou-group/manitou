@@ -1,7 +1,8 @@
 html{ font-family: sans-serif; }
 body{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
- aside, header, nav, section{ display: block; }
+ aside, header, main, nav, section{ display: block; }
 a{ background-color: transparent; }
+b{ font-weight: bold; }
 h1{ font-size: 2em; margin-top: 0.67em; margin-right: 0px; margin-bottom: 0.67em; margin-left: 0px; }
 img{ border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; }
 pre{ overflow-x: auto; overflow-y: auto; }
@@ -50,6 +51,8 @@ pre code{ padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-lef
 .container, section{ max-width: 980px; }
 }
 .row{ margin-left: -0.625rem; margin-right: -0.625rem; }
+.row::before, .row::after{ content: ' '; display: table; }
+.row::after{ clear: both; }
 .btn{ display: inline-block; font-weight: normal; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; -webkit-user-select: none; border-top-width: 0.0625rem; border-right-width: 0.0625rem; border-bottom-width: 0.0625rem; border-left-width: 0.0625rem; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent; padding-top: 0.375rem; padding-right: 1rem; padding-bottom: 0.375rem; padding-left: 1rem; font-size: 1rem; line-height: 1.5; border-top-left-radius: 0.25rem 0.25rem; border-top-right-radius: 0.25rem 0.25rem; border-bottom-right-radius: 0.25rem 0.25rem; border-bottom-left-radius: 0.25rem 0.25rem; }
 .btn-primary{ color: rgb(255, 255, 255); background-color: rgb(226, 0, 26); border-top-color: rgb(226, 0, 26); border-right-color: rgb(226, 0, 26); border-bottom-color: rgb(226, 0, 26); border-left-color: rgb(226, 0, 26); }
 .btn-info{ color: rgb(255, 255, 255); background-color: rgb(91, 192, 222); border-top-color: rgb(91, 192, 222); border-right-color: rgb(91, 192, 222); border-bottom-color: rgb(91, 192, 222); border-left-color: rgb(91, 192, 222); }
@@ -178,9 +181,13 @@ ul.bullet > li > a{ color: rgb(68, 68, 68); font-size: 0.875rem; }
 .btn-group .dropdown-menu li > a{ display: block; padding-top: 0.1875rem; padding-right: 1.25rem; padding-bottom: 0.1875rem; padding-left: 1.25rem; clear: both; font-weight: normal; line-height: 1.5; color: rgb(55, 58, 60); white-space: nowrap; cursor: pointer; }
 .btn-group .dropdown-menu .dropdown-header{ padding-top: 0.625rem; padding-right: 1.25rem; padding-bottom: 0px; padding-left: 1.25rem; font-weight: 700; }
 .docs{ padding-top: 30px; padding-bottom: 100px; }
-.docs .docs-aside{ margin-top: 20px; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; min-width: 0px; }
+.docs .docs-aside{ margin-top: 20px; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; }
 @media (min-width: 34em){
-.docs .docs-aside{ min-width: 0px; }
+.docs .docs-aside{ float: left; width: 25%; }
+}
+.docs .docs-main{ float: left; width: 100%; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; padding-bottom: 1.25rem; padding-top: 30px; }
+@media (min-width: 34em){
+.docs .docs-main{ float: left; width: 75%; }
 }
 .docs .highlight pre{ white-space: pre !important; }
 .bs-example{ position: relative; padding-top: 45px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; margin-top: 0px; margin-right: -15px; margin-bottom: 15px; margin-left: -15px; border-top-color: rgb(229, 229, 229); border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: rgb(238, 238, 238); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; box-shadow: rgba(0, 0, 0, 0.046875) 0px 3px 6px inset; }
@@ -200,3 +207,4 @@ ul.bullet > li > a{ color: rgb(68, 68, 68); font-size: 0.875rem; }
 .na{ color: rgb(79, 159, 207); }
 .nt{ color: rgb(47, 111, 159); }
 img{ width: 100%; }
+.row{ }

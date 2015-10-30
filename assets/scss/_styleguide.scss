@@ -145,6 +145,18 @@
   }
 }
 
+.bs-example {
+  .basic-grid {
+    @extend .basic-grid;
+  }
+  .navigation-grid {
+    @extend .navigation-grid;
+  }
+  .split-grid  {
+    @extend .split-grid ;
+  }
+}
+
 $primary-color: #5ea5ab;
 $primary-color-light: lighten($primary-color, 10%);
 $primary-color-lighter: lighten($primary-color, 40%);

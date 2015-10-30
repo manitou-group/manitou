@@ -123,7 +123,7 @@ module.exports = function(grunt) {
 		        }
 		    },
 			sass: {
-				files: 'assets/scss/main.scss',
+				files: 'assets/scss/*.scss',
 				tasks: ['sass', 'autoprefixer', 'csso', 'csscount'],
 			},
 			script: {
