@@ -358,8 +358,8 @@ module.exports = function(grunt) {
 		'ngAnnotate',
 		'concat',
 		'uglify',
-		'connect:localhost',
 		'jekyll',
+		'connect:localhost',
 		'delta'
 	]);
 
