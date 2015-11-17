@@ -61,6 +61,21 @@ module.exports = function(grunt) {
 	      }
 	    },
 
+	    ngAnnotate: {
+	        options: {
+	        },
+	        main: {
+	            files: [
+	                {
+	                    expand: true,
+	                    src: ['assets/js/main.js'],
+	                    ext: '.annotated.js',
+	                    extDot: 'last',
+	                },
+	            ],
+	        },
+	    },
+
 		concat: {
 			main: {
 				src: ['vendor/lodash/lodash.min.js',
@@ -70,7 +85,7 @@ module.exports = function(grunt) {
 					'vendor/angular-slider/slider.js',
 					'vendor/angular-simple-logger/dist/angular-simple-logger.js',
 					'vendor/angular-google-maps/dist/angular-google-maps.js',
-					'assets/js/main.js'],
+					'assets/js/main.annotated.js'],
 				dest: 'assets/js/<%= pkg.name %>-<%= pkg.version %>.js'
 			},
 			ieSupport: {
@@ -128,7 +143,7 @@ module.exports = function(grunt) {
 			},
 			script: {
 				files: 'assets/js/main.js',
-				tasks: ['jshint', 'concat']
+				tasks: ['jshint', 'ngAnnotate', 'concat']
 			},
 			html: {
 				files: ['*.html', '*/*.html', '*/*/*.html'],
@@ -327,6 +342,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.loadNpmTasks('grunt-pagespeed');
 	grunt.loadNpmTasks('grunt-css-count');
+	grunt.loadNpmTasks('grunt-ng-annotate');
 
 	grunt.registerTask('images', ['imagemin']);
 	grunt.registerTask('jek', ['jekyll']);
@@ -339,6 +355,7 @@ module.exports = function(grunt) {
 		'autoprefixer',
 		'csscount',
 		'csso',
+		'ngAnnotate',
 		'concat',
 		'uglify',
 		'connect:localhost',
@@ -352,6 +369,7 @@ module.exports = function(grunt) {
 		'autoprefixer',
 		'csscount',
 		'csso',
+		'ngAnnotate',
 		'concat',
 		'uglify',
 		'imagemin',

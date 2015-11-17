@@ -28897,11 +28897,11 @@ $(function() {
 
 var app = angular.module('frameworkApp', ['ui.slider', 'uiGmapgoogle-maps']);
 
-app.controller('SliderCtrl', function ($scope) {
+app.controller('SliderCtrl', ["$scope", function ($scope) {
   $scope.range = {'min': '13', 'max': '32' };
-});
+}]);
 
-app.controller('MapCtrl', function ($scope) {
+app.controller('MapCtrl', ["$scope", function ($scope) {
   $scope.map = {
   	center: {
   		latitude: 47.365464,
@@ -28961,12 +28961,12 @@ app.controller('MapCtrl', function ($scope) {
 	// zipcode: "44150"
  //  };
 
-});
+}]);
 
-app.controller('ContactCtrl', function ($scope) {
+app.controller('ContactCtrl', ["$scope", function ($scope) {
 	$scope.clickedCoordinates = false;
 	$scope.clickCoordinates = function() {
       $scope.clickedCoordinates = !$scope.clickedCoordinates;
     };
-});
+}]);
 

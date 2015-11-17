@@ -19,6 +19,7 @@
     "grunt-css-count": "^0.3.0",
     "grunt-csso": "^0.7.0",
     "grunt-jekyll": "^0.4.2",
+    "grunt-ng-annotate": "^1.0.1",
     "grunt-pagespeed": "^1.0.0",
     "grunt-sass": "^1.0.0"
   }
