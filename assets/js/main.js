@@ -1,5 +1,9 @@
 $(function() {
 
+  $('.toggle-spinner').on( "click", function() {
+    $('.spinner-backdrop').toggle();
+  });
+
 });
 
 var app = angular.module('frameworkApp', ['ui.slider', 'uiGmapgoogle-maps']);
