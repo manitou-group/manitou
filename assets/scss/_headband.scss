@@ -1,0 +1,60 @@
+// Headband
+// -------------------------
+
+.headband {
+  position: relative;
+  min-height: 480px;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 50px;
+  .headband-bkg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+    transform: translate(-50%, -50%);
+  }
+  .headband-content {
+    @extend .container;
+    z-index: 1;
+    position: relative;
+    color: white;
+    text-align: center;
+    h1 {
+      font-size: 50px;
+      text-align: center;
+      color: white;
+      padding: 50px 0;
+    }
+    .lg {
+      text-align: justify;
+      line-height: 1.5;
+      hyphens: auto;
+      margin-bottom: 40px;
+    }
+    .version {
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.btn-outline-inverse {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  width: auto;
+  padding: 20px 50px;
+  font-size: 17px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  height: auto;
+  text-transform: uppercase;
+  font-weight: 500;
+  &:hover,
+  &:focus {
+    color: $red !important;
+  }
+}

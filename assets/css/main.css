@@ -580,23 +580,24 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, section {
+.container, .headband .headband-content, section {
   margin-right: auto;
   margin-left: auto;
   padding-left: 0.625rem;
   padding-right: 0.625rem; }
   .container:before,
+  .headband .headband-content:before,
   section:before,
-  .container:after, section:after {
+  .container:after, .headband .headband-content:after, section:after {
     content: " ";
     display: table; }
-  .container:after, section:after {
+  .container:after, .headband .headband-content:after, section:after {
     clear: both; }
   @media (min-width: 62em) {
-    .container, section {
+    .container, .headband .headband-content, section {
       max-width: 980px; } }
   @media (min-width: 75em) {
-    .container, section {
+    .container, .headband .headband-content, section {
       max-width: 980px; } }
 
 .container-fluid {
@@ -7144,17 +7145,18 @@ dt {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE2001A', endColorstr='#FFC20016', GradientType=0); }
   @media (max-width: 47.9em) {
-    .navbar .container, .navbar section {
+    .navbar .container, .navbar .headband .headband-content, .headband .navbar .headband-content, .navbar section {
       margin-right: auto;
       margin-left: auto;
       padding-left: 0;
       padding-right: 0; }
       .navbar .container:before,
-      .navbar section:before,
-      .navbar .container:after, .navbar section:after {
+      .navbar .headband .headband-content:before,
+      .headband .navbar .headband-content:before, .navbar section:before,
+      .navbar .container:after, .navbar .headband .headband-content:after, .headband .navbar .headband-content:after, .navbar section:after {
         content: " ";
         display: table; }
-      .navbar .container:after, .navbar section:after {
+      .navbar .container:after, .navbar .headband .headband-content:after, .headband .navbar .headband-content:after, .navbar section:after {
         clear: both; } }
   .navbar .navbar-toggler {
     padding: 0 0.9375rem;
@@ -8549,6 +8551,60 @@ h2.toggler-collapse {
   -webkit-animation: loader 1s infinite steps(8);
           animation: loader 1s infinite steps(8); }
 
+.headband {
+  position: relative;
+  min-height: 480px;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 50px; }
+  .headband .headband-bkg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .headband .headband-content {
+    z-index: 1;
+    position: relative;
+    color: white;
+    text-align: center; }
+    .headband .headband-content h1 {
+      font-size: 50px;
+      text-align: center;
+      color: white;
+      padding: 50px 0; }
+    .headband .headband-content .lg {
+      text-align: justify;
+      line-height: 1.5;
+      -webkit-hyphens: auto;
+         -moz-hyphens: auto;
+          -ms-hyphens: auto;
+              hyphens: auto;
+      margin-bottom: 40px; }
+    .headband .headband-content .version {
+      margin-top: 10px;
+      margin-bottom: 30px; }
+
+.btn-outline-inverse {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  width: auto;
+  padding: 20px 50px;
+  font-size: 17px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  height: auto;
+  text-transform: uppercase;
+  font-weight: 500; }
+  .btn-outline-inverse:hover,
+  .btn-outline-inverse:focus {
+    color: #e2001a !important; }
+
 .docs {
   padding-top: 30px;
   padding-bottom: 100px; }
@@ -8756,7 +8812,7 @@ h2.toggler-collapse {
   font-weight: 300;
   line-height: 1.4; }
 
-.manitou-bs-docs-header .container, .manitou-bs-docs-header section {
+.manitou-bs-docs-header .container, .manitou-bs-docs-header .headband .headband-content, .headband .manitou-bs-docs-header .headband-content, .manitou-bs-docs-header section {
   position: relative; }
 
 @media (min-width: 768px) {
@@ -9382,7 +9438,7 @@ h1[id] {
     border-radius: 4px; } }
 
 /* Undo width of container */
-.bs-example .container, .bs-example section {
+.bs-example .container, .bs-example .headband .headband-content, .headband .bs-example .headband-content, .bs-example section {
   width: auto; }
 
 /* Tweak content of examples for optimum awesome */

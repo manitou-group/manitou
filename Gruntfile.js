@@ -139,11 +139,11 @@ module.exports = function(grunt) {
 		    },
 			sass: {
 				files: 'assets/scss/*.scss',
-				tasks: ['sass', 'autoprefixer', 'csso', 'csscount'],
+				tasks: ['sass', 'autoprefixer', 'csso', 'csscount', 'jekyll'],
 			},
 			script: {
 				files: 'assets/js/main.js',
-				tasks: ['jshint', 'ngAnnotate', 'concat']
+				tasks: ['jshint', 'ngAnnotate', 'concat', 'jekyll']
 			},
 			html: {
 				files: ['*.html', '*/*.html', '*/*/*.html'],
@@ -373,8 +373,8 @@ module.exports = function(grunt) {
 		'concat',
 		'uglify',
 		'imagemin',
-		'connect:localhost',
-		'criticalcss'
+		'criticalcss',
+		'jekyll'
 	]);
 
 };
