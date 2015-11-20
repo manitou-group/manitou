@@ -7,17 +7,28 @@ critical_file: critical/critical-interactive.css
 {% include web-aside.html view="interactive-components" %}
 
 <main class="docs-main">
+	
 	<h1>Interactive components</h1>
 	<p class="lg">These components offer and need an interaction with the user to be useful. They bring dynamism to the website.</p>
 	<p>You can find the below components in their proprer stylesheet <a target="_blank" href="https://github.com/manitou-group/manitou/blob/master/assets/scss/_carousel.scss"><code>_carousel.scss</code></a>, <a target="_blank" href="https://github.com/manitou-group/manitou/blob/master/assets/scss/_pagination.scss"><code>_pagination.scss</code></a>, <a target="_blank" href="https://github.com/manitou-group/manitou/blob/master/assets/scss/breadcrumb.scss"><code>breadcrumb.scss</code></a> and <a target="_blank" href="https://github.com/manitou-group/manitou/blob/master/assets/scss/_toggle-collapse.scss"><code>_toggle-collapse.scss</code></a>. The modal component is a Bootstrap 4 native component.</p>
 
+	<hr>
+
 	{% include components/carousel.html %}
+
+	<hr>
 
 	{% include components/pagination.html %}
 
+	<hr>
+
 	{% include components/breadcrumb.html %}
 
+	<hr>
+
 	{% include components/toggle-collapse.html %}
+
+	<hr>
 
 	{% include components/modal.html %}
 
