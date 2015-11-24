@@ -12,6 +12,10 @@ title : Manitou API
  
 	<p>You know you need it.</p>
 
+	<br>
+	<hr>
+	<br>
+
 
 	<section id="why">
 		<h2>Why?</h2>
@@ -26,8 +30,13 @@ title : Manitou API
 
 		<h3>3rd Party Integrations</h3>
 
-		<p></p>
+		<p>We are currently building integrations with third party platforms to make sure our catalogue is always up to date. Among them: lead generation platforms, showcasing platforms, </p>
+
 	</section>
+
+	<br>
+	<hr>
+	<br>
 
 
 	<section id="prismic">
@@ -44,19 +53,62 @@ title : Manitou API
 		<p>You will find all available SDKs on <a href="https://github.com/prismicio" target="_blank">Prismic.io Github Account</a>. Many are available: Ruby, PHP, JS, Node JS, Python, Scala, .Net, Java... Check the documentation of each one and install it. Grab your API Key and add it to your config file.</p>
 	</section>
 
+	<br>
+	<hr>
+	<br>
 
 	<section id="data">
 		<h2>Data &amp; API Queries</h2>
 
 		<h3>Machines &amp; Countries</h3>
 
-		<p></p>
+		<h2 class="toggler" data-toggle="collapse" data-target="#machine" aria-expanded="false" aria-controls="machine">
+		    <span>Machine JSON Example</span>
+		</h2>
+		<row class="collapse" id="machine">
+		    <div>
+		    	<code>
+		    		{
+					  "Main" : {
+					    "model_name" : {
+					      "fieldset" : "Model Name",
+					      "type" : "StructuredText",
+					      "config" : {
+					        "single" : "heading1",
+					        "placeholder" : "Model Name"
+					      }
+					    },
+					    "machine_ordering" : {
+					      "type" : "Number",
+					      "config" : {
+					        "label" : "Machine Order (ASC)",
+					        "min" : 0
+					      }
+					    },
+					    "machine_cat" : {
+					      "type" : "Link",
+					      "fieldset" : "Machine Category",
+					      "config" : {
+					        "placeholder" : "Machine Category",
+					        "select" : "document",
+					        "masks" : [ "machine-cat" ]
+					      }
+					    }
+					  }
+					}
+					...
+		    	</code>
+		  </div>
+		</row>
 
 		<h3>Attachments &amp; Attachment References</h3>
 
 		<p></p>
 	</section>
 
+	<br>
+	<hr>
+	<br>
 
 
 	<section id="key">
