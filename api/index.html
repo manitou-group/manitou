@@ -66,8 +66,7 @@ title : Manitou API
 		    <span>Machine JSON Example</span>
 		</strong></p>
 		<row class="collapse" id="machine">
-		    <div>
-		    	<code class="bs-example">
+		  <code>
 {% highlight json %}
 {
   "Main" : {
@@ -99,11 +98,91 @@ title : Manitou API
 }
 ...
 {% endhighlight %}
-		    	</code>
+		    </code>
 		  </div>
 		</row>
 
 		<h3>Attachments &amp; Attachment References</h3>
+
+		<p><strong class="toggler" data-toggle="collapse" data-target="#attachment" aria-expanded="false" aria-controls="attachment">
+		    <span>Attachment JSON Example</span>
+		</strong></p>
+		<row class="collapse" id="attachment">
+		  <code>
+{% highlight json %}
+{
+  "Main" : {
+    "model_name" : {
+      "fieldset" : "Model Name",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Model Name"
+      }
+    },
+    "machine_ordering" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Machine Order (ASC)",
+        "min" : 0
+      }
+    },
+    "machine_cat" : {
+      "type" : "Link",
+      "fieldset" : "Machine Category",
+      "config" : {
+        "placeholder" : "Machine Category",
+        "select" : "document",
+        "masks" : [ "machine-cat" ]
+      }
+    }
+  }
+}
+...
+{% endhighlight %}
+		    </code>
+		  </div>
+		</row>
+
+		<p><strong class="toggler" data-toggle="collapse" data-target="#attachment_ref" aria-expanded="false" aria-controls="attachment_ref">
+		    <span>Attachment Reference JSON Example</span>
+		</strong></p>
+		<row class="collapse" id="attachment_ref">
+		  <code>
+{% highlight json %}
+{
+  "Main" : {
+    "model_name" : {
+      "fieldset" : "Model Name",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Model Name"
+      }
+    },
+    "machine_ordering" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Machine Order (ASC)",
+        "min" : 0
+      }
+    },
+    "machine_cat" : {
+      "type" : "Link",
+      "fieldset" : "Machine Category",
+      "config" : {
+        "placeholder" : "Machine Category",
+        "select" : "document",
+        "masks" : [ "machine-cat" ]
+      }
+    }
+  }
+}
+...
+{% endhighlight %}
+		    </code>
+		  </div>
+		</row>
 
 		<p></p>
 	</section>
