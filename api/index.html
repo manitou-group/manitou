@@ -68,37 +68,37 @@ title : Manitou API
 		<row class="collapse" id="machine">
 		    <div>
 		    	<code>
-		    		{% highlight json %}
-		    		{
-					  "Main" : {
-					    "model_name" : {
-					      "fieldset" : "Model Name",
-					      "type" : "StructuredText",
-					      "config" : {
-					        "single" : "heading1",
-					        "placeholder" : "Model Name"
-					      }
-					    },
-					    "machine_ordering" : {
-					      "type" : "Number",
-					      "config" : {
-					        "label" : "Machine Order (ASC)",
-					        "min" : 0
-					      }
-					    },
-					    "machine_cat" : {
-					      "type" : "Link",
-					      "fieldset" : "Machine Category",
-					      "config" : {
-					        "placeholder" : "Machine Category",
-					        "select" : "document",
-					        "masks" : [ "machine-cat" ]
-					      }
-					    }
-					  }
-					}
-					...
-					{% endhighlight %}
+{% highlight json %}
+{
+  "Main" : {
+    "model_name" : {
+      "fieldset" : "Model Name",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Model Name"
+      }
+    },
+    "machine_ordering" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Machine Order (ASC)",
+        "min" : 0
+      }
+    },
+    "machine_cat" : {
+      "type" : "Link",
+      "fieldset" : "Machine Category",
+      "config" : {
+        "placeholder" : "Machine Category",
+        "select" : "document",
+        "masks" : [ "machine-cat" ]
+      }
+    }
+  }
+}
+...
+{% endhighlight %}
 		    	</code>
 		  </div>
 		</row>
