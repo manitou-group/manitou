@@ -7680,7 +7680,8 @@ hr {
   font-size: 0.875rem;
   padding: 0; }
   .btn-lg > span, .btn-group-lg > .btn > span {
-    line-height: 3.75rem; }
+    height: 3.75rem;
+    line-height: 1.25rem; }
   .btn-lg > i, .btn-group-lg > .btn > i {
     font-size: 1.5rem;
     width: 3.75rem;

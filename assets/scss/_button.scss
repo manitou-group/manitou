@@ -44,8 +44,8 @@
 	font-size: calc-rem(14px);
 	padding: 0;
 	> span {
-		//height: $btn-lg-height;
-		line-height: calc-rem(60px);
+		height: $btn-lg-height;
+		line-height: calc-rem(20px);
 	}
 	> i {
 		font-size: calc-rem(24px);
