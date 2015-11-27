@@ -42,9 +42,15 @@ title : Manitou API
 
     <p>You will find all available SDKs on <a href="https://github.com/prismicio" target="_blank">Prismic.io Github Account</a>. Many are available: Ruby, PHP, JS, Node JS, Python, Scala, .Net, Java... Check the documentation of each one and install it. Grab your API Key and add it to your config file.</p>
 
+  </section>
+
+
+  <section id="data">
+    <h2>Data &amp; API Queries</h2>
+
 		<h3>Custom Types</h3>
 
-		<p>We have defined and structured the documents we needed based on our requirements and constraints. </p>
+		<p>A custom type is a JSON file used by Prismic to manage data on a per document level. We have defined and structured the data we needed into "custom types". They are based on our own needs, requirements and constraints. It's easy to add new elements or delete old ones in every custom type (or document mask (their "old" name)) but way more complex to edit one. That's why sometimes, you fill find elements names with "-" (hyphens) and others with "_" (underscores). Be careful.</p>
 
     <h4>Machines &amp; Categories</h4>
 
@@ -1692,6 +1698,8 @@ title : Manitou API
     </div>
 
     <br>
+    <hr>
+    <br>
 
 		<p>We can however know the category of one "machine" thanks to its link to a "machine-cat" document.</p>
 
@@ -1781,6 +1789,10 @@ title : Manitou API
     <br>
 
 		<p>This kind of document types exist in order to group documents. In this case: "machine". It can help you filter a query on "machine". We also provide subcategories inside the "machine-cat", contact-us for more information.</p>
+
+    <br>
+    <hr>
+    <br>
 
 
     <h4>Countries</h4>
@@ -1908,6 +1920,10 @@ title : Manitou API
 
 		<p>You can also use it as a filter on your own app by displaying only machines which are considered available by a subsidiary on a specific country. In our repository, this availability is represented by a link.</p>
 
+    <br>
+    <hr>
+    <br>
+
 
     <h4>Languages</h4>
 
@@ -1961,6 +1977,10 @@ title : Manitou API
     <br>
 
 		<p>This can be used as a filter in your app to retrieve only some specific elements of a single document. For example, in a "machine" document, you have 10 machine descriptions ; 1 per language.</p>
+
+    <br>
+    <hr>
+    <br>
 
 
     <h4>Attachment Category, Attachments &amp; Attachment References</h4>
@@ -2640,6 +2660,11 @@ title : Manitou API
       </row>
     </div>
 
+    <br>
+    <hr>
+    <br>
+
+
     <h4>Services</h4>
 
     <div class="bloc">
@@ -2875,6 +2900,10 @@ title : Manitou API
 {% endhighlight %}
       </row>
     </div>
+
+    <br>
+    <hr>
+    <br>
 
 
     <h4>Markets &amp; Applications (&amp; Translations)</h4>
@@ -3273,6 +3302,11 @@ title : Manitou API
     </div>
 
 
+    <br>
+    <hr>
+    <br>
+
+
     <h4>Benefits &amp; Translations</h4>
 
 		<p>Benefits are a concept who allow us to avoid duplicate content. On many of our models, some direct customer benefits can be found on several models of one range. Instead of duplicating it on every concerned machine, we've done a document a lone document and machine documents link to it if concerned.</p>
@@ -3485,19 +3519,6 @@ title : Manitou API
       </row>
     </div>
 
-		
-	</section>
-
-	<br>
-	<hr>
-	<br>
-
-	<section id="data">
-		<h2>Data &amp; API Queries</h2>
-
-		
-
-		<p></p>
 	</section>
 
 	<br>
