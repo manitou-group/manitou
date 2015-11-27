@@ -48,7 +48,7 @@ title : Manitou API
 
     <h4>Machines &amp; Categories</h4>
 
-		<p>Explanations</p>
+		<p>We offer one single kind of document whatever the equipment category: "machine". It includes a lot of elements which may be full or empty depending on the equipment category. Some elements like "machine_ordering" are designed for default ordering systems. </p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#machine" aria-expanded="false" aria-controls="machine">
@@ -1693,7 +1693,7 @@ title : Manitou API
 
     <br>
 
-		<p>Explanations</p>
+		<p>We can however know the category of one "machine" thanks to its link to a "machine-cat" document.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#machine_cat" aria-expanded="false" aria-controls="machine_cat">
@@ -1780,12 +1780,12 @@ title : Manitou API
 
     <br>
 
-		<p>Explanations</p>
+		<p>This kind of document types exist in order to group documents. In this case: "machine". It can help you filter a query on "machine". We also provide subcategories inside the "machine-cat", contact-us for more information.</p>
 
 
-    <h4>Countries &amp; Subsidiaries</h4>
+    <h4>Countries</h4>
 
-		<p>Explanations</p>
+		<p>We make a big deal about dismantling correlations between countries (or territories) and languages. They are two different notions. In our case, countries are mainly used as filters on the "macine" catalogue. Our many subsidiaries decide if one model is distributed or not on a per country basis.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#country" aria-expanded="false" aria-controls="country">
@@ -1906,12 +1906,12 @@ title : Manitou API
 
     <br>
 
-		<p>Explanations</p>
+		<p>You can also use it as a filter on your own app by displaying only machines which are considered available by a subsidiary on a specific country. In our repository, this availability is represented by a link.</p>
 
 
     <h4>Languages</h4>
 
-		<p>Explanations</p>
+		<p>As previsouly mentionned, languages are not country. For the moment, we provide texts (who need to be translated ≠ machine names for instance) in 10 languages.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#language" aria-expanded="false" aria-controls="language">
@@ -1960,10 +1960,12 @@ title : Manitou API
 
     <br>
 
-		<p>Explanations</p>
+		<p>This can be used as a filter in your app to retrieve only some specific elements of a single document. For example, in a "machine" document, you have 10 machine descriptions ; 1 per language.</p>
 
 
-    <h4>Attachments &amp; Attachment References</h4>
+    <h4>Attachment Category, Attachments &amp; Attachment References</h4>
+
+    <p>Manitou equipment is nothing without an attachment. Wether we talk about fork carriages, baskets, buckets or clamps, your equipment is way more useful with one. However, the big complexity is about the compatibility between equipment and attachments.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#attachment_cat" aria-expanded="false" aria-controls="attachment_cat">
@@ -2050,7 +2052,7 @@ title : Manitou API
 
     <br>
 
-		<p>Explanations</p>
+		<p>We have grouped the wide range of attachments into categories.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#attachment" aria-expanded="false" aria-controls="attachment">
@@ -2286,7 +2288,7 @@ title : Manitou API
 
     <br>
 
-		<p>Explanations</p>
+		<p>One single attachment can have between one and many attachment references. An attachment reference is different from another because it has, at least, a different reference number. Most of the time it also has a different width, weight or machine compatibility.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#attachment_ref" aria-expanded="false" aria-controls="attachment_ref">
@@ -2822,7 +2824,7 @@ title : Manitou API
 
     <br>
 
-		<p>Explanations</p>
+		<p>In some specific cases, mostly when there is a lot of text, and also for performance reasons, we've divided a document from its translations. For services, it is the case. We have, one one hand, some "service" documents and its translations (1 per language) on the other hand.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#service_translation" aria-expanded="false" aria-controls="service_translation">
@@ -2874,14 +2876,10 @@ title : Manitou API
       </row>
     </div>
 
-    <br>
-
-		<p>Explanations</p>
-
 
     <h4>Markets &amp; Applications (&amp; Translations)</h4>
 
-		<p>Explanations</p>
+		<p>We design, assemble and distribute handling equipment on three distinct markets: agriculture, construction and industries.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#market" aria-expanded="false" aria-controls="market">
@@ -3046,7 +3044,7 @@ title : Manitou API
 
     <br>
 
-		<p>Explanations</p>
+		<p>Inside these 3 markets, we deliver solutions for a large number of applications. We have grouped them into markets to make their browsing easier.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#application" aria-expanded="false" aria-controls="application">
@@ -3227,10 +3225,10 @@ title : Manitou API
 
     <br>
 
-		<p>Explanations</p>
+		<p>As much as services, applications have their translations apart.</p>
 
         <div class="bloc">
-      <small class="toggler" data-toggle="collapse" data-target="#application" aria-expanded="false" aria-controls="application">
+      <small class="toggler" data-toggle="collapse" data-target="#application-translation" aria-expanded="false" aria-controls="application-translation">
           <span class="label label-default">application-translation</span>&nbsp; JSON Mask
       </small>
       <row class="collapse" id="application">
@@ -3274,14 +3272,10 @@ title : Manitou API
       </row>
     </div>
 
-    <br>
-
-		<p>Explanations</p>
-
 
     <h4>Benefits &amp; Translations</h4>
 
-		<p>Explanations</p>
+		<p>Benefits are a concept who allow us to avoid duplicate content. On many of our models, some direct customer benefits can be found on several models of one range. Instead of duplicating it on every concerned machine, we've done a document a lone document and machine documents link to it if concerned.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#benefit" aria-expanded="false" aria-controls="benefit">
@@ -3444,7 +3438,7 @@ title : Manitou API
 
     <br>
 
-		<p>Explanations</p>
+		<p>They also have their translations apart.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#benefit_translation" aria-expanded="false" aria-controls="benefit_translation">
@@ -3491,10 +3485,6 @@ title : Manitou API
       </row>
     </div>
 
-    <br>
-
-		<p>Explanations</p>
-
 		
 	</section>
 
@@ -3531,13 +3521,13 @@ title : Manitou API
     <ul>
       <li>Explain us briefly your project, the requests volume and your stack so we can have an idea.</li>
       <li>Give us your contact information (technical contact name, email, phone number, address, URL of your project).</li>
-      <li></li>
+      <li>Don't use the descriptive texts in order to avoid duplicate content.</li>
     </ul>
 
     <p>Always keep in mind that you don't respect our guidelines, we keep the right to destroy your API key at any time without prior notice.</p>
 
     <p>
-      <a href="mailto:webmaster@manitou-group.com" download="manitou-framework" title="Ask your API key by email" class="btn btn-primary btn-lg">
+      <a href="mailto:webmaster@manitou-group.com" download="manitou-framework" title="Ask your API key by email" class="btn btn-primary btn-lg" target="_blank">
         <i class="fa fa-download"></i>
         <span>Ask your API key & Go build great stuff</span>
       </a>
