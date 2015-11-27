@@ -45,12 +45,22 @@ title : Manitou API
   </section>
 
 
+  <br>
+  <hr>
+  <br>
+
+
   <section id="data">
     <h2>Data &amp; API Queries</h2>
 
 		<h3>Custom Types</h3>
 
 		<p>A custom type is a JSON file used by Prismic to manage data on a per document level. We have defined and structured the data we needed into "custom types". They are based on our own needs, requirements and constraints. It's easy to add new elements or delete old ones in every custom type (or document mask (their "old" name)) but way more complex to edit one. That's why sometimes, you fill find elements names with "-" (hyphens) and others with "_" (underscores). Be careful.</p>
+
+
+    <br>
+    <hr>
+    <br>
 
     <h4>Machines &amp; Categories</h4>
 
@@ -1697,9 +1707,6 @@ title : Manitou API
       </row>
     </div>
 
-    <br>
-    <hr>
-    <br>
 
 		<p>We can however know the category of one "machine" thanks to its link to a "machine-cat" document.</p>
 
@@ -3519,6 +3526,172 @@ title : Manitou API
       </row>
     </div>
 
+    <br>
+    <hr>
+    <br>
+
+    <h3>JS Query Example</h3>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <small class="toggler" data-toggle="collapse" data-target="#query" aria-expanded="false" aria-controls="query">
+          <span class="label label-default">Commented JS Query code
+      </small>
+      <row class="collapse" id="query">
+{% highlight js %}
+
+// Find here an example of an prismic call for all manitou's machines available.
+
+// First create the Api object which permit you to query on manitou cdn
+
+Prismic.Api('https://manitou.cdn.prismic.io/api', function (err, Api) { 
+  var renderMachine = []; 
+  // then query our cdn
+  
+  // ('everything').ref(Api.master()) ==> means you query on every document in our master repository (you don't have to edit this part).
+
+
+
+  // query(Prismic.Predicates.at("document.type", "machine")) ==> here your query. You can change "machine" with any manitou's documents (attachment, benefit, event ...).
+  
+  // If you want to query an unique document, query with "document.id" and change "machine" with the document id.
+  // You can find a machine id on manitou.com : for example, the MLT 625 75 h refer to http://www.manitou.com/en/p/UtVNhwEAALIk6Csb => id : "UtVNhwEAALIk6Csb"
+  
+  // Find more element on https://developers.prismic.io/documentation/developers-manual#querying-a-repository
+
+
+
+  // prismic query render "pages" of results limited to 100 elements by page. So in order to have all machines, we have to query all pages.
+  // So we gather all pages results in an array. Then we use a function to grab the data.
+    Api.form('everything').ref(Api.master()).page(1).query(Prismic.Predicates.at("document.type", "machine")).pageSize(100).submit(function (err, resMachine) { 
+        renderMachine[0] = resMachine.results;
+        var swi = resMachine.total_pages;
+        switch (swi) {            
+            case(2):
+                Api.form('everything').ref(Api.master()).page(2).query(Prismic.Predicates.at("document.type", "machine")).pageSize(100).submit(function (err, resMachine) {
+                    renderMachine[1] = resMachine.results;
+                    constructeur(renderMachine);
+                });
+                break;
+
+            case(3):
+                Api.form('everything').ref(Api.master()).page(2).query(Prismic.Predicates.at("document.type", "machine")).pageSize(100).submit(function (err, resMachine) {
+                    renderMachine[1] = resMachine.results;
+                    Api.form('everything').ref(Api.master()).page(3).query(Prismic.Predicates.at("document.type", "machine")).pageSize(100).submit(function (err, resMachine) {
+                        renderMachine[2] = resMachine.results;
+                        constructeur(renderMachine);
+                    });
+                });
+                break;
+
+            case(4):
+                Api.form('everything').ref(Api.master()).page(2).query(Prismic.Predicates.at("document.type", "machine")).pageSize(100).submit(function (err, resMachine) {
+                    renderMachine[1] = resMachine.results;
+                    Api.form('everything').ref(Api.master()).page(3).query(Prismic.Predicates.at("document.type", "machine")).pageSize(100).submit(function (err, resMachine) {
+                        renderMachine[2] = resMachine.results;
+                        Api.form('everything').ref(Api.master()).page(4).query(Prismic.Predicates.at("document.type", "machine")).pageSize(100).submit(function (err, resMachine) {
+                            renderMachine[3] = resMachine.results;
+                            constructeur(renderMachine);
+                        });
+                    });
+                });
+                break;
+
+            default:
+              constructeur(renderMachine);
+                break;
+        }
+});
+
+// Here a function which create an array which contain data on all machines. See the custom types to see all the available data and pick all you need.
+function constructeur(arrayMachine){
+    var cat = 'machine.machine_cat';
+    var vid = 'machine.video';
+    var pict = 'machine.photos';
+    var desc_en = 'machine.machine_desc_en';
+    var scribd = 'machine.scribd';
+    var d1 = 'machine.diagram_1';
+    var height = 'machine.height-m';
+    var docu = 'document';
+
+    var renderArray = [];
+    var indice = 0;
+
+    for(var i = 0; i < arrayMachine.length; i++){
+      for(var j = 0; j < arrayMachine[i].length; j++){
+        renderArray[indice] = {};
+
+        renderArray[indice].name = arrayMachine[i][j].slug;
+        renderArray[indice].id = arrayMachine[i][j].id;
+        renderArray[indice].category = arrayMachine[i][j].fragments[machine_cat].value[docu].slug;
+
+        // In prismic, if a machine never have a video then the prismic fragment don't exist.
+        // So we have to check the existence and then grab the link.
+        if (arrayMachine[i][j].fragments[vid]){
+        renderArray[indice].video = arrayMachine[i][j].fragments[vid].value.oembed.embed_url;
+        } else {
+          renderArray[indice].video = null;
+        }
+
+        if (arrayMachine[i][j].fragments[pict]){
+        renderArray[indice].picture = arrayMachine[i][j].fragments[pict].value.oembed.embed_url;
+        } else {
+          renderArray[indice].picture = null;
+        }
+
+        // Several document may be bound to a machine => we create an array which will contain all documents.
+        if (arrayMachine[i][j].fragments[scribd]){
+        renderArray[indice].guide = [];
+        for(var elem in arrayMachine[i][j].fragments[scribd].value){
+          renderArray[indice].guide[elem] = arrayMachine[i][j].fragments[scribd].value[elem].data.link.value.oembed.url;
+        }
+        } else {
+          renderArray[indice].guide = null;
+        }
+
+        if (arrayMachine[i][j].fragments[d1]){
+            renderArray[indice].diagram = arrayMachine[i][j].fragments[d1].value.file.url;
+          } else {
+            renderArray[indice].diagram = null;
+          }
+
+        if (arrayMachine[i][j].fragments[height]){
+            renderArray[indice].height_m = arrayMachine[i][j].fragments[height].value;
+          } else {
+            renderArray[indice].height_m = null;
+          }
+        
+        indice++;
+      }
+    }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <br>
+
+    <p>Explanations</p>
+
+    <h3>JSON Response Example</h3>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <small class="toggler" data-toggle="collapse" data-target="#response" aria-expanded="false" aria-controls="response">
+          <span class="label label-default">JSON Response
+      </small>
+      <row class="collapse" id="response">
+{% highlight json %}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <br>
+
+    <p>Explanations</p>
+
 	</section>
 
 	<br>
@@ -3542,7 +3715,7 @@ title : Manitou API
     <ul>
       <li>Explain us briefly your project, the requests volume and your stack so we can have an idea.</li>
       <li>Give us your contact information (technical contact name, email, phone number, address, URL of your project).</li>
-      <li>Don't use the descriptive texts in order to avoid duplicate content.</li>
+      <li>Don't use the descriptive texts in your web apps in order to avoid duplicate content and SERPs discredit.</li>
     </ul>
 
     <p>Always keep in mind that you don't respect our guidelines, we keep the right to destroy your API key at any time without prior notice.</p>
