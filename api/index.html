@@ -3564,23 +3564,20 @@ title : Manitou API
 {% highlight js %}
 Prismic.Api('https://manitou.cdn.prismic.io/api', function (err, Api) { 
   var renderMachine = []; 
-  // then query our cdn
+  // then query the CDN
   
   // ('everything').ref(Api.master()) ==> means you query on every document in our master repository (you don't have to edit this part).
 
-
-
-  // query(Prismic.Predicates.at("document.type", "machine")) ==> here your query. You can change "machine" with any manitou's documents (attachment, benefit, event ...).
+  // query(Prismic.Predicates.at("document.type", "machine")) ==> here is your query. You can change "machine" with any manitou's documents (attachment, benefit, event ...).
   
-  // If you want to query an unique document, query with "document.id" and change "machine" with the document id.
+  // If you want to query a unique document, query with "document.id" and change "machine" with the document id.
   // You can find a machine id on manitou.com : for example, the MLT 625 75 h refer to http://www.manitou.com/en/p/UtVNhwEAALIk6Csb => id : "UtVNhwEAALIk6Csb"
   
-  // Find more element on https://developers.prismic.io/documentation/developers-manual#querying-a-repository
+  // Find more on https://developers.prismic.io/documentation/developers-manual#querying-a-repository
 
-
-
-  // prismic query render "pages" of results limited to 100 elements by page. So in order to have all machines, we have to query all pages.
+  // Prismic query renders "pages" of results limited to 100 elements per page. In order to have all machines, we have to query all pages.
   // So we gather all pages results in an array. Then we use a function to grab the data.
+
     Api.form('everything').ref(Api.master()).page(1).query(Prismic.Predicates.at("document.type", "machine")).pageSize(100).submit(function (err, resMachine) { 
         renderMachine[0] = resMachine.results;
         var swi = resMachine.total_pages;
@@ -3657,8 +3654,9 @@ function constructeur(arrayMachine){
         renderArray[indice].id = arrayMachine[i][j].id;
         renderArray[indice].category = arrayMachine[i][j].fragments[machine_cat].value[docu].slug;
 
-        // In prismic, if a machine never have a video then the prismic fragment don't exist.
-        // So we have to check the existence and then grab the link.
+        // In Prismic, if a machine never had a video link then the JSON fragment doesn't exist.
+        // Therefore, we have to check its existence and, if so, then grab the link.
+
         if (arrayMachine[i][j].fragments[vid]){
         renderArray[indice].video = arrayMachine[i][j].fragments[vid].value.oembed.embed_url;
         } else {
@@ -3671,7 +3669,8 @@ function constructeur(arrayMachine){
           renderArray[indice].picture = null;
         }
 
-        // Several document may be bound to a machine => we create an array which will contain all documents.
+        // Several documents may be linked to a machine => We create an array which will contain all documents.
+
         if (arrayMachine[i][j].fragments[scribd]){
         renderArray[indice].guide = [];
         for(var elem in arrayMachine[i][j].fragments[scribd].value){
