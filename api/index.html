@@ -57,9 +57,7 @@ title : Manitou API
 
 		<p>A custom type is a JSON file used by Prismic to manage data on a per document level. We have defined and structured the data we needed into "custom types". They are based on our own needs, requirements and constraints. It's easy to add new elements or delete old ones in every custom type (or document mask (their "old" name)) but way more complex to edit one. That's why sometimes, you fill find elements names with "-" (hyphens) and others with "_" (underscores). Be careful.</p>
 
-
     <br>
-    <hr>
     <br>
 
     <h4>Machines &amp; Categories</h4>
@@ -1707,6 +1705,7 @@ title : Manitou API
       </row>
     </div>
 
+    <br>
 
 		<p>We can however know the category of one "machine" thanks to its link to a "machine-cat" document.</p>
 
@@ -3532,19 +3531,14 @@ title : Manitou API
 
     <h3>JS Query Example</h3>
 
-    <p>Explanations</p>
+    <p>Find here an example of a Prismic call for all Manitou machines available. First, create the Api object which permit you to query on Prismic CDN.</p>
 
     <div class="bloc">
       <small class="toggler" data-toggle="collapse" data-target="#query" aria-expanded="false" aria-controls="query">
-          <span class="label label-default">Commented JS Query code
+          <span class="label label-default">Commented JS call code
       </small>
       <row class="collapse" id="query">
 {% highlight js %}
-
-// Find here an example of an prismic call for all manitou's machines available.
-
-// First create the Api object which permit you to query on manitou cdn
-
 Prismic.Api('https://manitou.cdn.prismic.io/api', function (err, Api) { 
   var renderMachine = []; 
   // then query our cdn
@@ -3603,8 +3597,20 @@ Prismic.Api('https://manitou.cdn.prismic.io/api', function (err, Api) {
                 break;
         }
 });
+{% endhighlight %}
+      </row>
+    </div>
 
-// Here a function which create an array which contain data on all machines. See the custom types to see all the available data and pick all you need.
+    <br>
+
+    <p>Here is a function which creates an array containing the data of all machines.</p>
+
+    <div class="bloc">
+      <small class="toggler" data-toggle="collapse" data-target="#array" aria-expanded="false" aria-controls="array">
+          <span class="label label-default">Commented JS array function code
+      </small>
+      <row class="collapse" id="array">
+{% highlight js %}
 function constructeur(arrayMachine){
     var cat = 'machine.machine_cat';
     var vid = 'machine.video';
@@ -3669,10 +3675,6 @@ function constructeur(arrayMachine){
 {% endhighlight %}
       </row>
     </div>
-
-    <br>
-
-    <p>Explanations</p>
 
     <h3>JSON Response Example</h3>
 
