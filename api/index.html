@@ -54,7 +54,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#machine" aria-expanded="false" aria-controls="machine">
-          <span class="label label-default">machine</span> JSON Mask
+          <span class="label label-default">machine</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="machine">
 {% highlight json %}
@@ -1699,7 +1699,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#machine_cat" aria-expanded="false" aria-controls="machine_cat">
-         <span class="label label-default">machine-cat</span> JSON Mask
+         <span class="label label-default">machine-cat</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="machine_cat">
 {% highlight json %}
@@ -1793,7 +1793,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#country" aria-expanded="false" aria-controls="country">
-          <span class="label label-default">country-territory</span> JSON Mask
+          <span class="label label-default">country-territory</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="country">
 {% highlight json %}
@@ -1912,145 +1912,6 @@ title : Manitou API
 
 		<p>Explanations</p>
 
-    <div class="bloc">
-      <strong class="toggler" data-toggle="collapse" data-target="#subsidiary" aria-expanded="false" aria-controls="subsidiary">
-          <span class="label label-default">subsidiary</span> JSON Mask
-      </strong>
-      <row class="collapse" id="subsidiary">
-{% highlight json %}
-{
-  "Subsidiary Information" : {
-    "subsidiary_name" : {
-      "fieldset" : "Subsidiary Name",
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "placeholder" : "Subsidiary Name"
-      }
-    },
-    "vp" : {
-      "type" : "Link",
-      "fieldset" : "VP Sales",
-      "config" : {
-        "select" : "document",
-        "masks" : [ "vp" ]
-      }
-    },
-    "subsidiary_ordering" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Subsidiary Order (ASC)",
-        "min" : 0
-      }
-    },
-    "subsidiary_image_team" : {
-      "type" : "Image",
-      "fieldset" : "Subsidiary Team Image",
-      "config" : {
-        "thumbnails" : [ {
-          "name" : "web",
-          "width" : 280,
-          "height" : 186
-        }, {
-          "name" : "square",
-          "width" : 250,
-          "height" : 250
-        } ]
-      }
-    },
-    "subsidiary_image_office" : {
-      "type" : "Image",
-      "fieldset" : "Subsidiary Offices Image",
-      "config" : {
-        "thumbnails" : [ {
-          "name" : "web",
-          "width" : 280,
-          "height" : 186
-        }, {
-          "name" : "square",
-          "width" : 250,
-          "height" : 250
-        } ]
-      }
-    },
-    "subsidiary_address" : {
-      "type" : "StructuredText",
-      "fieldset" : "Subsidiary Address",
-      "config" : {
-        "single" : "paragraph"
-      }
-    },
-    "subsidiary_zipcode" : {
-      "type" : "StructuredText",
-      "fieldset" : "Subsidiary ZipCode",
-      "config" : {
-        "single" : "paragraph"
-      }
-    },
-    "subsidiary_city" : {
-      "type" : "StructuredText",
-      "fieldset" : "Subsidiary City",
-      "config" : {
-        "single" : "paragraph"
-      }
-    },
-    "subsidiary_country" : {
-      "type" : "Link",
-      "fieldset" : "Subsidiary Country (Address)",
-      "config" : {
-        "select" : "document",
-        "masks" : [ "country-territory" ],
-        "placeholder" : "Select a Country"
-      }
-    },
-    "subsidiary_coordinates" : {
-      "fieldset" : "Subsidiary Coordinates",
-      "type" : "GeoPoint"
-    },
-    "subsidiary_emails" : {
-      "type" : "Group",
-      "fieldset" : "Subsidiary Email Adresses",
-      "config" : {
-        "fields" : {
-          "text" : {
-            "type" : "Text"
-          }
-        }
-      }
-    },
-    "subsidiary_phone" : {
-      "type" : "StructuredText",
-      "fieldset" : "Subsidiary Phone Number",
-      "config" : {
-        "single" : "paragraph",
-        "placeholder" : "Subsidiary Phone Number"
-      }
-    },
-    "countries" : {
-      "type" : "Group",
-      "fieldset" : "Countries covered by Subsidiary",
-      "config" : {
-        "fields" : {
-          "link" : {
-            "type" : "Link",
-            "config" : {
-              "select" : "document",
-              "masks" : [ "country-territory" ]
-            }
-          }
-        }
-      }
-    }
-  }
-}
-{% endhighlight %}
-      </row>
-    </div>
-
-    <br>
-
-		<p>Explanations</p>
-
 
     <h3>Languages</h3>
 
@@ -2060,7 +1921,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#language" aria-expanded="false" aria-controls="language">
-          <span class="label label-default">language</span> JSON Mask
+          <span class="label label-default">language</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="language">
 {% highlight json %}
@@ -2112,7 +1973,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#attachment_cat" aria-expanded="false" aria-controls="attachment_cat">
-          <span class="label label-default">attachment-cat</span> JSON Mask
+          <span class="label label-default">attachment-cat</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="attachment_cat">
 {% highlight json %}
@@ -2199,7 +2060,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#attachment" aria-expanded="false" aria-controls="attachment">
-          <span class="label label-default">attachment</span> JSON Mask
+          <span class="label label-default">attachment</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="attachment">
 {% highlight json %}
@@ -2435,7 +2296,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#attachment_ref" aria-expanded="false" aria-controls="attachment_ref">
-          <span class="label label-default">attachment-reference</span> JSON Mask
+          <span class="label label-default">attachment-reference</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="attachment_ref">
 {% highlight json %}
@@ -2787,7 +2648,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#service" aria-expanded="false" aria-controls="service">
-          <span class="label label-default">service</span> JSON Mask
+          <span class="label label-default">service</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="service">
 {% highlight json %}
@@ -2971,7 +2832,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#service_translation" aria-expanded="false" aria-controls="service_translation">
-          <span class="label label-default">service-translation</span> JSON Mask
+          <span class="label label-default">service-translation</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="service_translation">
 {% highlight json %}
@@ -3032,7 +2893,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#market" aria-expanded="false" aria-controls="market">
-          <span class="label label-default">market</span> JSON Mask
+          <span class="label label-default">market</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="market">
 {% highlight json %}
@@ -3197,7 +3058,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#application" aria-expanded="false" aria-controls="application">
-          <span class="label label-default">application</span> JSON Mask
+          <span class="label label-default">application</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="application">
 {% highlight json %}
@@ -3378,7 +3239,7 @@ title : Manitou API
 
         <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#application" aria-expanded="false" aria-controls="application">
-          <span class="label label-default">application-translation</span> JSON Mask
+          <span class="label label-default">application-translation</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="application">
 {% highlight json %}
@@ -3434,7 +3295,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#benefit" aria-expanded="false" aria-controls="benefit">
-          <span class="label label-default">benefit</span> JSON Mask
+          <span class="label label-default">benefit</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="benefit">
 {% highlight json %}
@@ -3597,7 +3458,7 @@ title : Manitou API
 
     <div class="bloc">
       <strong class="toggler" data-toggle="collapse" data-target="#benefit_translation" aria-expanded="false" aria-controls="benefit_translation">
-          <span class="label label-default">benefit-translation</span> JSON Mask
+          <span class="label label-default">benefit-translation</span>&nbsp; JSON Mask
       </strong>
       <row class="collapse" id="benefit_translation">
 {% highlight json %}
