@@ -8,29 +8,23 @@ title : Manitou API
 <main class="docs-main">
 
 	<h1>API</h1>
-	<p></p>
- 
-	<p>You know you need it.</p>
-
-	<br>
-	<hr>
-	<br>
-
 
 	<section id="why">
 		<h2>Why?</h2>
 
 		<h3>1 API = X Apps</h3>
 
-		<p></p>
+		<p>Since the beginning of the new manitou.com website project, we needed one single place to gather the information we wanted to share and to distribute it into several tools. It took us time to fetch all the data and structure it. However, we knew it was worth it because, now we can share it with you.</p>
+
+    <p>From one single place which gathers the structured data and its API, we can grant access and </p>
 
 		<h3>Always Up-to-date</h3>
 
-		<p></p>
+		<p>We know how painful it can be to update information and maintain it as much up-to-date as possible. We also think that you may have something more interesting to do than copy-pasting it every x. So we grant access to something we already do for us </p>
 
 		<h3>3rd Party Integrations</h3>
 
-		<p>We are currently building integrations with third party platforms to make sure our catalogue is always up to date. Among them: lead generation platforms, showcasing platforms, </p>
+		<p>We are currently building integrations with third party platforms to make sure our catalogue is always up to date. Among them: lead generation platforms, showcasing tools, specifications spreaders, marketplaces...</p>
 
 	</section>
 
@@ -44,13 +38,3575 @@ title : Manitou API
 
 		<p>Prismic is a content repository management system. It includes a REST API and allows content managers to create, edit and manage contents through JSON masks and distribute it on apps via the API. Have a look at <a href="https://prismic.io" target="_blank">Prismic.io</a>, check the <a href="https://prismic.io/tour/api" target="_blank">API tour</a>, the <a href="https://prismic.io/faq" target="_blank">FAQ</a>, the <a href="https://qa.prismic.io/" target="_blank">Q&amp;A</a> &amp; the <a href="https://developers.prismic.io/" target="_blank">technical documentation</a> before going any further.</p>
 
+    <h3>Starter Development Kits on Github</h3>
+
+    <p>You will find all available SDKs on <a href="https://github.com/prismicio" target="_blank">Prismic.io Github Account</a>. Many are available: Ruby, PHP, JS, Node JS, Python, Scala, .Net, Java... Check the documentation of each one and install it. Grab your API Key and add it to your config file.</p>
+
 		<h3>Custom Types</h3>
 
-		<p>We have defined and structured a </p>
+		<p>We have defined and structured the documents we needed based on our requirements and constraints. </p>
 
-		<h3>Starter Development Kits on Github</h3>
+    <h3>Machines &amp; Categories</h3>
 
-		<p>You will find all available SDKs on <a href="https://github.com/prismicio" target="_blank">Prismic.io Github Account</a>. Many are available: Ruby, PHP, JS, Node JS, Python, Scala, .Net, Java... Check the documentation of each one and install it. Grab your API Key and add it to your config file.</p>
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#machine" aria-expanded="false" aria-controls="machine">
+          <span>machine JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="machine">
+{% highlight json %}
+{
+  "Main" : {
+    "model_name" : {
+      "fieldset" : "Model Name",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Model Name"
+      }
+    },
+    "machine_ordering" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Machine Order (ASC)",
+        "min" : 0
+      }
+    },
+    "machine_cat" : {
+      "type" : "Link",
+      "fieldset" : "Machine Category",
+      "config" : {
+        "placeholder" : "Machine Category",
+        "select" : "document",
+        "masks" : [ "machine-cat" ]
+      }
+    },
+    "machine_subcat" : {
+      "type" : "Link",
+      "fieldset" : "Machine SubCategory",
+      "config" : {
+        "placeholder" : "Machine SubCategory",
+        "select" : "document",
+        "masks" : [ "subcat-awp", "subcat-mft", "subcat-mounted", "subcat-wheq" ]
+      }
+    },
+    "machine_platform_ok" : {
+      "type" : "Select",
+      "fieldset" : "Platform Ok ?",
+      "config" : {
+        "options" : [ "No", "Yes" ]
+      }
+    },
+    "machine_desc_en" : {
+      "fieldset" : "Description (EN)",
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em"
+      }
+    },
+    "machine_desc_fr" : {
+      "fieldset" : "Description (FR)",
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em"
+      }
+    },
+    "machine_desc_es" : {
+      "fieldset" : "Description (ES)",
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em"
+      }
+    },
+    "machine_desc_de" : {
+      "fieldset" : "Description (DE)",
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em"
+      }
+    },
+    "machine_desc_it" : {
+      "fieldset" : "Description (IT)",
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em"
+      }
+    },
+    "machine_desc_pt" : {
+      "fieldset" : "Description (PT)",
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em"
+      }
+    },
+    "machine_desc_nl" : {
+      "fieldset" : "Description (NL)",
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em"
+      }
+    },
+    "machine_desc_pl" : {
+      "fieldset" : "Description (PL)",
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em"
+      }
+    },
+    "machine_desc_ru" : {
+      "fieldset" : "Description (RU)",
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em"
+      }
+    },
+    "machine_desc_zh" : {
+      "fieldset" : "Description (ZH)",
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em"
+      }
+    }
+  },
+  "Coun." : {
+    "countries" : {
+      "type" : "Group",
+      "fieldset" : "Available in the following countries",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "masks" : [ "country-territory" ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Docs" : {
+    "photos" : {
+      "fieldset" : "Photos",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Flickr Album URL"
+      }
+    },
+    "video" : {
+      "fieldset" : "Video",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Youtube Video URL"
+      }
+    },
+    "3d" : {
+      "fieldset" : "3D",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Sketchfab URL"
+      }
+    },
+    "scribd" : {
+      "type" : "Group",
+      "fieldset" : "Scribd",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Embed",
+            "config" : {
+              "placeholder" : "Paste the Scribd URL"
+            }
+          }
+        }
+      }
+    },
+    "virtual_tour" : {
+      "fieldset" : "Virtual Tour URL",
+      "type" : "Link"
+    }
+  },
+  "Dim's°" : {
+    "diagram_1" : {
+      "fieldset" : "Diagrams",
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Diagram 1 (side)",
+        "select" : "media"
+      }
+    },
+    "diagram_2" : {
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Diagram 2 (top)",
+        "select" : "media"
+      }
+    },
+    "diagram_3" : {
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Diagram 3 (front/back)",
+        "select" : "media"
+      }
+    },
+    "length-m" : {
+      "fieldset" : "Length",
+      "type" : "Number",
+      "config" : {
+        "label" : "@ forks heels (m.)",
+        "min" : 0
+      }
+    },
+    "length-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "@ forks heels (ft.)",
+        "min" : 0
+      }
+    },
+    "length_total_m" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Total, Forks incl. (m.)",
+        "min" : 0
+      }
+    },
+    "length_total_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Total, Forks incl. (ft.)",
+        "min" : 0
+      }
+    },
+    "overall_length_m" : {
+      "fieldset" : "Overall Length for AWP",
+      "type" : "Number",
+      "config" : {
+        "label" : "Overall Length (m.)",
+        "min" : 0
+      }
+    },
+    "overall_length_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Overall Length (ft.)",
+        "min" : 0
+      }
+    },
+    "overall_length_folded_m" : {
+      "fieldset" : "Overall Length for AWP when folded",
+      "type" : "Number",
+      "config" : {
+        "label" : "Ovrl. Length Folded (m.)",
+        "min" : 0
+      }
+    },
+    "overall_length_folded_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Ovrl. Length Folded (ft.)",
+        "min" : 0
+      }
+    },
+    "wheelbase_length_m" : {
+      "fieldset" : "Wheelbase Length",
+      "type" : "Number",
+      "config" : {
+        "label" : "Wheelbase Length (m.)",
+        "min" : 0
+      }
+    },
+    "wheelbase_length_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Wheelbase Length (ft.)",
+        "min" : 0
+      }
+    },
+    "width-m" : {
+      "fieldset" : "Overall Width",
+      "type" : "Number",
+      "config" : {
+        "label" : "Overall Width (m.)",
+        "min" : 0
+      }
+    },
+    "width-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Overall Width (ft.)",
+        "min" : 0
+      }
+    },
+    "overall_width_stabslowered_m" : {
+      "fieldset" : "Overall Width Stabs Lowered",
+      "type" : "Number",
+      "config" : {
+        "label" : "OW Stabs lowered (m.)",
+        "min" : 0
+      }
+    },
+    "overall_width_stabslowered_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "OW Stabs lowered (ft.)",
+        "min" : 0
+      }
+    },
+    "width_forkcarriage_m" : {
+      "fieldset" : "Width of Fork Carriage",
+      "type" : "Number",
+      "config" : {
+        "label" : "WFC (m.)",
+        "min" : 0
+      }
+    },
+    "width_forkcarriage_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "WFC (ft.)",
+        "min" : 0
+      }
+    },
+    "aisle-width-m-1000x1200" : {
+      "fieldset" : "Aisle Width",
+      "type" : "Number",
+      "config" : {
+        "label" : "1000x1200 pallet (m.)",
+        "min" : 0
+      }
+    },
+    "aisle-width-ft-1000x1200" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "1000x1200 pallet (ft.)",
+        "min" : 0
+      }
+    },
+    "aisle-width-m-800x1200" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "800x1200 pallet (m.)",
+        "min" : 0
+      }
+    },
+    "aisle-width-ft-800x1200" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "800x1200 pallet (ft.)",
+        "min" : 0
+      }
+    },
+    "height-m" : {
+      "fieldset" : "Overall Height (mast lowered, tiller up, AWP folded)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Height (m.)",
+        "min" : 0
+      }
+    },
+    "height-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Height (ft.)",
+        "min" : 0
+      }
+    },
+    "overall_height_folded_m" : {
+      "fieldset" : "Overall Height when folded (for AWP)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Height Folded (m.)",
+        "min" : 0
+      }
+    },
+    "overall_height_folded_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Height Folded (ft.)",
+        "min" : 0
+      }
+    },
+    "weight-kg" : {
+      "fieldset" : "Unladen Weight (with Standard Forks)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Weight (in kg.)",
+        "min" : 0
+      }
+    },
+    "weight-lb" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Weight (in lb.)",
+        "min" : 0
+      }
+    },
+    "weight_axle_front_laden_kg" : {
+      "fieldset" : "Weight Front Axle",
+      "type" : "Number",
+      "config" : {
+        "label" : "Front Laden (kg.)",
+        "min" : 0
+      }
+    },
+    "weight_axle_front_laden_lb" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Front Laden (lb.)",
+        "min" : 0
+      }
+    },
+    "weight_axle_front_unladen_kg" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Front Unladen (kg.)",
+        "min" : 0
+      }
+    },
+    "weight_axle_front_unladen_lb" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Front Unladen (lb.)",
+        "min" : 0
+      }
+    },
+    "weight_axle_rear_laden_kg" : {
+      "fieldset" : "Weight Rear Axle",
+      "type" : "Number",
+      "config" : {
+        "label" : "Rear Laden (kg.)",
+        "min" : 0
+      }
+    },
+    "weight_axle_rear_laden_lb" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Rear Laden (lb.)",
+        "min" : 0
+      }
+    },
+    "weight_axle_rear_unladen_kg" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Rear Unladen (kg.)",
+        "min" : 0
+      }
+    },
+    "weight_axle_rear_unladen_lb" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Rear Unladen (lb.)",
+        "min" : 0
+      }
+    },
+    "turning-radius-m" : {
+      "fieldset" : "Turning Radius (Ext. or biggest value)",
+      "type" : "Number",
+      "config" : {
+        "label" : "TR (m.)",
+        "min" : 0
+      }
+    },
+    "turning-radius-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "TR (ft.)",
+        "min" : 0
+      }
+    },
+    "turning_radius_basket_m" : {
+      "fieldset" : "Turning Radius with Basket (for AWP)",
+      "type" : "Number",
+      "config" : {
+        "label" : "TRWB (m.)",
+        "min" : 0
+      }
+    },
+    "turning_radius_basket_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "TRWB (ft.)",
+        "min" : 0
+      }
+    },
+    "ground-clearance-m" : {
+      "fieldset" : "Ground Clearance",
+      "type" : "Number",
+      "config" : {
+        "label" : "GC in (m.)",
+        "min" : 0
+      }
+    },
+    "ground-clearance-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "GC in (ft.)",
+        "min" : 0
+      }
+    },
+    "floor-access-m" : {
+      "fieldset" : "Floor Access",
+      "type" : "Number",
+      "config" : {
+        "label" : "Floor Access in (m.)",
+        "min" : 0
+      }
+    },
+    "floor-access-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Floor Access in (ft.)",
+        "min" : 0
+      }
+    },
+    "dimensions_basket_folded_m" : {
+      "fieldset" : "Basket Dimensions (AWP)",
+      "type" : "Text",
+      "config" : {
+        "label" : "Folded (L x W) (m)"
+      }
+    },
+    "dimensions_basket_folded_ft" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Folded (L x W) (ft)"
+      }
+    },
+    "dimensions_basket_unfolded_m" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Unfolded (L x W) (m)"
+      }
+    },
+    "dimensions_basket_unfolded_ft" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Unfolded (L x W) (ft)"
+      }
+    },
+    "pendulum_length_m" : {
+      "fieldset" : "Pendulum (AWP)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Length (m)",
+        "min" : 0
+      }
+    },
+    "pendulum_length_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Length (ft)",
+        "min" : 0
+      }
+    }
+  },
+  "Perfs" : {
+    "load_chart" : {
+      "fieldset" : "Load charts Rough Terrain - EN1459-B",
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Load Chart (no stabs)",
+        "select" : "media"
+      }
+    },
+    "load_chart_stabs" : {
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Load Chart (with stabs)",
+        "select" : "media"
+      }
+    },
+    "load_chart_industrial" : {
+      "fieldset" : "Load charts Industrial - EN1459-A",
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Load Chart (no stabs)",
+        "select" : "media"
+      }
+    },
+    "load_chart_industrial_stabs" : {
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Load Chart (with stabs)",
+        "select" : "media"
+      }
+    },
+    "lifting-height-m" : {
+      "fieldset" : "Lifting Height",
+      "type" : "Number",
+      "config" : {
+        "label" : "Lifting Height (m)",
+        "min" : 0
+      }
+    },
+    "lifting-height-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Lifting Height (ft)",
+        "min" : 0
+      }
+    },
+    "lifting-capacity-kg" : {
+      "fieldset" : "Lifting Capacity",
+      "type" : "Number",
+      "config" : {
+        "label" : "Lifting Capacity (kg)",
+        "min" : 0
+      }
+    },
+    "lifting-capacity-lb" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Lifting Capacity (lb)",
+        "min" : 0
+      }
+    },
+    "lifting-capacity-ppl" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Lifting Capacity (pers.)",
+        "min" : 0
+      }
+    },
+    "lifting-capacity-exterior-ppl" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Lifting Capacity Ext. (pers.)",
+        "min" : 0
+      }
+    },
+    "traction-capacity-kg" : {
+      "fieldset" : "Traction Capacity (CT)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Traction Capacity (kg)",
+        "min" : 0
+      }
+    },
+    "traction-capacity-lb" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Traction Capacity (lb)",
+        "min" : 0
+      }
+    },
+    "max-reach-m" : {
+      "fieldset" : "Reach",
+      "type" : "Number",
+      "config" : {
+        "label" : "Max. Reach (m)",
+        "min" : 0
+      }
+    },
+    "max-reach-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Max. Reach (ft)",
+        "min" : 0
+      }
+    },
+    "max-reach-capacity-kg" : {
+      "fieldset" : "Capacity @Max.R - No Stabs",
+      "type" : "Number",
+      "config" : {
+        "label" : "Capacity @Max.R (kg)",
+        "min" : 0
+      }
+    },
+    "max-reach-capacity-lb" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Capacity @Max.R (lb)",
+        "min" : 0
+      }
+    },
+    "max-reach-capacity-stabs-kg" : {
+      "fieldset" : "Capacity @Max.R - Stabs",
+      "type" : "Number",
+      "config" : {
+        "label" : "Capacity @Max.R (kg)",
+        "min" : 0
+      }
+    },
+    "max-reach-capacity-stabs-lb" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Capacity @Max.R (lb)",
+        "min" : 0
+      }
+    },
+    "drawbar-pull-dan" : {
+      "fieldset" : "Force",
+      "type" : "Number",
+      "config" : {
+        "label" : "Drawbar pull (daN)",
+        "min" : 0
+      }
+    },
+    "drawbar-pull-lbf" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Drawbar pull (lbf)",
+        "min" : 0
+      }
+    },
+    "break-out-force-dan" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Break-out (daN)",
+        "min" : 0
+      }
+    },
+    "break-out-force-lbf" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Break-out (lbf)",
+        "min" : 0
+      }
+    },
+    "overhang-m" : {
+      "fieldset" : "Overhang",
+      "type" : "Number",
+      "config" : {
+        "label" : "Overhang (m)",
+        "min" : 0
+      }
+    },
+    "overhang-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Overhang (ft)",
+        "min" : 0
+      }
+    },
+    "moving-speed-kmh" : {
+      "fieldset" : "Moving Speed",
+      "type" : "Number",
+      "config" : {
+        "label" : "Speed Laden (km/h)",
+        "min" : 0
+      }
+    },
+    "moving-speed-mph" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Speed Laden (mph)",
+        "min" : 0
+      }
+    },
+    "moving_speed_unladen_kmh" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Speed Unladen (km/h)",
+        "min" : 0
+      }
+    },
+    "moving_speed_unladen_mph" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Speed Unladen (mph)",
+        "min" : 0
+      }
+    },
+    "working-speed-kmh" : {
+      "fieldset" : "Working Speed (for AWP)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Working speed (km/h)",
+        "min" : 0
+      }
+    },
+    "working-speed-mph" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Working speed (mph)",
+        "min" : 0
+      }
+    },
+    "time_lifting_laden" : {
+      "fieldset" : "Time",
+      "type" : "Number",
+      "config" : {
+        "label" : "Lifting Laden (sec.)",
+        "min" : 0
+      }
+    },
+    "time_lifting_unladen" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Lifting Unladen (sec.)",
+        "min" : 0
+      }
+    },
+    "time_lowering_laden" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Lowering Laden (sec.)",
+        "min" : 0
+      }
+    },
+    "time_lowering_unladen" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Lowering Unladen (sec.)",
+        "min" : 0
+      }
+    },
+    "time_extension_laden" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Extens° Laden (sec.)",
+        "min" : 0
+      }
+    },
+    "time_extension_unladen" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Extens° Unladen (sec.)",
+        "min" : 0
+      }
+    },
+    "time_retraction_laden" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Retract° Laden (sec.)",
+        "min" : 0
+      }
+    },
+    "time_retraction_unladen" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Retract° Unladen (sec.)",
+        "min" : 0
+      }
+    },
+    "time_crowd" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Crowd (sec.)",
+        "min" : 0
+      }
+    },
+    "time_dump" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Dump (sec.)",
+        "min" : 0
+      }
+    },
+    "mast-inclination-front" : {
+      "fieldset" : "Tilt of Mast",
+      "type" : "Number",
+      "config" : {
+        "label" : "Mast Inclination (front °)",
+        "min" : 0
+      }
+    },
+    "mast-inclination-rear" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Mast Inclination (rear °)",
+        "min" : 0
+      }
+    },
+    "surmontable-slope-percent" : {
+      "fieldset" : "Surmontable Slope",
+      "type" : "Number",
+      "config" : {
+        "label" : "S.Slope Laden (%)",
+        "min" : 0
+      }
+    },
+    "surmontable_slope_percent_unladen" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "S.Slope Unladen (%)",
+        "min" : 0
+      }
+    },
+    "max_crossfall_accepted_unfolded" : {
+      "fieldset" : "Max. Crossfall Accepted (when AWP unfolded)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Max. Crossfall (deg)",
+        "min" : 0
+      }
+    }
+  },
+  "Eng.Batt." : {
+    "energy" : {
+      "fieldset" : "Energy",
+      "type" : "Select",
+      "config" : {
+        "label" : "Energy",
+        "options" : [ "machineEnergy.Diesel", "machineEnergy.Petrol", "machineEnergy.Lpg", "machineEnergy.Electric", "machineEnergy.Bienergy", "machineEnergy.Manual", "machineEnergy.ElectroManual" ]
+      }
+    },
+    "engine-brand" : {
+      "fieldset" : "Engine",
+      "type" : "Select",
+      "config" : {
+        "label" : "Engine Brand",
+        "options" : [ "Cummins", "Deutz", "FPT", "John Deere", "Kubota", "Lombardini", "Mercedes", "Nissan", "Perkins", "PSI", "Yanmar" ]
+      }
+    },
+    "engine-type" : {
+      "type" : "Select",
+      "config" : {
+        "label" : "Engine Type",
+        "options" : [ "Stage III / Tier III", "Stage 3A", "Stage 3B", "Interim Tier III", "Interim Tier IV", "Stage IV / Tier IV Final", "Stage IIIa / Tier III", "Stage 3B / Interim Tier IV", "Stage 3A / Interim Tier IV", "3B / Tier IV Final", "Tier IV Final" ]
+      }
+    },
+    "engine_manufacturer_type" : {
+      "fieldset" : "Engine Manufacturer Type",
+      "type" : "Text",
+      "config" : {
+        "label" : "Manufacturer Type"
+      }
+    },
+    "power-cv" : {
+      "fieldset" : "Power",
+      "type" : "Number",
+      "config" : {
+        "label" : "Power (cv)",
+        "min" : 0
+      }
+    },
+    "power-hp" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Power (hp)",
+        "min" : 0
+      }
+    },
+    "power-kw" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Power (kw)",
+        "min" : 0
+      }
+    },
+    "engine_torque_force" : {
+      "fieldset" : "Maximum Torque",
+      "type" : "Number",
+      "config" : {
+        "label" : "Max. Torque Force (Nm)",
+        "min" : 0
+      }
+    },
+    "engine_torque_rotation" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Max. Torque Revolut° (rpm)",
+        "min" : 0
+      }
+    },
+    "engine_cylinders" : {
+      "fieldset" : "Cylinders",
+      "type" : "Number",
+      "config" : {
+        "label" : "Number of Cylinders",
+        "min" : 0
+      }
+    },
+    "engine_cubic_capacity_cm3" : {
+      "fieldset" : "Cubic Capacity",
+      "type" : "Number",
+      "config" : {
+        "label" : "Cubic Capacity (cm3)",
+        "min" : 0
+      }
+    },
+    "engine_cubic_capacity_cubin" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Cubic Capacity (cubic inches)",
+        "min" : 0
+      }
+    },
+    "engine_injection" : {
+      "fieldset" : "Injection",
+      "type" : "Select",
+      "config" : {
+        "label" : "Injection",
+        "options" : [ "engineInjection.direct", "engineInjection.indirect", "engineInjection.central", "engineInjection.swirl", "engineInjection.multiport", "engineInjection.continuous", "engineInjection.singlepoint" ]
+      }
+    },
+    "engine_cooling" : {
+      "fieldset" : "Cooling",
+      "type" : "Select",
+      "config" : {
+        "label" : "Cooling",
+        "options" : [ "engineCooling.water", "engineCooling.air", "engineCooling.airAndWater" ]
+      }
+    },
+    "fuel_tank_volume_l" : {
+      "fieldset" : "Fuel Reservoir",
+      "type" : "Number",
+      "config" : {
+        "label" : "Fuel Tank Volume (l.)",
+        "min" : 0
+      }
+    },
+    "fuel_tank_volume_gal" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Fuel Tank Volume (gal.)",
+        "min" : 0
+      }
+    },
+    "urea_tank_volume_l" : {
+      "fieldset" : "DEF Reservoir",
+      "type" : "Number",
+      "config" : {
+        "label" : "Urea Tank Volume (l.)",
+        "min" : 0
+      }
+    },
+    "urea_tank_volume_gal" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Urea Tank Volume (gal.)",
+        "min" : 0
+      }
+    },
+    "battery-voltage-v" : {
+      "fieldset" : "Battery",
+      "type" : "Number",
+      "config" : {
+        "label" : "Battery Voltage (V)",
+        "min" : 0
+      }
+    },
+    "battery-amperage-ah" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Battery Amperage (Ah)",
+        "min" : 0
+      }
+    },
+    "transmission" : {
+      "fieldset" : "Transmission",
+      "type" : "Select",
+      "config" : {
+        "label" : "Transmission",
+        "options" : [ "MachineTransmission.TorqueConverter", "MachineTransmission.Hydrostatic", "MachineTransmission.ContinuouslyVariable", "MachineTransmission.ElectricalMotor" ]
+      }
+    }
+  },
+  "Hydr." : {
+    "pump_type" : {
+      "fieldset" : "Pump Type",
+      "type" : "Select",
+      "config" : {
+        "label" : "Pump Type",
+        "options" : [ "MachinePumpType.Variable", "MachinePumpType.Gear" ]
+      }
+    },
+    "pump_brand" : {
+      "fieldset" : "Pump Brand",
+      "type" : "Select",
+      "config" : {
+        "label" : "Pump Brand",
+        "options" : [ "Rexroth", "Casappa", "Sauer" ]
+      }
+    },
+    "hydraulic-flow-lmn" : {
+      "fieldset" : "Hydraulics",
+      "type" : "Number",
+      "config" : {
+        "label" : "Hydraulic Flow (l/mn)",
+        "min" : 0
+      }
+    },
+    "hydraulic-flow-gpm" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Hydraulic Flow (gpm)",
+        "min" : 0
+      }
+    },
+    "hydraulic-pressure-bar" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Hydraulic Pressure (bar)",
+        "min" : 0
+      }
+    },
+    "hydraulic-pressure-psi" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Hydraulic Pressure (psi)",
+        "min" : 0
+      }
+    },
+    "hydraulic_oil_tank_volume_l" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Oil Tank Volume (l.)",
+        "min" : 0
+      }
+    },
+    "hydraulic_oil_tank_volume_gal" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Oil Tank Volume (gal.)",
+        "min" : 0
+      }
+    }
+  },
+  "Other" : {
+    "cabin_homologation" : {
+      "fieldset" : "Cabin Homologation",
+      "type" : "Select",
+      "config" : {
+        "label" : "Cabin Homologation",
+        "options" : [ "FOPS", "ROPS", "FOPS - ROPS" ]
+      }
+    },
+    "commands" : {
+      "fieldset" : "Commands",
+      "type" : "Select",
+      "config" : {
+        "label" : "Commands",
+        "options" : [ "JSM", "1 Joystick", "2 Joysticks", "Joysticks", "Levers", "Finger Touch", "LPS" ]
+      }
+    },
+    "display" : {
+      "fieldset" : "Display",
+      "type" : "Select",
+      "config" : {
+        "label" : "Display",
+        "options" : [ "LCD", "LCD 7'", "LCD 9'" ]
+      }
+    },
+    "drive-type" : {
+      "fieldset" : "Drive Type",
+      "type" : "Select",
+      "config" : {
+        "label" : "Drive Type",
+        "options" : [ "DriveType.Seated", "DriveType.Standup", "DriveType.Carried" ]
+      }
+    },
+    "standard-tyres" : {
+      "fieldset" : "Standard Tyres",
+      "type" : "Select",
+      "config" : {
+        "label" : "Standard Tyres",
+        "options" : [ "TyresType.Pneumatic", "TyresType.PneumaticFoamFilled", "TyresType.PneumaticFoamFilledNoMarking", "TyresType.SuperElastic", "TyresType.SuperElasticSolidCushion", "TyresType.NoMarking", "TyresType.Nylon", "TyresType.Polyurethane" ]
+      }
+    },
+    "number-wheels" : {
+      "fieldset" : "Number of Wheels",
+      "type" : "Select",
+      "config" : {
+        "label" : "Number of Wheels",
+        "options" : [ "1", "2", "3", "4", "5", "6", "7", "8" ]
+      }
+    },
+    "number-wheels-front" : {
+      "type" : "Select",
+      "config" : {
+        "label" : "Wheels Front",
+        "options" : [ "1", "2", "3", "4", "5", "6" ]
+      }
+    },
+    "number-wheels-rear" : {
+      "type" : "Select",
+      "config" : {
+        "label" : "Wheels Rear",
+        "options" : [ "1", "2", "3", "4", "5", "6" ]
+      }
+    },
+    "number-drive-wheels-front" : {
+      "type" : "Select",
+      "config" : {
+        "label" : "Drive Wheels Front",
+        "options" : [ "0", "1", "2", "3", "4", "5", "6" ]
+      }
+    },
+    "number-drive-wheels-rear" : {
+      "type" : "Select",
+      "config" : {
+        "label" : "Drive Wheels Rear",
+        "options" : [ "0", "1", "2", "3", "4", "5", "6" ]
+      }
+    },
+    "number_steering_wheels_front" : {
+      "type" : "Select",
+      "config" : {
+        "label" : "Steering Wheels Front",
+        "options" : [ "0", "1", "2", "3", "4", "5", "6" ]
+      }
+    },
+    "number_steering_wheels_rear" : {
+      "type" : "Select",
+      "config" : {
+        "label" : "Steering Wheels Rear",
+        "options" : [ "0", "1", "2", "3", "4", "5", "6" ]
+      }
+    },
+    "dimensions-front-tyres" : {
+      "fieldset" : "Tyres Dimensions",
+      "type" : "Text",
+      "config" : {
+        "label" : "Front Tyres"
+      }
+    },
+    "dimensions-rear-tyres" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Rear Tyres"
+      }
+    },
+    "floor-pressure-dan-cm2" : {
+      "fieldset" : "Floor Pressure",
+      "type" : "Number",
+      "config" : {
+        "label" : "Hard Floor (daN/cm2)"
+      }
+    },
+    "floor-pressure-lbf-ft2" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Hard Floor (lbF/ft2)"
+      }
+    },
+    "stabs_type" : {
+      "fieldset" : "Stabilizers",
+      "type" : "Select",
+      "config" : {
+        "label" : "Type",
+        "options" : [ "StabsType.WingType", "StabsType.Compact", "StabsType.Telescopic", "StabsType.TelescopicDuplex", "StabsType.TelescopicTriplex" ]
+      }
+    },
+    "stabs_commands" : {
+      "type" : "Select",
+      "config" : {
+        "label" : "Commands",
+        "options" : [ "StabsCommands.Individual", "StabsCommands.Simultaneous", "StabsCommands.IndividualOrSimultaneous" ]
+      }
+    },
+    "frame_levelling_lateral" : {
+      "fieldset" : "Frame Levelling",
+      "type" : "Text",
+      "config" : {
+        "label" : "Lateral +/- (deg)"
+      }
+    },
+    "frame_levelling_longitudinal" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Longitudinal +/- (deg)"
+      }
+    },
+    "rotation_standard" : {
+      "fieldset" : "Rotation (MRT, AWP...)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Standard (deg)",
+        "min" : 0
+      }
+    },
+    "rotation_optional" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Optional (deg)",
+        "min" : 0
+      }
+    },
+    "rotation_basket_left" : {
+      "fieldset" : "Basket Rotation (AWP)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Left Max. Angle (deg)"
+      }
+    },
+    "rotation_basket_right" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Right Max. Angle (deg)"
+      }
+    },
+    "pendulum_up" : {
+      "fieldset" : "Pendulum (AWP)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Up Max. Angle (deg)"
+      }
+    },
+    "pendulum_down" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Down Max. Angle (deg)"
+      }
+    },
+    "standard_forks" : {
+      "fieldset" : "Standard Forks",
+      "type" : "Text",
+      "config" : {
+        "label" : "Lth x Wth x Tck (mm)"
+      }
+    },
+    "standard-mast" : {
+      "fieldset" : "Standard Mast Type",
+      "type" : "Select",
+      "config" : {
+        "label" : "Standard Mast",
+        "options" : [ "MastType.Simplex", "MastType.Duplex", "MastType.Triplex", "MastType.Quadriplex", "MastType.DuplexFreeLift", "MastType.TriplexFreeLift" ]
+      }
+    },
+    "standard-mast-free-lift-m" : {
+      "fieldset" : "Standard Mast Free Lift",
+      "type" : "Number",
+      "config" : {
+        "label" : "Free Lift (m)",
+        "min" : 0
+      }
+    },
+    "standard-mast-free-lift-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Free Lift (ft)",
+        "min" : 0
+      }
+    },
+    "standard-mast-height-low-m" : {
+      "fieldset" : "Standard Mast Height Low",
+      "type" : "Number",
+      "config" : {
+        "label" : "Mast Height (m)",
+        "min" : 0
+      }
+    },
+    "standard-mast-height-low-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Mast Height (ft)",
+        "min" : 0
+      }
+    },
+    "standard-mast-height-up-m" : {
+      "fieldset" : "Standard Mast Height Up",
+      "type" : "Number",
+      "config" : {
+        "label" : "Mast Height (m)",
+        "min" : 0
+      }
+    },
+    "standard-mast-height-up-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Mast Height (ft)",
+        "min" : 0
+      }
+    },
+    "ce-tractor-homologation" : {
+      "fieldset" : "CE Tractor Homologation",
+      "type" : "Select",
+      "config" : {
+        "label" : "CE Homologation",
+        "options" : [ "Yes", "No" ]
+      }
+    },
+    "brake_service" : {
+      "fieldset" : "Brake",
+      "type" : "Select",
+      "config" : {
+        "label" : "Service",
+        "options" : [ "brakeService.electromagnetic", "brakeService.hydrostatic", "brakeService.hydraulic", "brakeService.oilImmersedMultiDiscBrakingOnFrontRearAxles" ]
+      }
+    },
+    "brake_parking" : {
+      "type" : "Select",
+      "config" : {
+        "label" : "Parking",
+        "options" : [ "brakeParking.handleRelease", "brakeParking.automaticNegativeHandbrake", "brakeParking.Sahr", "brakeParking.OilImmersedMultiDiscMechanicsFrontAxle" ]
+      }
+    },
+    "noise_driving_position" : {
+      "fieldset" : "Noise",
+      "type" : "Number",
+      "config" : {
+        "label" : "@ Driving Position (dB)",
+        "min" : 0
+      }
+    },
+    "noise_environmental" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Environmental (dB)",
+        "min" : 0
+      }
+    },
+    "vibrations_arm_hand" : {
+      "fieldset" : "Vibrations",
+      "type" : "Number",
+      "config" : {
+        "label" : "Arm/hand (m/s2)",
+        "min" : 0
+      }
+    },
+    "vibrations_body" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Body (m/s2)",
+        "min" : 0
+      }
+    },
+    "reduce-loading" : {
+      "fieldset" : "Manitou Reduce",
+      "type" : "Number",
+      "config" : {
+        "label" : "Loading (l/h)",
+        "min" : 0
+      }
+    },
+    "reduce_loading_gal" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Loading (gal/h)",
+        "min" : 0
+      }
+    },
+    "reduce-road" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Road (l/h)",
+        "min" : 0
+      }
+    },
+    "reduce_road_gal" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Loading (gal/h)",
+        "min" : 0
+      }
+    },
+    "reduce-handling" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Handling (l/h)",
+        "min" : 0
+      }
+    },
+    "reduce_handling_gal" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Handling (gal/h)",
+        "min" : 0
+      }
+    },
+    "reduce-idle" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Idle Speed (l/h)",
+        "min" : 0
+      }
+    },
+    "reduce_idle_gal" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Idle Speed (gal/h)",
+        "min" : 0
+      }
+    },
+    "nota_bene" : {
+      "type" : "StructuredText",
+      "fieldset" : "Nota Bene",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink",
+        "placeholder" : "Please mention any local specificity, regulation, note and useful info for this machine in any language."
+      }
+    }
+  },
+  "Equipments" : {
+    "equipments" : {
+      "type" : "Group",
+      "fieldset" : "Equipments",
+      "config" : {
+        "fields" : {
+          "equipment_link" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "masks" : [ "equipment" ]
+            }
+          },
+          "equipment_type" : {
+            "type" : "Select",
+            "fieldset" : "Type",
+            "config" : {
+              "label" : "St. / Opt° ?",
+              "options" : [ "Standard", "Optional" ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Masts" : {
+    "mast" : {
+      "type" : "Group",
+      "fieldset" : "Masts",
+      "config" : {
+        "fields" : {
+          "mast_category" : {
+            "type" : "Select",
+            "fieldset" : "Mast",
+            "config" : {
+              "label" : "Mast Category",
+              "options" : [ "DuplexTotalVisibility", "DuplexFreeLift", "TriplexFreeLift" ]
+            }
+          },
+          "mast_ref" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Mast Ref."
+            }
+          },
+          "mast_lifting_height" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Lifting Height (m)",
+              "min" : 0
+            }
+          },
+          "mast_height_lowered_m" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Height Mast Lowered (m)",
+              "min" : 0
+            }
+          },
+          "mast_height_extended_m" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Height Mast Extended (m)",
+              "min" : 0
+            }
+          },
+          "mast_free_lift_m" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Free Lift (m)",
+              "min" : 0
+            }
+          },
+          "residual_capacity_standard_forks_m" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Residual Capacity Std. Forks (kg)",
+              "min" : 0
+            }
+          },
+          "tilt_mast_forward" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Tilt of Mast Forward (deg)",
+              "min" : 0
+            }
+          },
+          "tilt_mast_backward" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Tilt of Mast Backward (deg)",
+              "min" : 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "Benef." : {
+    "benefits" : {
+      "type" : "Group",
+      "fieldset" : "Related Benefits",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "masks" : [ "benefit" ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Attach." : {
+    "attachments" : {
+      "type" : "Group",
+      "fieldset" : "Focus Attachments",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "masks" : [ "attachment" ]
+            }
+          }
+        }
+      }
+    },
+    "attachments_regular" : {
+      "type" : "Group",
+      "fieldset" : "Regular Attachments",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "masks" : [ "attachment" ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Serv." : {
+    "services" : {
+      "type" : "Group",
+      "fieldset" : "Related Services",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "masks" : [ "service" ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#machine_cat" aria-expanded="false" aria-controls="machine_cat">
+          <span><span class="label label-default">machine-cat</span> JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="machine_cat">
+{% highlight json %}
+{
+  "Machine Category Information" : {
+    "machine_cat_title" : {
+      "fieldset" : "Machine Category Title",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1"
+      }
+    },
+    "machine_cat_image" : {
+      "type" : "Image",
+      "fieldset" : "Machine Category Image",
+      "config" : {
+        "thumbnails" : [ {
+          "name" : "web",
+          "width" : 640,
+          "height" : 430
+        }, {
+          "name" : "square",
+          "width" : 250,
+          "height" : 250
+        } ]
+      }
+    },
+    "machine_cat_ordering" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Machine Categ. Order (ASC)",
+        "min" : 0
+      }
+    },
+    "machine_cat_title_en" : {
+      "type" : "Text",
+      "fieldset" : "English"
+    },
+    "machine_cat_title_fr" : {
+      "type" : "Text",
+      "fieldset" : "Français"
+    },
+    "machine_cat_title_es" : {
+      "type" : "Text",
+      "fieldset" : "Español"
+    },
+    "machine_cat_title_de" : {
+      "type" : "Text",
+      "fieldset" : "Deutsch"
+    },
+    "machine_cat_title_it" : {
+      "type" : "Text",
+      "fieldset" : "Italiano"
+    },
+    "machine_cat_title_pt" : {
+      "type" : "Text",
+      "fieldset" : "Português"
+    },
+    "machine_cat_title_nl" : {
+      "type" : "Text",
+      "fieldset" : "Nederlands"
+    },
+    "machine_cat_title_pl" : {
+      "type" : "Text",
+      "fieldset" : "Polski"
+    },
+    "machine_cat_title_ru" : {
+      "type" : "Text",
+      "fieldset" : "Pусский"
+    },
+    "machine_cat_title_zh" : {
+      "type" : "Text",
+      "fieldset" : "中文"
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+
+    <h3>Countries &amp; Subsidiaries</h3>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#country" aria-expanded="false" aria-controls="country">
+          <span>country-territory JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="country">
+{% highlight json %}
+{
+  "Country information" : {
+    "name" : {
+      "fieldset" : "Country / Territory Name",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Country / Territory Name"
+      }
+    },
+    "2-letters-code" : {
+      "fieldset" : "2 Letters ISO 3166-1-alpha-2 Country Code",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "strong",
+        "placeholder" : "2 Letters ISO 3166-1-alpha-2 Country Code"
+      }
+    },
+    "subsidiary_link" : {
+      "fieldset" : "Subsidiary",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "subsidiary" ]
+      }
+    },
+    "phone_prefix" : {
+      "fieldset" : "Phone Prefix, (no +, no space)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Phone Prefix",
+        "min" : 0
+      }
+    },
+    "center_latitude" : {
+      "fieldset" : "Latitude, Longitude & Zoom",
+      "type" : "Number",
+      "config" : {
+        "label" : "Latitude : 0.0000000"
+      }
+    },
+    "center_longitude" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Longitude : 0.0000000"
+      }
+    },
+    "center_zoom" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Zoom Level : (0 -> 21)",
+        "min" : 0,
+        "max" : 21
+      }
+    },
+    "default-unit-system" : {
+      "fieldset" : "Default Unit System",
+      "type" : "Select",
+      "config" : {
+        "label" : "Default Unit System",
+        "options" : [ "UnitSystem.Metric", "UnitSystem.Imperial" ]
+      }
+    },
+    "related-default-language" : {
+      "fieldset" : "Default Language",
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Default Language",
+        "select" : "document",
+        "masks" : [ "language" ]
+      }
+    },
+    "focus_1" : {
+      "fieldset" : "Focus Blocks",
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Focus 1",
+        "select" : "document",
+        "masks" : [ "focus" ]
+      }
+    },
+    "focus_2" : {
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Focus 2",
+        "select" : "document",
+        "masks" : [ "focus" ]
+      }
+    },
+    "focus_3" : {
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Focus 3",
+        "select" : "document",
+        "masks" : [ "focus" ]
+      }
+    },
+    "focus_4" : {
+      "type" : "Link",
+      "config" : {
+        "placeholder" : "Focus 4",
+        "select" : "document",
+        "masks" : [ "focus" ]
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#subsidiary" aria-expanded="false" aria-controls="subsidiary">
+          <span>subsidiary JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="subsidiary">
+{% highlight json %}
+{
+  "Subsidiary Information" : {
+    "subsidiary_name" : {
+      "fieldset" : "Subsidiary Name",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Subsidiary Name"
+      }
+    },
+    "vp" : {
+      "type" : "Link",
+      "fieldset" : "VP Sales",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "vp" ]
+      }
+    },
+    "subsidiary_ordering" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Subsidiary Order (ASC)",
+        "min" : 0
+      }
+    },
+    "subsidiary_image_team" : {
+      "type" : "Image",
+      "fieldset" : "Subsidiary Team Image",
+      "config" : {
+        "thumbnails" : [ {
+          "name" : "web",
+          "width" : 280,
+          "height" : 186
+        }, {
+          "name" : "square",
+          "width" : 250,
+          "height" : 250
+        } ]
+      }
+    },
+    "subsidiary_image_office" : {
+      "type" : "Image",
+      "fieldset" : "Subsidiary Offices Image",
+      "config" : {
+        "thumbnails" : [ {
+          "name" : "web",
+          "width" : 280,
+          "height" : 186
+        }, {
+          "name" : "square",
+          "width" : 250,
+          "height" : 250
+        } ]
+      }
+    },
+    "subsidiary_address" : {
+      "type" : "StructuredText",
+      "fieldset" : "Subsidiary Address",
+      "config" : {
+        "single" : "paragraph"
+      }
+    },
+    "subsidiary_zipcode" : {
+      "type" : "StructuredText",
+      "fieldset" : "Subsidiary ZipCode",
+      "config" : {
+        "single" : "paragraph"
+      }
+    },
+    "subsidiary_city" : {
+      "type" : "StructuredText",
+      "fieldset" : "Subsidiary City",
+      "config" : {
+        "single" : "paragraph"
+      }
+    },
+    "subsidiary_country" : {
+      "type" : "Link",
+      "fieldset" : "Subsidiary Country (Address)",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "country-territory" ],
+        "placeholder" : "Select a Country"
+      }
+    },
+    "subsidiary_coordinates" : {
+      "fieldset" : "Subsidiary Coordinates",
+      "type" : "GeoPoint"
+    },
+    "subsidiary_emails" : {
+      "type" : "Group",
+      "fieldset" : "Subsidiary Email Adresses",
+      "config" : {
+        "fields" : {
+          "text" : {
+            "type" : "Text"
+          }
+        }
+      }
+    },
+    "subsidiary_phone" : {
+      "type" : "StructuredText",
+      "fieldset" : "Subsidiary Phone Number",
+      "config" : {
+        "single" : "paragraph",
+        "placeholder" : "Subsidiary Phone Number"
+      }
+    },
+    "countries" : {
+      "type" : "Group",
+      "fieldset" : "Countries covered by Subsidiary",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "masks" : [ "country-territory" ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+
+    <h3>Languages</h3>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#language" aria-expanded="false" aria-controls="language">
+          <span>language JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="language">
+{% highlight json %}
+{
+  "Language Information" : {
+    "name" : {
+      "fieldset" : "Language Name",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Language Name"
+      }
+    },
+    "locale" : {
+      "fieldset" : "Locale",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "placeholder" : "Locale"
+      }
+    },
+    "order" : {
+      "fieldset" : "Order (ASC)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Modal Order (ASC)"
+      }
+    },
+    "direction" : {
+      "fieldset" : "Writing Direction",
+      "type" : "Select",
+      "config" : {
+        "options" : [ "LangDirection.LeftToRight", "LangDirection.RightToLeft" ],
+        "label" : "Writing Direction"
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+
+    <h3>Attachments &amp; Attachment References</h3>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#attachment_cat" aria-expanded="false" aria-controls="attachment_cat">
+          <span>attachment-cat JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="attachment_cat">
+{% highlight json %}
+{
+  "Attachment Category Information" : {
+    "attachment_cat_title" : {
+      "fieldset" : "Attachment Category Title",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1"
+      }
+    },
+    "attachment_cat_image" : {
+      "type" : "Image",
+      "fieldset" : "Attachment Category Image",
+      "config" : {
+        "thumbnails" : [ {
+          "name" : "web",
+          "width" : 640,
+          "height" : 430
+        }, {
+          "name" : "square",
+          "width" : 250,
+          "height" : 250
+        } ]
+      }
+    },
+    "attachment_cat_ordering" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Att. Categ. Order (ASC)",
+        "min" : 0
+      }
+    },
+    "attachment_cat_text_en" : {
+      "type" : "Text",
+      "fieldset" : "English"
+    },
+    "attachment_cat_text_fr" : {
+      "type" : "Text",
+      "fieldset" : "Français"
+    },
+    "attachment_cat_text_es" : {
+      "type" : "Text",
+      "fieldset" : "Español"
+    },
+    "attachment_cat_text_de" : {
+      "type" : "Text",
+      "fieldset" : "Deutsch"
+    },
+    "attachment_cat_text_it" : {
+      "type" : "Text",
+      "fieldset" : "Italiano"
+    },
+    "attachment_cat_text_pt" : {
+      "type" : "Text",
+      "fieldset" : "Português"
+    },
+    "attachment_cat_text_nl" : {
+      "type" : "Text",
+      "fieldset" : "Nederlands"
+    },
+    "attachment_cat_text_pl" : {
+      "type" : "Text",
+      "fieldset" : "Polski"
+    },
+    "attachment_cat_text_ru" : {
+      "type" : "Text",
+      "fieldset" : "Pусский"
+    },
+    "attachment_cat_text_zh" : {
+      "type" : "Text",
+      "fieldset" : "中文"
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#attachment" aria-expanded="false" aria-controls="attachment">
+          <span>attachment JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="attachment">
+{% highlight json %}
+{
+  "Attachment Information" : {
+    "attachment-name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Attachment Name"
+      }
+    },
+    "attachment_cat" : {
+      "type" : "Link",
+      "fieldset" : "Attachment Category",
+      "config" : {
+        "placeholder" : "Attachment Category",
+        "select" : "document",
+        "masks" : [ "attachment-cat" ]
+      }
+    },
+    "attachment_ordering" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Attach. Order (Biggest 1st)",
+        "min" : 0
+      }
+    },
+    "attachment-name-en" : {
+      "fieldset" : "English",
+      "type" : "Text",
+      "config" : {
+        "label" : "Name (EN)"
+      }
+    },
+    "attachment-desc-en" : {
+      "type" : "StructuredText",
+      "fieldset" : "Description (EN)",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    },
+    "attachment-name-fr" : {
+      "fieldset" : "Français",
+      "type" : "Text",
+      "config" : {
+        "label" : "Name (FR)"
+      }
+    },
+    "attachment-desc-fr" : {
+      "type" : "StructuredText",
+      "fieldset" : "Description (FR)",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    },
+    "attachment-name-es" : {
+      "fieldset" : "Español",
+      "type" : "Text",
+      "config" : {
+        "label" : "Name (ES)"
+      }
+    },
+    "attachment-desc-es" : {
+      "type" : "StructuredText",
+      "fieldset" : "Description (ES)",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    },
+    "attachment-name-de" : {
+      "fieldset" : "Deutsch",
+      "type" : "Text",
+      "config" : {
+        "label" : "Name (DE)"
+      }
+    },
+    "attachment-desc-de" : {
+      "type" : "StructuredText",
+      "fieldset" : "Description (DE)",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    },
+    "attachment-name-it" : {
+      "fieldset" : "Italiano",
+      "type" : "Text",
+      "config" : {
+        "label" : "Name (IT)"
+      }
+    },
+    "attachment-desc-it" : {
+      "type" : "StructuredText",
+      "fieldset" : "Description (IT)",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    },
+    "attachment-name-pt" : {
+      "fieldset" : "Português",
+      "type" : "Text",
+      "config" : {
+        "label" : "Name (PT)"
+      }
+    },
+    "attachment-desc-pt" : {
+      "type" : "StructuredText",
+      "fieldset" : "Description (PT)",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    },
+    "attachment-name-nl" : {
+      "fieldset" : "Nederlands",
+      "type" : "Text",
+      "config" : {
+        "label" : "Name (NL)"
+      }
+    },
+    "attachment-desc-nl" : {
+      "type" : "StructuredText",
+      "fieldset" : "Description (NL)",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    },
+    "attachment-name-pl" : {
+      "fieldset" : "Polski",
+      "type" : "Text",
+      "config" : {
+        "label" : "Name (PL)"
+      }
+    },
+    "attachment-desc-pl" : {
+      "type" : "StructuredText",
+      "fieldset" : "Description (PL)",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    },
+    "attachment-name-ru" : {
+      "fieldset" : "Pусский",
+      "type" : "Text",
+      "config" : {
+        "label" : "Name (RU)"
+      }
+    },
+    "attachment-desc-ru" : {
+      "type" : "StructuredText",
+      "fieldset" : "Description (RU)",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    },
+    "attachment-name-zh" : {
+      "fieldset" : "中文",
+      "type" : "Text",
+      "config" : {
+        "label" : "Name (ZH)"
+      }
+    },
+    "attachment-desc-zh" : {
+      "type" : "StructuredText",
+      "fieldset" : "Description (ZH)",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    }
+  },
+  "Documents" : {
+    "photos" : {
+      "fieldset" : "Photos",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Flickr Album URL"
+      }
+    },
+    "video" : {
+      "fieldset" : "Video",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Youtube URL"
+      }
+    },
+    "3d" : {
+      "fieldset" : "3D",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Sketchfab URL"
+      }
+    },
+    "scribd" : {
+      "type" : "Group",
+      "fieldset" : "Scribd",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Embed",
+            "config" : {
+              "placeholder" : "Paste the Scribd URL"
+            }
+          }
+        }
+      }
+    }
+  },
+  "References" : {
+    "attachment_references" : {
+      "type" : "Group",
+      "fieldset" : "Related Attachment References",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "placeholder" : "Related Attachment References",
+              "select" : "document",
+              "masks" : [ "attachment-reference" ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#attachment_ref" aria-expanded="false" aria-controls="attachment_ref">
+          <span>attachment-reference JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="attachment_ref">
+{% highlight json %}
+{
+  "Attachment Reference Information" : {
+    "ref_name" : {
+      "fieldset" : "Reference Name",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Reference Name"
+      }
+    },
+    "ref_number" : {
+      "fieldset" : "Reference Number",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "strong",
+        "placeholder" : "Reference Number"
+      }
+    }
+  },
+  "Specs" : {
+    "length-m" : {
+      "fieldset" : "Length",
+      "type" : "Number",
+      "config" : {
+        "label" : "Length (in m)",
+        "min" : 0
+      }
+    },
+    "length-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Length (in ft)",
+        "min" : 0
+      }
+    },
+    "width-m" : {
+      "fieldset" : "Width",
+      "type" : "Number",
+      "config" : {
+        "label" : "Width (in m)",
+        "min" : 0
+      }
+    },
+    "width-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Width (in ft)",
+        "min" : 0
+      }
+    },
+    "height-m" : {
+      "fieldset" : "Height",
+      "type" : "Number",
+      "config" : {
+        "label" : "Height (in m)",
+        "min" : 0
+      }
+    },
+    "height-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Height (in ft)",
+        "min" : 0
+      }
+    },
+    "weight-kg" : {
+      "fieldset" : "Weight",
+      "type" : "Number",
+      "config" : {
+        "label" : "Weight (in kg)",
+        "min" : 0
+      }
+    },
+    "weight-lb" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Weight (in lb)",
+        "min" : 0
+      }
+    },
+    "capacity-kg" : {
+      "fieldset" : "Capacity",
+      "type" : "Number",
+      "config" : {
+        "label" : "Capacity (in kg)",
+        "min" : 0
+      }
+    },
+    "capacity-lb" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Capacity (in lb)",
+        "min" : 0
+      }
+    },
+    "capacity-l" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Capacity (in l)",
+        "min" : 0
+      }
+    },
+    "capacity-gal" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Capacity (in gal)",
+        "min" : 0
+      }
+    },
+    "capacity-ppl" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Capacity (in people)",
+        "min" : 0
+      }
+    },
+    "fork-spread-min-m" : {
+      "fieldset" : "Fork Spread",
+      "type" : "Number",
+      "config" : {
+        "label" : "Fork Spread Min (in m)",
+        "min" : 0
+      }
+    },
+    "fork-spread-min-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Fork Spread Min (in ft)",
+        "min" : 0
+      }
+    },
+    "fork-spread-max-m" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Fork Spread Max (in m)",
+        "min" : 0
+      }
+    },
+    "fork-spread-max-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Fork Spread Max (in ft)",
+        "min" : 0
+      }
+    },
+    "side-shift-m" : {
+      "fieldset" : "Side Shift",
+      "type" : "Number",
+      "config" : {
+        "label" : "Side Shift (in m)",
+        "min" : 0
+      }
+    },
+    "side-shift-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Side Shift (in ft)",
+        "min" : 0
+      }
+    },
+    "teeth" : {
+      "fieldset" : "Teeth",
+      "type" : "Number",
+      "config" : {
+        "label" : "Number of Teeth",
+        "min" : 0
+      }
+    },
+    "rotation" : {
+      "fieldset" : "Rotation",
+      "type" : "Number",
+      "config" : {
+        "label" : "Rotation Left/Right",
+        "min" : 0
+      }
+    },
+    "outreach-m" : {
+      "fieldset" : "Outreach for Jibs & Cranes",
+      "type" : "Number",
+      "config" : {
+        "label" : "Outreach (m)",
+        "min" : 0
+      }
+    },
+    "outreach-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Outreach (ft)",
+        "min" : 0
+      }
+    },
+    "cable-length-m" : {
+      "fieldset" : "Winch",
+      "type" : "Number",
+      "config" : {
+        "label" : "Cable Length (m)",
+        "min" : 0
+      }
+    },
+    "cable-length-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Cable Length (ft)",
+        "min" : 0
+      }
+    },
+    "hook-speed-m" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Hook Speed (m/min)",
+        "min" : 0
+      }
+    },
+    "hook-speed-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Hook Speed (ft/min)",
+        "min" : 0
+      }
+    },
+    "hooks" : {
+      "fieldset" : "Hooks",
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "hook_number" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Hook Number",
+              "placeholder" : "Hook Number"
+            }
+          },
+          "capacity_hook_kg" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Hook Capacity (kg)",
+              "min" : 0
+            }
+          },
+          "capacity_hook_lb" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Hook Capacity (lb)",
+              "min" : 0
+            }
+          },
+          "distance_hook_m" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Hook Position (m)",
+              "min" : 0
+            }
+          },
+          "distance_hook_ft" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Hook Position (ft)",
+              "min" : 0
+            }
+          }
+        }
+      }
+    },
+    "ldr" : {
+      "fieldset" : "LDR",
+      "type" : "Select",
+      "config" : {
+        "options" : [ "No", "Yes" ]
+      }
+    },
+    "ereco" : {
+      "fieldset" : "e-Reco",
+      "type" : "Select",
+      "config" : {
+        "options" : [ "No", "Yes" ]
+      }
+    },
+    "hydraulic_opening" : {
+      "fieldset" : "Hydraulic Opening",
+      "type" : "Select",
+      "config" : {
+        "options" : [ "No", "Yes" ]
+      }
+    },
+    "flexible_tube" : {
+      "fieldset" : "Flexible Tube",
+      "type" : "Select",
+      "config" : {
+        "options" : [ "No", "Yes" ]
+      }
+    },
+    "diameter-min-m" : {
+      "fieldset" : "Diameters Capabilities",
+      "type" : "Number",
+      "config" : {
+        "label" : "Diam. Min. (Ø in m)",
+        "min" : 0
+      }
+    },
+    "diameter-max-m" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Diam. Max. (Ø in m)",
+        "min" : 0
+      }
+    },
+    "diameter-min-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Diam. Min. (Ø in ft)",
+        "min" : 0
+      }
+    },
+    "diameter-max-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Diam. Max. (Ø in ft)",
+        "min" : 0
+      }
+    }
+  },
+  "Compatibilities" : {
+    "machine_compatibility" : {
+      "type" : "Group",
+      "fieldset" : "Machine Compatibilities",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "placeholder" : "Machine Compatibilities",
+              "select" : "document",
+              "masks" : [ "machine" ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <h3>Services</h3>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#service" aria-expanded="false" aria-controls="service">
+          <span>service JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="service">
+{% highlight json %}
+{
+  "Service Info" : {
+    "service_name" : {
+      "fieldset" : "Service Name",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Service Name"
+      }
+    },
+    "service_image" : {
+      "type" : "Image",
+      "fieldset" : "Service Image",
+      "config" : {
+        "thumbnails" : [ {
+          "name" : "web",
+          "width" : 870,
+          "height" : 652
+        }, {
+          "name" : "web_thumb",
+          "width" : 360,
+          "height" : 240
+        }, {
+          "name" : "web_nav",
+          "width" : 440,
+          "height" : 150
+        }, {
+          "name" : "square",
+          "width" : 250,
+          "height" : 250
+        } ]
+      }
+    },
+    "service_ordering" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Service Order (ASC)",
+        "min" : 0
+      }
+    },
+    "service_pdfs" : {
+      "type" : "Group",
+      "fieldset" : "Scribd",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Embed",
+            "config" : {
+              "placeholder" : "Paste the Scribd URL"
+            }
+          }
+        }
+      }
+    },
+    "service_video" : {
+      "fieldset" : "YouTube",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Youtube URL"
+      }
+    },
+    "service_translation_en" : {
+      "fieldset" : "English",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "service-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "service_translation_fr" : {
+      "fieldset" : "Français",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "service-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "service_translation_es" : {
+      "fieldset" : "Español",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "service-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "service_translation_de" : {
+      "fieldset" : "Deutsch",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "service-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "service_translation_it" : {
+      "fieldset" : "Italiano",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "service-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "service_translation_pt" : {
+      "fieldset" : "Português",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "service-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "service_translation_nl" : {
+      "fieldset" : "Nederlands",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "service-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "service_translation_pl" : {
+      "fieldset" : "Polski",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "service-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "service_translation_ru" : {
+      "fieldset" : "Pусский",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "service-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "service_translation_zh" : {
+      "fieldset" : "中文",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "service-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    }
+  },
+  "Countries" : {
+    "service_countries" : {
+      "type" : "Group",
+      "fieldset" : "Available in the following countries",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "masks" : [ "country-territory" ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#service_translation" aria-expanded="false" aria-controls="service_translation">
+          <span>service-translation JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="service_translation">
+{% highlight json %}
+{
+  "Service Translation" : {
+    "service_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "placeholder" : "Service Title",
+        "single" : "heading1"
+      }
+    },
+    "service_title_repo_admin" : {
+      "fieldset" : "Service Title (EN)",
+      "type" : "Text",
+      "config" : {
+        "placeholder" : "Service Title (EN)"
+      }
+    },
+    "service_language" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "language" ],
+        "placeholder" : "Select the Language"
+      }
+    },
+    "service_description" : {
+      "type" : "StructuredText",
+      "fieldset" : "Service Description",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    },
+    "service_benefits" : {
+      "type" : "StructuredText",
+      "fieldset" : "Service Benefits",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item"
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+
+    <h3>Markets &amp; Applications (&amp; Translations)</h3>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#market" aria-expanded="false" aria-controls="market">
+          <span>market JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="market">
+{% highlight json %}
+{
+  "Market Information" : {
+    "market_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Market Title"
+      }
+    },
+    "market_position" : {
+      "fieldset" : "Market Position",
+      "type" : "Number",
+      "config" : {
+        "min" : 0
+      }
+    },
+    "market_image" : {
+      "type" : "Image",
+      "fieldset" : "Market Image",
+      "config" : {
+        "thumbnails" : [ {
+          "name" : "web",
+          "width" : 440,
+          "height" : 300
+        }, {
+          "name" : "web_nav",
+          "width" : 440,
+          "height" : 150
+        }, {
+          "name" : "square",
+          "width" : 250,
+          "height" : 250
+        } ]
+      }
+    },
+    "market_title_en" : {
+      "fieldset" : "English",
+      "type" : "Text",
+      "config" : {
+        "label" : "Market Title (EN)"
+      }
+    },
+    "market_title_fr" : {
+      "fieldset" : "Français",
+      "type" : "Text",
+      "config" : {
+        "label" : "Market Title (FR)"
+      }
+    },
+    "market_title_es" : {
+      "fieldset" : "Español",
+      "type" : "Text",
+      "config" : {
+        "label" : "Market Title (ES)"
+      }
+    },
+    "market_title_de" : {
+      "fieldset" : "Deutsch",
+      "type" : "Text",
+      "config" : {
+        "label" : "Market Title (DE)"
+      }
+    },
+    "market_title_it" : {
+      "fieldset" : "Italiano",
+      "type" : "Text",
+      "config" : {
+        "label" : "Market Title (IT)"
+      }
+    },
+    "market_title_pt" : {
+      "fieldset" : "Português",
+      "type" : "Text",
+      "config" : {
+        "label" : "Market Title (PT)"
+      }
+    },
+    "market_title_nl" : {
+      "fieldset" : "Nederlands",
+      "type" : "Text",
+      "config" : {
+        "label" : "Market Title (NL)"
+      }
+    },
+    "market_title_pl" : {
+      "fieldset" : "Polski",
+      "type" : "Text",
+      "config" : {
+        "label" : "Market Title (PL)"
+      }
+    },
+    "market_title_ru" : {
+      "fieldset" : "Pусский",
+      "type" : "Text",
+      "config" : {
+        "label" : "Market Title (RU)"
+      }
+    },
+    "market_title_zh" : {
+      "fieldset" : "中文",
+      "type" : "Text",
+      "config" : {
+        "label" : "Market Title (ZH)"
+      }
+    },
+    "market_video" : {
+      "fieldset" : "Video",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Youtube URL"
+      }
+    },
+    "market_photos" : {
+      "fieldset" : "Photos",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Flickr Album URL"
+      }
+    },
+    "market_scribd" : {
+      "type" : "Group",
+      "fieldset" : "Scribd",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Embed",
+            "config" : {
+              "placeholder" : "Paste the Scribd URL"
+            }
+          }
+        }
+      }
+    },
+    "applications" : {
+      "type" : "Group",
+      "fieldset" : "Applications",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "placeholder" : "Applications",
+              "select" : "document",
+              "masks" : [ "application" ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#application" aria-expanded="false" aria-controls="application">
+          <span>Application JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="application">
+{% highlight json %}
+{
+  "Application Information" : {
+    "application_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Application Title"
+      }
+    },
+    "application_market" : {
+      "type" : "Link",
+      "fieldset" : "Market",
+      "config" : {
+        "placeholder" : "Market",
+        "select" : "document",
+        "masks" : [ "market" ]
+      }
+    },
+    "application_email" : {
+      "type" : "Group",
+      "fieldset" : "Contact Email Address",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Contact Email Address"
+            }
+          }
+        }
+      }
+    },
+    "application_image" : {
+      "type" : "Image",
+      "fieldset" : "Application Image",
+      "config" : {
+        "thumbnails" : [ {
+          "name" : "web",
+          "width" : 640,
+          "height" : 430
+        }, {
+          "name" : "square",
+          "width" : 250,
+          "height" : 250
+        } ]
+      }
+    },
+    "application_video" : {
+      "fieldset" : "Video",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Youtube URL"
+      }
+    },
+    "application_photos" : {
+      "fieldset" : "Photos",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Flickr Album URL"
+      }
+    },
+    "application_pdfs" : {
+      "type" : "Group",
+      "fieldset" : "Scribd",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Embed",
+            "config" : {
+              "placeholder" : "Paste the Scribd URL"
+            }
+          }
+        }
+      }
+    },
+    "application_translation_en" : {
+      "fieldset" : "English",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "application-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "application_translation_fr" : {
+      "fieldset" : "Français",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "application-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "application_translation_es" : {
+      "fieldset" : "Español",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "application-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "application_translation_de" : {
+      "fieldset" : "Deutsch",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "application-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "application_translation_it" : {
+      "fieldset" : "Italiano",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "application-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "application_translation_pt" : {
+      "fieldset" : "Português",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "application-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "application_translation_nl" : {
+      "fieldset" : "Nederlands",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "application-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "application_translation_pl" : {
+      "fieldset" : "Polski",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "application-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "application_translation_ru" : {
+      "fieldset" : "Pусский",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "application-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "application_translation_zh" : {
+      "fieldset" : "中文",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "application-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+        <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#application" aria-expanded="false" aria-controls="application">
+          <span>application-translation JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="application">
+{% highlight json %}
+{
+  "Application Translation" : {
+    "application_title" : {
+      "fieldset" : "Title",
+      "type" : "StructuredText",
+      "config" : {
+        "placeholder" : "Application Title",
+        "single" : "heading1"
+      }
+    },
+    "application_title_repo_admin" : {
+      "fieldset" : "Application Title (EN)",
+      "type" : "Text",
+      "config" : {
+        "placeholder" : "Application Title (EN)"
+      }
+    },
+    "application_language" : {
+      "fieldset" : "Translation Language",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "language" ],
+        "placeholder" : "Select the Language"
+      }
+    },
+    "application_desc" : {
+      "type" : "StructuredText",
+      "fieldset" : "Application Description",
+      "config" : {
+        "multi" : "paragraph, hyperlink"
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+
+    <h3>Benefits &amp; Translations</h3>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#benefit" aria-expanded="false" aria-controls="benefit">
+          <span>benefit JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="benefit">
+{% highlight json %}
+{
+  "Benefit Information" : {
+    "benefit_name" : {
+      "fieldset" : "Benefit Name",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "placeholder" : "Benefit Name"
+      }
+    },
+    "benefit_image" : {
+      "type" : "Image",
+      "fieldset" : "Benefit Image",
+      "config" : {
+        "thumbnails" : [ {
+          "name" : "web",
+          "width" : 1440,
+          "height" : 870
+        }, {
+          "name" : "web_thumb",
+          "width" : 360,
+          "height" : 240
+        }, {
+          "name" : "square",
+          "width" : 250,
+          "height" : 250
+        } ]
+      }
+    },
+    "benefit_photos" : {
+      "fieldset" : "Photos",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Flickr Album URL"
+      }
+    },
+    "benefit_video" : {
+      "fieldset" : "Video",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Youtube URL"
+      }
+    },
+    "benefit_scribd" : {
+      "type" : "Group",
+      "fieldset" : "Scribd",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Embed",
+            "config" : {
+              "placeholder" : "Paste the Scribd URL"
+            }
+          }
+        }
+      }
+    },
+    "benefit_translation_en" : {
+      "fieldset" : "English",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "benefit-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "benefit_translation_fr" : {
+      "fieldset" : "Français",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "benefit-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "benefit_translation_es" : {
+      "fieldset" : "Español",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "benefit-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "benefit_translation_de" : {
+      "fieldset" : "Deutsch",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "benefit-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "benefit_translation_it" : {
+      "fieldset" : "Italiano",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "benefit-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "benefit_translation_pt" : {
+      "fieldset" : "Português",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "benefit-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "benefit_translation_nl" : {
+      "fieldset" : "Nederlands",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "benefit-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "benefit_translation_pl" : {
+      "fieldset" : "Polski",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "benefit-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "benefit_translation_ru" : {
+      "fieldset" : "Pусский",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "benefit-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    },
+    "benefit_translation_zh" : {
+      "fieldset" : "中文",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "benefit-translation" ],
+        "placeholder" : "Link to Translation"
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+    <div class="bloc">
+      <p><strong class="toggler" data-toggle="collapse" data-target="#benefit_translation" aria-expanded="false" aria-controls="benefit_translation">
+          <span>benefit-translation JSON Mask</span>
+      </strong></p>
+      <row class="collapse" id="benefit_translation">
+{% highlight json %}
+{
+  "Benefit Translation" : {
+    "benefit_title" : {
+      "fieldset" : "Benefit Title",
+      "type" : "StructuredText",
+      "config" : {
+        "placeholder" : "Benefit Title",
+        "single" : "heading1"
+      }
+    },
+    "benefit_title_repo_admin" : {
+      "fieldset" : "Benefit Title (EN)",
+      "type" : "Text",
+      "config" : {
+        "placeholder" : "Benefit Title (EN)"
+      }
+    },
+    "benefit_language" : {
+      "fieldset" : "Translation Language",
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "language" ],
+        "placeholder" : "Select the Language"
+      }
+    },
+    "benefit_desc" : {
+      "type" : "StructuredText",
+      "fieldset" : "Benefit Description",
+      "config" : {
+        "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item, hyperlink"
+      }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <p>Explanations</p>
+
+		
 	</section>
 
 	<br>
@@ -60,134 +3616,7 @@ title : Manitou API
 	<section id="data">
 		<h2>Data &amp; API Queries</h2>
 
-		<h3>Machines &amp; Countries</h3>
-
-		<p>Explanations</p>
-
-		<div class="bloc">
-			<p><strong class="toggler" data-toggle="collapse" data-target="#machine" aria-expanded="false" aria-controls="machine">
-			    <span>Machine JSON Example</span>
-			</strong></p>
-			<row class="collapse" id="machine">
-{% highlight json %}
-{
-  "Main" : {
-    "model_name" : {
-      "fieldset" : "Model Name",
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "placeholder" : "Model Name"
-      }
-    },
-    "machine_ordering" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Machine Order (ASC)",
-        "min" : 0
-      }
-    },
-    "machine_cat" : {
-      "type" : "Link",
-      "fieldset" : "Machine Category",
-      "config" : {
-        "placeholder" : "Machine Category",
-        "select" : "document",
-        "masks" : [ "machine-cat" ]
-      }
-    }
-  }
-}
-...
-{% endhighlight %}
-			</row>
-		</div>
-
 		
-
-		<h3>Attachments &amp; Attachment References</h3>
-
-		<p>Explanations</p>
-
-		<div class="bloc">
-			<p><strong class="toggler" data-toggle="collapse" data-target="#attachment" aria-expanded="false" aria-controls="attachment">
-			    <span>Attachment JSON Example</span>
-			</strong></p>
-			<row class="collapse" id="attachment">
-{% highlight json %}
-{
-  "Main" : {
-    "model_name" : {
-      "fieldset" : "Model Name",
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "placeholder" : "Model Name"
-      }
-    },
-    "machine_ordering" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Machine Order (ASC)",
-        "min" : 0
-      }
-    },
-    "machine_cat" : {
-      "type" : "Link",
-      "fieldset" : "Machine Category",
-      "config" : {
-        "placeholder" : "Machine Category",
-        "select" : "document",
-        "masks" : [ "machine-cat" ]
-      }
-    }
-  }
-}
-...
-{% endhighlight %}
-			</row>
-		</div>
-
-		<p>Explanations</p>
-
-		<div class="bloc">
-			<p><strong class="toggler" data-toggle="collapse" data-target="#attachment_ref" aria-expanded="false" aria-controls="attachment_ref">
-			    <span>Attachment Reference JSON Example</span>
-			</strong></p>
-			<row class="collapse" id="attachment_ref">
-{% highlight json %}
-{
-  "Main" : {
-    "model_name" : {
-      "fieldset" : "Model Name",
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "placeholder" : "Model Name"
-      }
-    },
-    "machine_ordering" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Machine Order (ASC)",
-        "min" : 0
-      }
-    },
-    "machine_cat" : {
-      "type" : "Link",
-      "fieldset" : "Machine Category",
-      "config" : {
-        "placeholder" : "Machine Category",
-        "select" : "document",
-        "masks" : [ "machine-cat" ]
-      }
-    }
-  }
-}
-...
-{% endhighlight %}
-			</row>
-		</div>
 
 		<p></p>
 	</section>
@@ -200,17 +3629,32 @@ title : Manitou API
 	<section id="key">
 		<h2>API Key</h2>
 
-		<h3>Conditions</h3>
+		<h3>One Condition</h3>
 
-		<p>Use Caching System on CDN</p>
+		<p>Use Caching System on Prismic's CDN</p>
 
-		<p>Respect Quotas</p>
+    <p>Please use the Prismic JSON replies stocked on their CDN. Use the webhook to trigger cache renewal. We often release versions of the content repository. It may vary from once a week to twice per hour without prior notice. </p>
 
-		<p></p>
+		<h3>Ask Yours</h3>
 
-		<h3>Ask yours</h3>
+		<p>We do not deliver API keys to everyone. In order to obtain one, please :</p>
 
-		<p></p>
+    <ul>
+      <li>Explain us briefly your project, the requests volume and your stack so we can have an idea.</li>
+      <li>Give us your contact information (technical contact name, email, phone number, address, URL of your project).</li>
+      <li></li>
+    </ul>
+
+    <p>Always keep in mind that you don't respect our guidelines, we keep the right to destroy your API key at any time without prior notice.</p>
+
+    <p>
+      <a href="mailto:webmaster@manitou-group.com" download="manitou-framework" title="Ask your API key by email" class="btn btn-primary btn-lg">
+        <i class="fa fa-download"></i>
+        <span>Ask your API key & Go build great stuff</span>
+      </a>
+    </p>
+
+    <p></p>
 	</section>
 
 </main>
