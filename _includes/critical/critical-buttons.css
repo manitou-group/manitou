@@ -2,9 +2,9 @@ html{ font-family: sans-serif; }
 body{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
  aside, header, main, nav, section{ display: block; }
 a{ background-color: transparent; }
-b{ font-weight: bold; }
 h1{ font-size: 2em; margin-top: 0.67em; margin-right: 0px; margin-bottom: 0.67em; margin-left: 0px; }
 img{ border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; }
+hr{ box-sizing: content-box; height: 0px; }
 pre{ overflow-x: auto; overflow-y: auto; }
 code, pre{ font-family: monospace, monospace; font-size: 1em; }
 button{ color: inherit; font: inherit; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
@@ -37,6 +37,7 @@ h1, h2{ font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit
 h1, h2{ margin-bottom: 0.5rem; }
 h1{ font-size: 2.5rem; }
 h2{ font-size: 2rem; }
+hr{ margin-top: 1rem; margin-bottom: 1rem; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-top-width: 0.0625rem; border-top-style: solid; border-top-color: rgba(0, 0, 0, 0.0976562); }
 code, pre{ font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; }
 code{ padding-top: 0.2rem; padding-right: 0.4rem; padding-bottom: 0.2rem; padding-left: 0.4rem; font-size: 90%; color: rgb(189, 65, 71); background-color: rgb(247, 247, 249); border-top-left-radius: 0.25rem 0.25rem; border-top-right-radius: 0.25rem 0.25rem; border-bottom-right-radius: 0.25rem 0.25rem; border-bottom-left-radius: 0.25rem 0.25rem; }
 pre{ display: block; margin-top: 0px; margin-bottom: 1rem; font-size: 90%; line-height: 1.5; color: rgb(55, 58, 60); }
@@ -117,10 +118,17 @@ header .sup-nav .row ul{ list-style-type: none; list-style-position: initial; li
 header .sup-nav .row ul > li{ padding-right: 15px; }
 header .sup-nav .row ul > li > a{ color: rgb(255, 255, 255); font-size: 11px; }
 header .sup-nav .row .sup-nav-shortcuts{ display: none; }
+footer ul > li{ color: rgb(226, 0, 26); }
+footer .footer-legal ul{ position: relative; clear: left; float: left; left: 50%; list-style-type: none; list-style-position: initial; list-style-image: initial; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
+footer .footer-legal ul > li{ float: left; position: relative; right: 50%; display: block; }
+footer .footer-legal ul > li > a{ display: block; font-size: 0.6875rem; line-height: 2.5rem; color: rgb(174, 168, 176); }
+footer .footer-legal ul > li > a::before{ content: '|'; padding-left: 0.625rem; padding-right: 0.625rem; font-weight: 400; }
+footer .footer-legal ul > li:first-child a::before{ content: ''; }
 a{ }
 h1{ font-weight: 700; font-size: 1.875rem; color: rgb(226, 0, 26); }
 h2{ margin-top: 0px; margin-bottom: 0.625rem; padding-top: 0px; padding-bottom: 0.625rem; font-weight: 700; font-size: 1.375rem; line-height: 1.625rem; }
 h2.dropdown-toggle{ cursor: pointer; }
+hr{ border-top-color: rgb(213, 213, 213); }
 p{ font-size: 0.875rem; line-height: 1.125rem; }
 p.lg{ font-size: 1rem; line-height: 1.125rem; }
 ul{ padding-left: 1.75rem; margin-left: 0px; list-style-type: disc; }
@@ -156,6 +164,7 @@ ul.bullet > li > a{ color: rgb(68, 68, 68); font-size: 0.875rem; }
 .navbar .collapse ul li a{ font-weight: 700; }
 .navbar .collapse ul li a::after{ float: right; margin-top: 0.625rem; }
 }
+hr{ }
  .card-nav{ box-shadow: none; margin-bottom: 20px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(245, 245, 245); display: block; background-position: initial initial; background-repeat: initial initial; }
  .card-nav h2{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
  .card-nav .card-block ul{ padding-left: 1.25rem; }
@@ -164,7 +173,7 @@ ul.bullet > li > a{ color: rgb(68, 68, 68); font-size: 0.875rem; }
 .btn > span{ display: table-cell; vertical-align: middle; white-space: normal; text-align: left; height: 2.5rem; line-height: 1rem; padding-top: 0px; padding-right: 0.125rem; padding-bottom: 0px; padding-left: 0.625rem; }
 .btn > i{ display: block; float: left; height: 2.5rem; width: 2.5rem; margin-left: -1.25rem; line-height: 2.5rem; text-align: center; text-shadow: rgba(255, 255, 255, 0.847656) 1px 1px 0px; }
 .btn-lg{ height: 3.75rem; font-size: 0.875rem; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
-.btn-lg > span{ line-height: 3.75rem; }
+.btn-lg > span{ height: 3.75rem; line-height: 1.25rem; }
 .btn-lg > i{ font-size: 1.5rem; width: 3.75rem; margin-left: 0px; line-height: 3.75rem; }
 .btn-default{ box-shadow: rgb(61, 61, 61) 0px 1px 0px; color: rgb(255, 255, 255); background-repeat: repeat no-repeat; }
 .btn-default > i{ text-shadow: rgba(0, 0, 0, 0.246094) 1px 1px 0px; }
@@ -180,6 +189,8 @@ ul.bullet > li > a{ color: rgb(68, 68, 68); font-size: 0.875rem; }
 .btn-group .dropdown-menu li{ margin-bottom: 0px; }
 .btn-group .dropdown-menu li > a{ display: block; padding-top: 0.1875rem; padding-right: 1.25rem; padding-bottom: 0.1875rem; padding-left: 1.25rem; clear: both; font-weight: normal; line-height: 1.5; color: rgb(55, 58, 60); white-space: nowrap; cursor: pointer; }
 .btn-group .dropdown-menu .dropdown-header{ padding-top: 0.625rem; padding-right: 1.25rem; padding-bottom: 0px; padding-left: 1.25rem; font-weight: 700; }
+.spinner-backdrop{ position: fixed; top: 0px; left: 0px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgba(0, 0, 0, 0.796875); z-index: 1; width: 100%; display: none; background-position: initial initial; background-repeat: initial initial; }
+.spinner{ position: absolute; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); width: 100px; height: 100px; text-indent: 999px; overflow-x: hidden; overflow-y: hidden; background-image: url(/assets/im/loader.png); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; -webkit-animation-name: loader; -webkit-animation-duration: 1s; -webkit-animation-timing-function: steps(8, end); -webkit-animation-delay: initial; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: initial; -webkit-animation-fill-mode: initial; background-position: 0px 0px; background-repeat: initial initial; }
 .docs{ padding-top: 30px; padding-bottom: 100px; }
 .docs .docs-aside{ margin-top: 20px; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; }
 @media (min-width: 34em){
@@ -207,4 +218,3 @@ ul.bullet > li > a{ color: rgb(68, 68, 68); font-size: 0.875rem; }
 .na{ color: rgb(79, 159, 207); }
 .nt{ color: rgb(47, 111, 159); }
 img{ width: 100%; }
-.row{ }

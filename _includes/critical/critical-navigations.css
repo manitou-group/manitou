@@ -122,6 +122,11 @@ footer h3{ padding-left: 0.625rem; }
 footer h4{ padding-left: 0.625rem; }
 footer ul > li{ color: rgb(226, 0, 26); }
 footer .footer-menu{ background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(237, 237, 237); padding-top: 1.875rem; padding-bottom: 1.875rem; box-shadow: rgba(0, 0, 0, 0.0976562) 0px 0px 1.5625rem 0px inset; background-position: initial initial; background-repeat: initial initial; }
+footer .footer-legal ul{ position: relative; clear: left; float: left; left: 50%; list-style-type: none; list-style-position: initial; list-style-image: initial; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
+footer .footer-legal ul > li{ float: left; position: relative; right: 50%; display: block; }
+footer .footer-legal ul > li > a{ display: block; font-size: 0.6875rem; line-height: 2.5rem; color: rgb(174, 168, 176); }
+footer .footer-legal ul > li > a::before{ content: '|'; padding-left: 0.625rem; padding-right: 0.625rem; font-weight: 400; }
+footer .footer-legal ul > li:first-child a::before{ content: ''; }
 a{ }
 h1{ font-weight: 700; font-size: 1.875rem; color: rgb(226, 0, 26); }
 h2{ margin-top: 0px; margin-bottom: 0.625rem; padding-top: 0px; padding-bottom: 0.625rem; font-weight: 700; font-size: 1.375rem; line-height: 1.625rem; }
@@ -173,6 +178,8 @@ hr{ }
  .card-nav .card-block ul{ padding-left: 1.25rem; }
 .bloc{ background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(255, 255, 255); border-top-left-radius: 0.25rem 0.25rem; border-top-right-radius: 0.25rem 0.25rem; border-bottom-right-radius: 0.25rem 0.25rem; border-bottom-left-radius: 0.25rem 0.25rem; box-shadow: rgba(0, 0, 0, 0.148438) 0px 0px 0.625rem 0px; padding-top: 1.25rem; padding-right: 1.25rem; padding-bottom: 1.25rem; padding-left: 1.25rem; background-position: initial initial; background-repeat: initial initial; }
 .card-nav .card-header .dropdown-toggle::after{ display: none; }
+.spinner-backdrop{ position: fixed; top: 0px; left: 0px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgba(0, 0, 0, 0.796875); z-index: 1; width: 100%; display: none; background-position: initial initial; background-repeat: initial initial; }
+.spinner{ position: absolute; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); width: 100px; height: 100px; text-indent: 999px; overflow-x: hidden; overflow-y: hidden; background-image: url(/assets/im/loader.png); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; -webkit-animation-name: loader; -webkit-animation-duration: 1s; -webkit-animation-timing-function: steps(8, end); -webkit-animation-delay: initial; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: initial; -webkit-animation-fill-mode: initial; background-position: 0px 0px; background-repeat: initial initial; }
 .docs{ padding-top: 30px; padding-bottom: 100px; }
 .docs .docs-aside{ margin-top: 20px; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; }
 @media (min-width: 34em){
@@ -189,4 +196,3 @@ hr{ }
 }
 .bs-example .container{ width: auto; }
 img{ width: 100%; }
-.row{ }

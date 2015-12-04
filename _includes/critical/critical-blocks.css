@@ -1,6 +1,6 @@
 html{ font-family: sans-serif; }
 body{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
-article, aside, header, nav, section{ display: block; }
+article, aside, header, main, nav, section{ display: block; }
 a{ background-color: transparent; }
 b, strong{ font-weight: bold; }
 h1{ font-size: 2em; margin-top: 0.67em; margin-right: 0px; margin-bottom: 0.67em; margin-left: 0px; }
@@ -439,10 +439,16 @@ slider div.bubble.limit{ color: rgb(119, 119, 119); }
 @media (min-width: 48em){
 .filter .col-select{ float: left; width: 75%; }
 }
+.spinner-backdrop{ position: fixed; top: 0px; left: 0px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgba(0, 0, 0, 0.796875); z-index: 1; width: 100%; display: none; background-position: initial initial; background-repeat: initial initial; }
+.spinner{ position: absolute; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); width: 100px; height: 100px; text-indent: 999px; overflow-x: hidden; overflow-y: hidden; background-image: url(/assets/im/loader.png); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; -webkit-animation-name: loader; -webkit-animation-duration: 1s; -webkit-animation-timing-function: steps(8, end); -webkit-animation-delay: initial; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: initial; -webkit-animation-fill-mode: initial; background-position: 0px 0px; background-repeat: initial initial; }
 .docs{ padding-top: 30px; padding-bottom: 100px; }
 .docs .docs-aside{ margin-top: 20px; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; }
 @media (min-width: 34em){
 .docs .docs-aside{ float: left; width: 25%; }
+}
+.docs .docs-main{ float: left; width: 100%; position: relative; min-height: 1px; padding-left: 0.625rem; padding-right: 0.625rem; padding-bottom: 1.25rem; padding-top: 30px; }
+@media (min-width: 34em){
+.docs .docs-main{ float: left; width: 75%; }
 }
 .docs .highlight pre{ white-space: pre !important; }
 .bs-example{ position: relative; padding-top: 45px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; margin-top: 0px; margin-right: -15px; margin-bottom: 15px; margin-left: -15px; border-top-color: rgb(229, 229, 229); border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: rgb(238, 238, 238); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; box-shadow: rgba(0, 0, 0, 0.046875) 0px 3px 6px inset; }
@@ -461,4 +467,3 @@ slider div.bubble.limit{ color: rgb(119, 119, 119); }
 .nt{ color: rgb(47, 111, 159); }
 .img-responsive-fluid, .home-news img, .card-feature-container .card-feature img{ min-width: 100%; }
 img{ width: 100%; }
-.row{ }
