@@ -114,6 +114,13 @@ title : Manitou API Documentation
         "options" : [ "No", "Yes" ]
       }
     },
+    "pdf_technical_datasheet" : {
+      "type" : "Select",
+      "fieldset" : "Ok for PDF Technical Datasheet Generation ?",
+      "config" : {
+        "options" : [ "No", "Yes" ]
+      }
+    },
     "machine_desc_en" : {
       "fieldset" : "Description (EN)",
       "type" : "StructuredText",
@@ -650,17 +657,17 @@ title : Manitou API Documentation
       }
     },
     "lifting-height-m" : {
-      "fieldset" : "Lifting Height",
+      "fieldset" : "Lifting Height / Working Height for AWP",
       "type" : "Number",
       "config" : {
-        "label" : "Lifting Height (m)",
+        "label" : "Lifting/Working Height (m)",
         "min" : 0
       }
     },
     "lifting-height-ft" : {
       "type" : "Number",
       "config" : {
-        "label" : "Lifting Height (ft)",
+        "label" : "Lifting/Working Height (ft)",
         "min" : 0
       }
     },
@@ -1574,7 +1581,7 @@ title : Manitou API Documentation
             "fieldset" : "Mast",
             "config" : {
               "label" : "Mast Category",
-              "options" : [ "DuplexTotalVisibility", "DuplexFreeLift", "TriplexFreeLift" ]
+              "options" : [ "SimplexCentralCylinder", "DuplexTotalVisibility", "DuplexCentralCylinder", "DuplexLateralCylinder", "DuplexFreeLift", "TriplexFreeLift", "TriplexWithoutFreeLift" ]
             }
           },
           "mast_ref" : {
@@ -1679,6 +1686,29 @@ title : Manitou API Documentation
             "config" : {
               "select" : "document",
               "masks" : [ "attachment" ]
+            }
+          }
+        }
+      }
+    },
+    "load_chart_attachment_reference" : {
+      "type" : "Group",
+      "fieldset" : "Attachment references with load charts (MHT/MRT)",
+      "config" : {
+        "fields" : {
+          "load_chart" : {
+            "type" : "Link",
+            "config" : {
+              "placeholder" : "Load chart",
+              "select" : "media"
+            }
+          },
+          "attachment_ref" : {
+            "type" : "Link",
+            "config" : {
+              "placeholder" : "Attachment Reference",
+              "select" : "document",
+              "masks" : [ "attachment-reference" ]
             }
           }
         }
@@ -3330,7 +3360,7 @@ title : Manitou API Documentation
     <hr>
     <br>
 
-    <h4>Benefits &amp; Translations</h4>
+    <h4>Benefits &amp; Translations, Equipments (Standard &amp; Optionnal)</h4>
 
 		<p>Benefits are a concept who allow us to avoid duplicate content. On many of our models, some direct customer benefits can be found on several models of one range. Instead of duplicating it on every concerned machine, we've done a document a lone document and machine documents link to it if concerned.</p>
 
@@ -3539,6 +3569,120 @@ title : Manitou API Documentation
       "config" : {
         "multi" : "heading3, paragraph, strong, em, ulist, olist, list-item, o-list-item, hyperlink"
       }
+    }
+  }
+}
+{% endhighlight %}
+      </row>
+    </div>
+
+    <br>
+
+    <p>Machines can also have standard or optionnal equipments on a per machine basis.</p>
+
+    <div class="bloc">
+      <small class="toggler" data-toggle="collapse" data-target="#equipment" aria-expanded="false" aria-controls="equipment">
+          <span class="label label-default">equipment</span>&nbsp; JSON Mask
+      </small>
+      <br>
+      <row class="collapse" id="equipment">
+        <br>
+{% highlight json %}
+{
+  "Equipment" : {
+    "equipment_title" : {
+      "fieldset" : "Equipment Title",
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1"
+      }
+    },
+    "equipment_image" : {
+      "type" : "Image",
+      "fieldset" : "Equipment Image",
+      "config" : {
+        "thumbnails" : [ {
+          "name" : "web",
+          "width" : 1440,
+          "height" : 870
+        }, {
+          "name" : "web_thumb",
+          "width" : 360,
+          "height" : 240
+        }, {
+          "name" : "square",
+          "width" : 250,
+          "height" : 250
+        } ]
+      }
+    },
+    "equipment_photos" : {
+      "fieldset" : "Photos",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Flickr Album URL"
+      }
+    },
+    "equipment_video" : {
+      "fieldset" : "Video",
+      "type" : "Embed",
+      "config" : {
+        "placeholder" : "Paste the Youtube URL"
+      }
+    },
+    "equipment_scribd" : {
+      "type" : "Group",
+      "fieldset" : "Scribd",
+      "config" : {
+        "fields" : {
+          "link" : {
+            "type" : "Embed",
+            "config" : {
+              "placeholder" : "Paste the Scribd URL"
+            }
+          }
+        }
+      }
+    },
+    "equipment_name_en" : {
+      "type" : "Text",
+      "fieldset" : "English"
+    },
+    "equipment_name_fr" : {
+      "type" : "Text",
+      "fieldset" : "Français"
+    },
+    "equipment_name_es" : {
+      "type" : "Text",
+      "fieldset" : "Español"
+    },
+    "equipment_name_de" : {
+      "type" : "Text",
+      "fieldset" : "Deutsch"
+    },
+    "equipment_name_it" : {
+      "type" : "Text",
+      "fieldset" : "Italiano"
+    },
+    "equipment_name_pt" : {
+      "type" : "Text",
+      "fieldset" : "Português"
+    },
+    "equipment_name_nl" : {
+      "type" : "Text",
+      "fieldset" : "Nederlands"
+    },
+    "equipment_name_pl" : {
+      "type" : "Text",
+      "fieldset" : "Polski"
+    },
+    "equipment_name_ru" : {
+      "type" : "Text",
+      "fieldset" : "Pусский"
+    },
+    "equipment_name_zh" : {
+      "type" : "Text",
+      "fieldset" : "中文"
     }
   }
 }
