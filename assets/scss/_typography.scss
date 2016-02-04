@@ -7,6 +7,9 @@ a {
 	&:focus {
 	    text-decoration: none;
 	}
+	&.disabled {
+	    pointer-events: none;
+	}
 }
 
 .manitou-product-font {

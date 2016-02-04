@@ -6970,6 +6970,8 @@ a {
   a:hover,
   a:focus {
     text-decoration: none; }
+  a.disabled {
+    pointer-events: none; }
 
 .manitou-product-font {
   font-family: "Manitou Product", Helvetica, Arial, sans-serif; }

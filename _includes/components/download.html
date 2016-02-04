@@ -2,10 +2,14 @@
 
 	<h2>Download</h2>
 
-	<p>Before anything, download the Manitou Framework.</p>
-	
+	<p>Before anything, read and accept the <a href="/legal-mentions" title="terms and conditions">conditions</a> and download the Manitou Framework.</p>
+	<div class="checkbox">
+        <input type="checkbox" id="check-conditions" ng-model="conditionsChecked">
+        <label for="check-conditions">I have read, understand and accept the conditions.</label>
+    </div>
+
 	<p>
-		<a href="https://github.com/manitou-group/manitou/archive/master.zip" download="manitou-framework" title="Download Manitou Framework" class="btn btn-primary btn-lg">
+		<a href="https://github.com/manitou-group/manitou/archive/master.zip" download="manitou-framework" title="Download Manitou Framework" class="btn btn-primary btn-lg" ng-class="{disabled: !conditionsChecked}">
 			<i class="fa fa-download"></i>
 			<span>Download Manitou Framework</span>
 		</a>
@@ -13,4 +17,4 @@
 
 	<p>Have a look to the <strong><a href="https://github.com/manitou-group/manitou" target="_blank">GitHub Repository</a></strong> to know a bit more about the install.</p>
 
-</section>	
+</section>
