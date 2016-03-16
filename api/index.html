@@ -121,6 +121,14 @@ title : Manitou API Documentation
         "options" : [ "No", "Yes" ]
       }
     },
+    "load_center_of_gravity_mm" : {
+      "fieldset" : "Load Center of Gravity",
+      "type" : "Number",
+      "config" : {
+        "label" : "Load Center of Gravity (mm)",
+        "min" : 0
+      }
+    },
     "machine_desc_en" : {
       "fieldset" : "Description (EN)",
       "type" : "StructuredText",
@@ -362,6 +370,21 @@ title : Manitou API Documentation
         "min" : 0
       }
     },
+    "width_twin_wheels_incl_m" : {
+      "fieldset" : "Overall Width with Twin Wheels on Front Axle",
+      "type" : "Number",
+      "config" : {
+        "label" : "Twin Wheels Incl. Ovrl. Width (m.)",
+        "min" : 0
+      }
+    },
+    "width_twin_wheels_incl_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Twin Wheels Incl. Ovrl. Width (ft.)",
+        "min" : 0
+      }
+    },
     "overall_width_stabslowered_m" : {
       "fieldset" : "Overall Width Stabs Lowered",
       "type" : "Number",
@@ -377,6 +400,36 @@ title : Manitou API Documentation
         "min" : 0
       }
     },
+    "front_track_width_m" : {
+      "fieldset" : "Front Track Width (Voie avant)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Front Track Width (m.)",
+        "min" : 0
+      }
+    },
+    "front_track_width_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Front Track Width (ft.)",
+        "min" : 0
+      }
+    },
+    "rear_track_width_m" : {
+      "fieldset" : "Front Track Width (Voie arrière)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Rear Track Width (m.)",
+        "min" : 0
+      }
+    },
+    "rear_track_width_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Rear Track Width (ft.)",
+        "min" : 0
+      }
+    },
     "width_forkcarriage_m" : {
       "fieldset" : "Width of Fork Carriage",
       "type" : "Number",
@@ -389,6 +442,21 @@ title : Manitou API Documentation
       "type" : "Number",
       "config" : {
         "label" : "WFC (ft.)",
+        "min" : 0
+      }
+    },
+    "load_face_to_center_front_axle_m" : {
+      "fieldset" : "Distance from Load backrest to center of front axle",
+      "type" : "Number",
+      "config" : {
+        "label" : "Distance (m.)",
+        "min" : 0
+      }
+    },
+    "load_face_to_center_front_axle_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Distance (ft.)",
         "min" : 0
       }
     },
@@ -422,7 +490,7 @@ title : Manitou API Documentation
       }
     },
     "height-m" : {
-      "fieldset" : "Overall Height (mast lowered, tiller up, AWP folded)",
+      "fieldset" : "Overall Height (mast lowered, tiller up, AWP unfolded)",
       "type" : "Number",
       "config" : {
         "label" : "Height (m.)",
@@ -451,18 +519,63 @@ title : Manitou API Documentation
         "min" : 0
       }
     },
+    "coupling_height_m" : {
+      "fieldset" : "Coupling Height (hauteur d'attelage)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Coupling Height (m.)",
+        "min" : 0
+      }
+    },
+    "coupling_height_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Coupling Height (ft.)",
+        "min" : 0
+      }
+    },
+    "seat_height_m" : {
+      "fieldset" : "Seat Height (hauteur du siège)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Seat Height (m.)",
+        "min" : 0
+      }
+    },
+    "seat_height_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Seat Height (ft.)",
+        "min" : 0
+      }
+    },
+    "max_cabin_roof_height_m" : {
+      "fieldset" : "Max. Cabin Roof Height (hauteur au plus haut de la cabine)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Cabin Roof Height (m.)",
+        "min" : 0
+      }
+    },
+    "max_cabin_roof_height_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Cabin Roof Height (ft.)",
+        "min" : 0
+      }
+    },
     "weight-kg" : {
       "fieldset" : "Unladen Weight (with Standard Forks)",
       "type" : "Number",
       "config" : {
-        "label" : "Weight (in kg.)",
+        "label" : "Weight (kg.)",
         "min" : 0
       }
     },
     "weight-lb" : {
       "type" : "Number",
       "config" : {
-        "label" : "Weight (in lb.)",
+        "label" : "Weight (lb.)",
         "min" : 0
       }
     },
@@ -528,14 +641,29 @@ title : Manitou API Documentation
       "fieldset" : "Turning Radius (Ext. or biggest value)",
       "type" : "Number",
       "config" : {
-        "label" : "TR (m.)",
+        "label" : "TR ext. (m.)",
         "min" : 0
       }
     },
     "turning-radius-ft" : {
       "type" : "Number",
       "config" : {
-        "label" : "TR (ft.)",
+        "label" : "TR ext. (ft.)",
+        "min" : 0
+      }
+    },
+    "turning-radius-internal-m" : {
+      "fieldset" : "TR (Internal)",
+      "type" : "Number",
+      "config" : {
+        "label" : "TR int. (m.)",
+        "min" : 0
+      }
+    },
+    "turning-radius-internal-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "TR int. (ft.)",
         "min" : 0
       }
     },
@@ -566,6 +694,36 @@ title : Manitou API Documentation
       "type" : "Number",
       "config" : {
         "label" : "GC in (ft.)",
+        "min" : 0
+      }
+    },
+    "ground-clearance-under-mast-m" : {
+      "fieldset" : "Ground Clearance under the Mast",
+      "type" : "Number",
+      "config" : {
+        "label" : "GCUTM in (m.)",
+        "min" : 0
+      }
+    },
+    "ground-clearance-under-mast-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "GCUTM in (ft.)",
+        "min" : 0
+      }
+    },
+    "ground-clearance-under-stabs-m" : {
+      "fieldset" : "Ground Clearance under the Stabilisers / Bars (AWP)",
+      "type" : "Number",
+      "config" : {
+        "label" : "GCUTS in (m.)",
+        "min" : 0
+      }
+    },
+    "ground-clearance-under-stabs-ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "GCUTS in (ft.)",
         "min" : 0
       }
     },
@@ -610,7 +768,7 @@ title : Manitou API Documentation
       }
     },
     "pendulum_length_m" : {
-      "fieldset" : "Pendulum (AWP)",
+      "fieldset" : "Pendulum / Jib Length (AWP)",
       "type" : "Number",
       "config" : {
         "label" : "Length (m)",
@@ -618,6 +776,21 @@ title : Manitou API Documentation
       }
     },
     "pendulum_length_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Length (ft)",
+        "min" : 0
+      }
+    },
+    "counterweight_oversize_m" : {
+      "fieldset" : "Counterweight Oversize / Reach (AWP @ 90°, MFT,...)",
+      "type" : "Number",
+      "config" : {
+        "label" : "Length (m)",
+        "min" : 0
+      }
+    },
+    "counterweight_oversize_ft" : {
       "type" : "Number",
       "config" : {
         "label" : "Length (ft)",
@@ -657,17 +830,17 @@ title : Manitou API Documentation
       }
     },
     "lifting-height-m" : {
-      "fieldset" : "Lifting Height / Working Height for AWP",
+      "fieldset" : "Lifting Height / Platform Height for AWP",
       "type" : "Number",
       "config" : {
-        "label" : "Lifting/Working Height (m)",
+        "label" : "Lifting/Platform Height (m)",
         "min" : 0
       }
     },
     "lifting-height-ft" : {
       "type" : "Number",
       "config" : {
-        "label" : "Lifting/Working Height (ft)",
+        "label" : "Lifting/Platform Height (ft)",
         "min" : 0
       }
     },
@@ -764,14 +937,29 @@ title : Manitou API Documentation
       "fieldset" : "Force",
       "type" : "Number",
       "config" : {
-        "label" : "Drawbar pull (daN)",
+        "label" : "Drawbar pull laden (daN)",
         "min" : 0
       }
     },
     "drawbar-pull-lbf" : {
       "type" : "Number",
       "config" : {
-        "label" : "Drawbar pull (lbf)",
+        "label" : "Drawbar pull laden (lbf)",
+        "min" : 0
+      }
+    },
+    "drawbar-pull-unladen-dan" : {
+      "fieldset" : "Force",
+      "type" : "Number",
+      "config" : {
+        "label" : "Drawbar pull unladen (daN)",
+        "min" : 0
+      }
+    },
+    "drawbar-pull-unladen-lbf" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Drawbar pull unladen (lbf)",
         "min" : 0
       }
     },
@@ -790,7 +978,7 @@ title : Manitou API Documentation
       }
     },
     "overhang-m" : {
-      "fieldset" : "Overhang",
+      "fieldset" : "Overhang (Surplomb)",
       "type" : "Number",
       "config" : {
         "label" : "Overhang (m)",
@@ -919,6 +1107,66 @@ title : Manitou API Documentation
         "min" : 0
       }
     },
+    "mast_lifting_speed_laden_mps" : {
+      "fieldset" : "Mast Lifting Speed Laden",
+      "type" : "Number",
+      "config" : {
+        "label" : "Lift. Speed (m/s)",
+        "min" : 0
+      }
+    },
+    "mast_lifting_speed_laden_ftps" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Lift. Speed (ft/s)",
+        "min" : 0
+      }
+    },
+    "mast_lifting_speed_unladen_mps" : {
+      "fieldset" : "Mast Lifting Speed Unladen",
+      "type" : "Number",
+      "config" : {
+        "label" : "Lift. Speed (m/s)",
+        "min" : 0
+      }
+    },
+    "mast_lifting_speed_unladen_ftps" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Lift. Speed (ft/s)",
+        "min" : 0
+      }
+    },
+    "mast_lowering_speed_laden_mps" : {
+      "fieldset" : "Mast lowering Speed Laden",
+      "type" : "Number",
+      "config" : {
+        "label" : "Low. Speed (m/s)",
+        "min" : 0
+      }
+    },
+    "mast_lowering_speed_laden_ftps" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Low. Speed (ft/s)",
+        "min" : 0
+      }
+    },
+    "mast_lowering_speed_unladen_mps" : {
+      "fieldset" : "Mast Lowering Speed Unladen",
+      "type" : "Number",
+      "config" : {
+        "label" : "Low. Speed (m/s)",
+        "min" : 0
+      }
+    },
+    "mast_lowering_speed_unladen_ftps" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Low. Speed (ft/s)",
+        "min" : 0
+      }
+    },
     "mast-inclination-front" : {
       "fieldset" : "Tilt of Mast",
       "type" : "Number",
@@ -938,7 +1186,7 @@ title : Manitou API Documentation
       "fieldset" : "Surmontable Slope",
       "type" : "Number",
       "config" : {
-        "label" : "S.Slope Laden (%)",
+        "label" : "S.Slope Laden (AWP) (%)",
         "min" : 0
       }
     },
@@ -954,6 +1202,14 @@ title : Manitou API Documentation
       "type" : "Number",
       "config" : {
         "label" : "Max. Crossfall (deg)",
+        "min" : 0
+      }
+    },
+    "awp_earl_cycles_number" : {
+      "fieldset" : "AWP EARL Cycles number",
+      "type" : "Number",
+      "config" : {
+        "label" : "EARL Cycles",
         "min" : 0
       }
     }
@@ -1005,6 +1261,44 @@ title : Manitou API Documentation
       }
     },
     "power-kw" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Power (kw)",
+        "min" : 0
+      }
+    },
+    "second_engine_bienergy_brand_type" : {
+      "fieldset" : "Second Engine",
+      "type" : "Text",
+      "config" : {
+        "label" : "Brand + Type"
+      }
+    },
+    "second_engine_bienergy_power_kw" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Power (kw)",
+        "min" : 0
+      }
+    },
+    "lifting-engine-power-kw" : {
+      "fieldset" : "Lifting Engine Power",
+      "type" : "Number",
+      "config" : {
+        "label" : "Lifting Engine Power (kw)",
+        "min" : 0
+      }
+    },
+    "electropump-kw" : {
+      "fieldset" : "Electropump Power",
+      "type" : "Number",
+      "config" : {
+        "label" : "Power (kw)",
+        "min" : 0
+      }
+    },
+    "generator-kw" : {
+      "fieldset" : "Generator Power",
       "type" : "Number",
       "config" : {
         "label" : "Power (kw)",
@@ -1099,15 +1393,37 @@ title : Manitou API Documentation
       "fieldset" : "Battery",
       "type" : "Number",
       "config" : {
-        "label" : "Battery Voltage (V)",
+        "label" : "Voltage (V)",
         "min" : 0
       }
     },
     "battery-amperage-ah" : {
       "type" : "Number",
       "config" : {
-        "label" : "Battery Amperage (Ah)",
+        "label" : "Amperage (Ah)",
         "min" : 0
+      }
+    },
+    "battery-charger-voltage-v" : {
+      "fieldset" : "Battery Charger",
+      "type" : "Number",
+      "config" : {
+        "label" : "Voltage (V)",
+        "min" : 0
+      }
+    },
+    "battery-charger-amperage-ah" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Amperage (Ah)",
+        "min" : 0
+      }
+    },
+    "battery_space_standard_dimensions" : {
+      "fieldset" : "Battery Space Standard Dimensions",
+      "type" : "Text",
+      "config" : {
+        "label" : "DIN 43531/35/36 A, B, C, no"
       }
     },
     "transmission" : {
@@ -1116,6 +1432,36 @@ title : Manitou API Documentation
       "config" : {
         "label" : "Transmission",
         "options" : [ "MachineTransmission.TorqueConverter", "MachineTransmission.Hydrostatic", "MachineTransmission.ContinuouslyVariable", "MachineTransmission.ElectricalMotor" ]
+      }
+    },
+    "vdi_cycle_fuel_efficiency_l" : {
+      "fieldset" : "VDI Cycle Fuel Efficiency (Conso° carbu. cycle VDI)",
+      "type" : "Number",
+      "config" : {
+        "label" : "VDI Fuel Eff. (l/h)",
+        "min" : 0
+      }
+    },
+    "vdi_cycle_fuel_efficiency_gal" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "VDI Fuel Eff. (US gal/h)",
+        "min" : 0
+      }
+    },
+    "awp_daily_fuel_efficiency_l" : {
+      "fieldset" : "AWP daily Fuel Efficiency (Conso° Carburant Nacelle Quot.)",
+      "type" : "Number",
+      "config" : {
+        "label" : "AWP Fuel Eff. (l/day)",
+        "min" : 0
+      }
+    },
+    "awp_daily_fuel_efficiency_gal" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "AWP Fuel Eff. (US gal/day)",
+        "min" : 0
       }
     }
   },
@@ -1271,6 +1617,20 @@ title : Manitou API Documentation
         "options" : [ "0", "1", "2", "3", "4", "5", "6" ]
       }
     },
+    "number_braking_wheels_front" : {
+      "type" : "Select",
+      "config" : {
+        "label" : "Braking Wheels Front",
+        "options" : [ "0", "1", "2", "3", "4", "5", "6" ]
+      }
+    },
+    "number_braking_wheels_rear" : {
+      "type" : "Select",
+      "config" : {
+        "label" : "Braking Wheels Rear",
+        "options" : [ "0", "1", "2", "3", "4", "5", "6" ]
+      }
+    },
     "dimensions-front-tyres" : {
       "fieldset" : "Tyres Dimensions",
       "type" : "Text",
@@ -1285,16 +1645,16 @@ title : Manitou API Documentation
       }
     },
     "floor-pressure-dan-cm2" : {
-      "fieldset" : "Floor Pressure",
+      "fieldset" : "Ground Pressure",
       "type" : "Number",
       "config" : {
-        "label" : "Hard Floor (daN/cm2)"
+        "label" : "Hard Ground (daN/cm2)"
       }
     },
     "floor-pressure-lbf-ft2" : {
       "type" : "Number",
       "config" : {
-        "label" : "Hard Floor (lbF/ft2)"
+        "label" : "Hard Ground (lbF/ft2)"
       }
     },
     "stabs_type" : {
@@ -1366,6 +1726,13 @@ title : Manitou API Documentation
         "label" : "Down Max. Angle (deg)"
       }
     },
+    "carriage_standard_din_15173_ab" : {
+      "fieldset" : "Standard Fork Carriage",
+      "type" : "Text",
+      "config" : {
+        "label" : "DIN 15173 A/B Standard"
+      }
+    },
     "standard_forks" : {
       "fieldset" : "Standard Forks",
       "type" : "Text",
@@ -1379,6 +1746,21 @@ title : Manitou API Documentation
       "config" : {
         "label" : "Standard Mast",
         "options" : [ "MastType.Simplex", "MastType.Duplex", "MastType.Triplex", "MastType.Quadriplex", "MastType.DuplexFreeLift", "MastType.TriplexFreeLift" ]
+      }
+    },
+    "standard_mast_lifting_height_m" : {
+      "fieldset" : "Standard Mast Lifting Height",
+      "type" : "Number",
+      "config" : {
+        "label" : "St. Mast Lift. Height (m)",
+        "min" : 0
+      }
+    },
+    "standard_mast_lifting_height_ft" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "St. Mast Lift. Height (ft)",
+        "min" : 0
       }
     },
     "standard-mast-free-lift-m" : {
@@ -1426,6 +1808,21 @@ title : Manitou API Documentation
         "min" : 0
       }
     },
+    "standard_mast_front_angle" : {
+      "fieldset" : "Standard Mast Angle",
+      "type" : "Number",
+      "config" : {
+        "label" : "Front (°)",
+        "min" : 0
+      }
+    },
+    "standard_mast_rear_angle" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Rear (°)",
+        "min" : 0
+      }
+    },
     "ce-tractor-homologation" : {
       "fieldset" : "CE Tractor Homologation",
       "type" : "Select",
@@ -1453,14 +1850,14 @@ title : Manitou API Documentation
       "fieldset" : "Noise",
       "type" : "Number",
       "config" : {
-        "label" : "@ Driving Position (dB)",
+        "label" : "@ Driving Position (basket) (dB)",
         "min" : 0
       }
     },
     "noise_environmental" : {
       "type" : "Number",
       "config" : {
-        "label" : "Environmental (dB)",
+        "label" : "Environmental (ground) (dB)",
         "min" : 0
       }
     },
@@ -1475,64 +1872,15 @@ title : Manitou API Documentation
     "vibrations_body" : {
       "type" : "Number",
       "config" : {
-        "label" : "Body (m/s2)",
+        "label" : "Body (AWP) (m/s2)",
         "min" : 0
       }
     },
-    "reduce-loading" : {
-      "fieldset" : "Manitou Reduce",
+    "average_acceleration_driver_body" : {
+      "fieldset" : "Average Weighted Acceleration on Driver's Body",
       "type" : "Number",
       "config" : {
-        "label" : "Loading (l/h)",
-        "min" : 0
-      }
-    },
-    "reduce_loading_gal" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Loading (gal/h)",
-        "min" : 0
-      }
-    },
-    "reduce-road" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Road (l/h)",
-        "min" : 0
-      }
-    },
-    "reduce_road_gal" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Loading (gal/h)",
-        "min" : 0
-      }
-    },
-    "reduce-handling" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Handling (l/h)",
-        "min" : 0
-      }
-    },
-    "reduce_handling_gal" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Handling (gal/h)",
-        "min" : 0
-      }
-    },
-    "reduce-idle" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Idle Speed (l/h)",
-        "min" : 0
-      }
-    },
-    "reduce_idle_gal" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Idle Speed (gal/h)",
+        "label" : "NF EN 13059 Standard (m/s2)",
         "min" : 0
       }
     },
