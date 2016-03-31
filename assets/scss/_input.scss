@@ -86,11 +86,7 @@ input[type="checkbox"] {
 }
 input[type=checkbox][disabled]{
 	+ label {
-		margin-left: calc-rem(30px);
-		&:before {
-			border-radius: 50% !important;
-			content: " " !important;
-		}
+		color: $text-gray;
 	}
 }
 

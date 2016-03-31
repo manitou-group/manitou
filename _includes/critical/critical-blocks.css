@@ -1,10 +1,11 @@
 html{ font-family: sans-serif; }
 body{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
-article, aside, header, main, nav, section{ display: block; }
+article, aside, figure, header, main, nav, section{ display: block; }
 a{ background-color: transparent; }
 b, strong{ font-weight: bold; }
 h1{ font-size: 2em; margin-top: 0.67em; margin-right: 0px; margin-bottom: 0.67em; margin-left: 0px; }
 img{ border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; }
+figure{ margin-top: 1em; margin-right: 40px; margin-bottom: 1em; margin-left: 40px; }
 hr{ box-sizing: content-box; height: 0px; }
 pre{ overflow-x: auto; overflow-y: auto; }
 code, pre{ font-family: monospace, monospace; font-size: 1em; }
@@ -38,6 +39,7 @@ p{ margin-top: 0px; margin-bottom: 1rem; }
  ul ul{ margin-bottom: 0px; }
 a{ color: rgb(226, 0, 26); text-decoration: none; }
 pre{ margin-top: 0px; margin-bottom: 1rem; }
+figure{ margin-top: 0px; margin-right: 0px; margin-bottom: 1rem; margin-left: 0px; }
 img{ vertical-align: middle; }
 [role="button"]{ cursor: pointer; }
 table{ background-color: transparent; }
