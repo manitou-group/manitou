@@ -4,7 +4,7 @@
   font-family: 'Manitou Product';
   font-style: normal;
   font-weight: 400;
-  src: local("Manitou Product"), url("/assets/fonts/Manitou-product-font.eot") format("embedded-opentype"), url("/assets/fonts/Manitou-product-font.ttf") format("truetype"), url("/assets/fonts/Manitou-product-font.woff") format("woff"), url("/assets/fonts/Manitou-product-font.svg#MANITOU") format("svg"); }
+  src: local("Manitou Product"), url("/assets/fonts/Manitou-ExtraBold.eot") format("embedded-opentype"), url("/assets/fonts/Manitou-ExtraBold.woff") format("woff"), url("/assets/fonts/Manitou-ExtraBold.otf") format("truetype"); }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -6974,7 +6974,8 @@ a {
     pointer-events: none; }
 
 .manitou-product-font {
-  font-family: "Manitou Product", Helvetica, Arial, sans-serif; }
+  font-family: "Manitou Product", Helvetica, Arial, sans-serif;
+  color: #333; }
 
 h1, .h1 {
   font-weight: 700;
